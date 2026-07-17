@@ -1,8 +1,17 @@
+from typing import Annotated
+
 from fastapi import FastAPI
+import models
+from database import SessionLocal, engine
 
 app = FastAPI()
 
+models.Base.metadata.create_all(bind=engine)
 
-@app.get("/healthy")
-def healthy_check():
-    return {"status": "Healthy"}
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
