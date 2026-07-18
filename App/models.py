@@ -9,19 +9,3 @@ class Movies(Base):
     description = Column(String)
     rating = Column(Integer)
     watched = Column(Boolean, default=False)
-
-
-
-
-
-
-class Users(Base):
-    __tablename__='users'
-    username=Column(String,unique=True)
-    email=Column(String,unique=True)
-    first_name=Column(String)
-    last_name=Column(String)
-    password=Column(String)
-    verify_password=Column(String)
-    name=Column(String)
-    name=Column(String)
