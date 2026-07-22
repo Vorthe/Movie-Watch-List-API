@@ -5,6 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, Path
 from models import Movies
 from database import SessionLocal
 from starlette import status
+from .auth import get_current_user
 
 router = APIRouter()
 
@@ -18,6 +19,7 @@ def get_db():
 
 
 db_dep = Annotated[Session, Depends(get_db)]
+user_dep = Annotated[dict, Depends(get_current_user)]
 
 
 class MovieRequest(BaseModel):
@@ -28,21 +30,31 @@ class MovieRequest(BaseModel):
 
 
 @router.get("/", status_code=status.HTTP_200_OK)
-async def read_all(db: db_dep):
-    return db.query(Movies).all()
+async def read_all(user: user_dep, db: db_dep):
+    if user is None:
+        raise HTTPException(status_code=401, detail="Authentication Failed")
+    movie_model = db.query(Movies).filter(Movies.owner_id == user.get("id")).all()
+    return movie_model
 
 
 @router.get("/movie/{movie_id}", status_code=status.HTTP_200_OK)
-async def read_movie(db: db_dep, movie_id: int = Path(gt=0)):
-    movie_model = db.query(Movies).filter(Movies.id == movie_id).first()
+async def read_movie(user: user_dep, db: db_dep, movie_id: int = Path(gt=0)):
+    movie_model = (
+        db.query(Movies)
+        .filter(Movies.id == movie_id)
+        .filter(Movies.owner_id == user.get("id"))
+        .first()
+    )
     if movie_model is not None:
         return movie_model
     raise HTTPException(status_code=404, detail="Movie Not Found")
 
 
 @router.post("/movie", status_code=status.HTTP_201_CREATED)
-async def create_movie(db: db_dep, movie_request: MovieRequest):
-    movie_model = Movies(**movie_request.model_dump())
+async def create_movie(user: user_dep, db: db_dep, movie_request: MovieRequest):
+    if user is None:
+        raise HTTPException(status_code=401, detail="Authentication Failed")
+    movie_model = Movies(**movie_request.model_dump(), owner_id=user.get("id"))
 
     db.add(movie_model)
     db.commit()
@@ -50,9 +62,16 @@ async def create_movie(db: db_dep, movie_request: MovieRequest):
 
 @router.put("/movie/{movie_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def update_movie(
-    db: db_dep, movie_request: MovieRequest, movie_id: int = Path(gt=0)
+    user: user_dep, db: db_dep, movie_request: MovieRequest, movie_id: int = Path(gt=0)
 ):
-    movie_model = db.query(Movies).filter(Movies.id == movie_id).first()
+    if user is None:
+        raise HTTPException(status_code=401, detail="Authentication Failed")
+    movie_model = (
+        db.query(Movies)
+        .filter(Movies.id == movie_id)
+        .filter(Movies.owner_id == user.get("id"))
+        .first()
+    )
     if movie_model is None:
         raise HTTPException(status_code=404, detail="Movie Not Found")
     movie_model.title = movie_request.title
@@ -65,10 +84,19 @@ async def update_movie(
 
 
 @router.delete("/movie/{movie_id}")
-async def delete_movie(db: db_dep, movie_id: int = Path(gt=0)):
-    movie_model = db.query(Movies).filter(Movies.id == movie_id).first()
+async def delete_movie(user: user_dep, db: db_dep, movie_id: int = Path(gt=0)):
+    if user is None:
+        raise HTTPException(status_code=401, detail="Authentication Failed")
+    movie_model = (
+        db.query(Movies)
+        .filter(Movies.id == movie_id)
+        .filter(Movies.owner_id == user.get("id"))
+        .first()
+    )
     if movie_model is None:
         HTTPException(status_code=404, detail="Movie Not Found")
-    db.query(Movies).filter(Movies.id == movie_id).delete()
+    db.query(Movies).filter(Movies.id == movie_id).filter(
+        Movies.owner_id == user.get("id")
+    ).delete()
 
     db.commit()
