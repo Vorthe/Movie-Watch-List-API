@@ -27,6 +27,7 @@ class MovieRequest(BaseModel):
     description: str = Field(min_length=4, max_length=200)
     rating: int = Field(gt=0, lt=11)
     watched: bool
+    genre: str = Field(min_length=4, max_length=20)
 
 
 @router.get("/", status_code=status.HTTP_200_OK)

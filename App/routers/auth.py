@@ -28,6 +28,7 @@ class CreateUserRequest(BaseModel):
     last_name: str
     password: str
     role: str
+    phone_number: str = Field(min_length=10, max_length=12)
 
 
 class Token(BaseModel):
@@ -76,7 +77,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Could Not Validate User.",
             )
-        return {"username": username, "id": user_id,'user_role':user_role}
+        return {"username": username, "id": user_id, "user_role": user_role}
     except JWTError:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED, detail="Could Not Validate User."

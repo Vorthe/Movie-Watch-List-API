@@ -12,6 +12,7 @@ class Users(Base):
     hashed_password = Column(String)
     is_active = Column(Integer, default=True)
     role = Column(String)
+    phone_number = Column(String)
 
 
 class Movies(Base):
@@ -21,4 +22,5 @@ class Movies(Base):
     description = Column(String)
     rating = Column(Integer)
     watched = Column(Boolean, default=False)
+    genre = Column(String)
     owner_id = Column(Integer, ForeignKey("users.id"))
