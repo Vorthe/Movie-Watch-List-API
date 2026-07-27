@@ -84,7 +84,7 @@ async def update_movie(
     db.commit()
 
 
-@router.delete("/movie/{movie_id}")
+@router.delete("/movie/{movie_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_movie(user: user_dep, db: db_dep, movie_id: int = Path(gt=0)):
     if user is None:
         raise HTTPException(status_code=401, detail="Authentication Failed")
@@ -95,7 +95,7 @@ async def delete_movie(user: user_dep, db: db_dep, movie_id: int = Path(gt=0)):
         .first()
     )
     if movie_model is None:
-        HTTPException(status_code=404, detail="Movie Not Found")
+        raise HTTPException(status_code=404, detail="Movie Not Found")
     db.query(Movies).filter(Movies.id == movie_id).filter(
         Movies.owner_id == user.get("id")
     ).delete()
