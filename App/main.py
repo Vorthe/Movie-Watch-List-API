@@ -1,16 +1,25 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, status
+from fastapi.responses import RedirectResponse
 from .routers import auth, movies, admin, users
 from .models import Base
 from .database import engine
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
 
+app.mount("/static", StaticFiles(directory="App/static"), name="static")
+
+
+@app.get("/")
+def test(request: Request):
+    return RedirectResponse(url="/movies/movie-page", status_code=status.HTTP_302_FOUND)
+
+
 @app.get("/healthy")
 def health_check():
-    return{'status':'Healthy'}
-
+    return {"status": "Healthy"}
 
 
 app.include_router(auth.router)

@@ -7,7 +7,7 @@ app.dependency_overrides[get_current_user] = override_get_current_user
 
 
 def test_read_all_authenticated(test_movie):
-    response = client.get("/")
+    response = client.get("/movies")
     assert response.status_code == status.HTTP_200_OK
     assert response.json() == [
         {
@@ -23,7 +23,7 @@ def test_read_all_authenticated(test_movie):
 
 
 def test_read_one_authenticated(test_movie):
-    response = client.get("/movie/1")
+    response = client.get("movies/movie/1")
     assert response.status_code == status.HTTP_200_OK
     assert response.json() == {
         "title": "Brave Heart",
@@ -37,7 +37,7 @@ def test_read_one_authenticated(test_movie):
 
 
 def test_read_one_authenticated_not_found():
-    response = client.get("/movie/999")
+    response = client.get("movies/movie/999")
     assert response.status_code == 404
     assert response.json() == {"detail": "Movie Not Found"}
 
@@ -50,7 +50,7 @@ def test_create_movie(test_movie):
         "watched": False,
         "genre": "action",
     }
-    response = client.post("/movie", json=request_data)
+    response = client.post("movies/movie", json=request_data)
     assert response.status_code == 201
 
     db = TestingSessionLocal()
@@ -70,7 +70,7 @@ def test_update_movie(test_movie):
         "watched": False,
         "genre": "action",
     }
-    response = client.put("/movie/1", json=request_data)
+    response = client.put("movies/movie/1", json=request_data)
     assert response.status_code == 204
     db = TestingSessionLocal()
     model = db.query(Movies).filter(Movies.id == 1).first()
@@ -85,13 +85,13 @@ def test_update_movie_not_found(test_movie):
         "watched": False,
         "genre": "action",
     }
-    response = client.put("/movie/999", json=request_data)
+    response = client.put("movies/movie/999", json=request_data)
     assert response.status_code == 404
     assert response.json() == {"detail": "Movie Not Found"}
 
 
 def test_delete_movie(test_movie):
-    response = client.delete("/movie/1")
+    response = client.delete("movies/movie/1")
     assert response.status_code == 204
     db = TestingSessionLocal()
     model = db.query(Movies).filter(Movies.id == 1).first()
@@ -99,6 +99,6 @@ def test_delete_movie(test_movie):
 
 
 def test_delete_movie_not_found():
-    response = client.delete("/movie/999")
+    response = client.delete("movies/movie/999")
     assert response.status_code == 404
     assert response.json() == {"detail": "Movie Not Found"}
