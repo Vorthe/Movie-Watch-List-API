@@ -8,6 +8,7 @@ from starlette import status
 from .auth import get_current_user
 from starlette.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
+from sqlalchemy import func
 
 templates = Jinja2Templates(directory="App/templates")
 
@@ -33,6 +34,13 @@ class MovieRequest(BaseModel):
     rating: int = Field(gt=0, lt=11)
     watched: bool
     genre: str = Field(min_length=4, max_length=20)
+
+
+class MovieStats(BaseModel):
+    total_movies: int
+    watched_movies: int
+    unwatched_movies: int
+    average_rating: float
 
 
 ### Pages ###
@@ -97,9 +105,12 @@ async def render_edit_movie_page(request: Request, movie_id: int, db: db_dep):
 
 
 @router.get("/", status_code=status.HTTP_200_OK)
-async def read_all(user: user_dep, db: db_dep):
+async def read_all(user: user_dep, db: db_dep,genre:None):
     if user is None:
         raise HTTPException(status_code=401, detail="Authentication Failed")
+    if genre:
+        query=query.filter(Movies.genre==genre)
+        return query.all()
     movie_model = db.query(Movies).filter(Movies.owner_id == user.get("id")).all()
     return movie_model
 
@@ -167,3 +178,32 @@ async def delete_movie(user: user_dep, db: db_dep, movie_id: int = Path(gt=0)):
     ).delete()
 
     db.commit()
+
+
+@router.get("/stats", status_code=status.HTTP_200_OK)
+async def get_stats(user: user_dep, db: db_dep):
+    if user is None:
+        raise HTTPException(status_code=401, detail="Authentication Failed")
+
+    total_movies = db.query(Movies).filter(Movies.owner_id == user.get("id")).count()
+    watched_movies = (
+        db.query(Movies)
+        .filter(Movies.owner_id == user.get("id"))
+        .filter(Movies.watched)
+        .count()
+    )
+    unwatched_movies = total_movies - watched_movies
+    # unwatched_movies = db.query(Movies).filter(Movies.owner_id == user.get("id")).filter(Movies.watched==False).count()
+    average_rating = (
+        db.query(func.avg(Movies.rating))
+        .filter(Movies.owner_id == user.get("id"))
+        .filter(Movies.watched == True)
+        .scalar()
+    )  # توضیح این خط رو تو آبسیدین کامل نوشتم
+    average_rating = average_rating or 0
+    return {
+        "total_movies": total_movies,
+        "watched_movies": watched_movies,
+        "unwatched_movies": unwatched_movies,
+        "average_rating": average_rating,
+    }

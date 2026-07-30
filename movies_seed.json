@@ -1,0 +1,802 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Godfather",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Godfather: Part II",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Pulp Fiction",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Good, the Bad and the Ugly",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Dark Knight",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "12 Angry Men",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Schindler's List",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Fight Club",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Star Wars: Episode V - The Empire Strikes Back",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "One Flew Over the Cuckoo's Nest",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Inception",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Goodfellas",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Star Wars",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Seven Samurai",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Forrest Gump",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Matrix",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Lord of the Rings: The Two Towers",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "City of God",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Se7en",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Silence of the Lambs",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Once Upon a Time in the West",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Casablanca",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Usual Suspects",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Raiders of the Lost Ark",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Rear Window",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "It's a Wonderful Life",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Psycho",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "L\u00e9on: The Professional",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Sunset Blvd.",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "American History X",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Apocalypse Now",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Terminator 2: Judgment Day",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Saving Private Ryan",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Memento",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "City Lights",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Alien",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Modern Times",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Spirited Away",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "North by Northwest",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Back to the Future",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Life Is Beautiful",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Shining",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Pianist",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Citizen Kane",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Departed",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "M",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Paths of Glory",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Vertigo",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Django Unchained",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Double Indemnity",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Dark Knight Rises",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Aliens",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Taxi Driver",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "American Beauty",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Green Mile",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Gladiator",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Intouchables",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "WALL\u00b7E",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Lives of Others",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Toy Story 3",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Great Dictator",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Prestige",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "A Clockwork Orange",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Lawrence of Arabia",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Am\u00e9lie",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Reservoir Dogs",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Das Boot",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Lion King",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Cinema Paradiso",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Star Wars: Episode VI - Return of the Jedi",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Treasure of the Sierra Madre",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Third Man",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Once Upon a Time in America",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Requiem for a Dream",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Full Metal Jacket",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Oldboy",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Braveheart",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "L.A. Confidential",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Bicycle Thieves",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Chinatown",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Singin' in the Rain",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Princess Mononoke",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Monty Python and the Holy Grail",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Metropolis",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Rashomon",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Some Like It Hot",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Amadeus",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "2001: A Space Odyssey",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "All About Eve",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Witness for the Prosecution",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Sting",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "The Apartment",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Grave of the Fireflies",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    },
+    {
+        "title": "Indiana Jones and the Last Crusade",
+        "description": "IMDb Top Movie",
+        "rating": 10,
+        "watched": false,
+        "genre": "Drama",
+        "owner_id": 1
+    }
+]
