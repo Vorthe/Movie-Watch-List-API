@@ -1,4 +1,4 @@
-from ..routers.movies import get_db, get_current_user
+from ..App.routers.movies import get_db, get_current_user
 from fastapi import status
 from .utils import *
 

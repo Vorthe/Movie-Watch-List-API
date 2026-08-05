@@ -3,13 +3,13 @@ from fastapi.responses import RedirectResponse
 from .routers import auth, movies, admin, users
 from .models import Base
 from .database import engine
-from fastapi.staticfiles import StaticFiles
+# from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
 
-app.mount("/static", StaticFiles(directory="App/static"), name="static")
+# app.mount("/static", StaticFiles(directory="App/static"), name="static")
 
 
 @app.get("/")

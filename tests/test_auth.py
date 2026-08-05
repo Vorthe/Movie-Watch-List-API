@@ -1,5 +1,5 @@
 from .utils import *
-from ..routers.auth import (
+from ..App.routers.auth import (
     get_current_user,
     get_db,
     authentication_user,

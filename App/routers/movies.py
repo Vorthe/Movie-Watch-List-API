@@ -7,10 +7,10 @@ from ..database import SessionLocal
 from starlette import status
 from .auth import get_current_user
 from starlette.responses import RedirectResponse
-from fastapi.templating import Jinja2Templates
+# from fastapi.templating import Jinja2Templates
 from sqlalchemy import func, desc
 
-templates = Jinja2Templates(directory="App/templates")
+# templates = Jinja2Templates(directory="App/templates")
 
 
 router = APIRouter(prefix="/movies", tags=["movies"])
@@ -46,59 +46,59 @@ class MovieStats(BaseModel):
 ### Pages ###
 
 
-def redirect_to_login():
-    redirect_response = RedirectResponse(
-        url="/auth/login-page", status_code=status.HTTP_302_FOUND
-    )
-    redirect_response.delete_cookie(key="access_token")
-    return redirect_response
+# def redirect_to_login():
+#     redirect_response = RedirectResponse(
+#         url="/auth/login-page", status_code=status.HTTP_302_FOUND
+#     )
+#     redirect_response.delete_cookie(key="access_token")
+#     return redirect_response
 
 
-@router.get("/movie-page")
-async def render_movie_page(request: Request, db: db_dep):
-    try:
-        user = await get_current_user(request.cookies.get("access_token"))
-        if user is None:
-            return redirect_to_login()
-        movies = db.query(Movies).filter(Movies.owner_id == user.get("id")).all()
-        return templates.TemplateResponse(
-            request=request,
-            name="movie.html",
-            context={"request": request, "movies": movies, "user": user},
-        )
-    except:
-        return redirect_to_login()
+# @router.get("/movie-page")
+# async def render_movie_page(request: Request, db: db_dep):
+#     try:
+#         user = await get_current_user(request.cookies.get("access_token"))
+#         if user is None:
+#             return redirect_to_login()
+#         movies = db.query(Movies).filter(Movies.owner_id == user.get("id")).all()
+#         return templates.TemplateResponse(
+#             request=request,
+#             name="movie.html",
+#             context={"request": request, "movies": movies, "user": user},
+#         )
+#     except:
+#         return redirect_to_login()
 
 
-@router.get("/add-movie-page")
-async def render_movie_page(request: Request):
-    try:
-        user = await get_current_user(request.cookies.get("access_token"))
-        if user is None:
-            return redirect_to_login()
-        return templates.TemplateResponse(
-            request=request,
-            name="add-movie.html",
-            context={"request": request, "user": user},
-        )
-    except:
-        return redirect_to_login()
+# @router.get("/add-movie-page")
+# async def render_movie_page(request: Request):
+#     try:
+#         user = await get_current_user(request.cookies.get("access_token"))
+#         if user is None:
+#             return redirect_to_login()
+#         return templates.TemplateResponse(
+#             request=request,
+#             name="add-movie.html",
+#             context={"request": request, "user": user},
+#         )
+#     except:
+#         return redirect_to_login()
 
 
-@router.get("/edit-movie-page/{movie_id}")
-async def render_edit_movie_page(request: Request, movie_id: int, db: db_dep):
-    try:
-        user = await get_current_user(request.cookies.get("access_token"))
-        if user is None:
-            return redirect_to_login()
-        movie = db.query(Movies).filter(Movies.id == movie_id).first()
-        return templates.TemplateResponse(
-            request=request,
-            name="edit-movie.html",
-            context={"request": request, "movie": movie, "user": user},
-        )
-    except:
-        return redirect_to_login()
+# @router.get("/edit-movie-page/{movie_id}")
+# async def render_edit_movie_page(request: Request, movie_id: int, db: db_dep):
+#     try:
+#         user = await get_current_user(request.cookies.get("access_token"))
+#         if user is None:
+#             return redirect_to_login()
+#         movie = db.query(Movies).filter(Movies.id == movie_id).first()
+#         return templates.TemplateResponse(
+#             request=request,
+#             name="edit-movie.html",
+#             context={"request": request, "movie": movie, "user": user},
+#         )
+#     except:
+#         return redirect_to_login()
 
 
 ### Endpoints ###

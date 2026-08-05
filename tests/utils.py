@@ -1,12 +1,12 @@
 from sqlalchemy import create_engine, text
 from sqlalchemy.pool import StaticPool
 from sqlalchemy.orm import sessionmaker
-from ..database import Base
-from ..main import app
+from ..App.database import Base
+from ..App.main import app
 from fastapi.testclient import TestClient
 import pytest
-from ..models import Movies, Users
-from ..routers.auth import bycrypt_context
+from ..App.models import Movies, Users
+from ..App.routers.auth import bycrypt_context
 
 SQLALCHEMY_DATABASE_URL = "sqlite:///./testdb.db"
 

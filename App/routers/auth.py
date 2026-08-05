@@ -9,7 +9,7 @@ from passlib.context import CryptContext
 from starlette import status
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from jose import jwt, JWTError
-from fastapi.templating import Jinja2Templates
+# from fastapi.templating import Jinja2Templates
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -45,23 +45,23 @@ def get_db():
 
 
 db_dep = Annotated[Session, Depends(get_db)]
-templates = Jinja2Templates(directory="App/templates")
+# templates = Jinja2Templates(directory="App/templates")
 
 ### Pages ###
 
 
-@router.get("/login-page")
-def render_login_page(request: Request):
-    return templates.TemplateResponse(
-        request=request, name="login.html", context={"request": request}
-    )
+# @router.get("/login-page")
+# def render_login_page(request: Request):
+#     return templates.TemplateResponse(
+#         request=request, name="login.html", context={"request": request}
+#     )
 
 
-@router.get("/register-page")
-def render_register_page(request: Request):
-    return templates.TemplateResponse(
-        request=request, name="register.html", context={"request": request}
-    )
+# @router.get("/register-page")
+# def render_register_page(request: Request):
+#     return templates.TemplateResponse(
+#         request=request, name="register.html", context={"request": request}
+#     )
 
 
 ### Endpoints ###
