@@ -1,16 +1,28 @@
-# FastAPI Application
+# Movie Watch List API
 
-A simple Todo application built for learning and practicing modern Backend development with FastAPI.
+A Movie Watch List API built with FastAPI for learning and practicing modern backend development.
 
 The project demonstrates:
 
 * REST API development with FastAPI
-* Authentication with JWT
+* JWT Authentication
 * PostgreSQL integration
 * SQLAlchemy ORM
 * Alembic database migrations
 * Docker & Docker Compose
+* Automatic database migrations on container startup
 
+---
+
+## Features
+
+* JWT Authentication
+* User Management
+* Movie Watch List Management
+* PostgreSQL Database
+* SQLAlchemy ORM
+* Alembic Migrations
+* Dockerized Deployment
 
 ---
 
@@ -24,24 +36,25 @@ The project demonstrates:
 * Docker
 * Docker Compose
 
-
 ---
 
 ## Project Structure
 
 ```text
-FastAPI/
+movie-watch-list-api/
 │
 ├── App/
 │   ├── routers/
-│   ├── alembic/
 │   ├── main.py
 │   ├── database.py
 │   ├── models.py
 │   └── ...
 │
+├── alembic/
 ├── Dockerfile
 ├── docker-compose.yml
+├── alembic.ini
+├── requirements.txt
 ├── .env.example
 └── README.md
 ```
@@ -62,13 +75,13 @@ Make sure you have installed:
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Vorthe/Movie-Watch-List-API.git
 ```
 
 ### 2. Move into the project
 
 ```bash
-cd FastAPI
+cd movie-watch-list-api
 ```
 
 ### 3. Create the environment file
@@ -98,6 +111,8 @@ Build and start the containers:
 docker compose up --build
 ```
 
+The application automatically applies all Alembic migrations before starting the FastAPI server.
+
 ---
 
 ## API Documentation
@@ -107,6 +122,7 @@ Swagger UI:
 ```
 http://localhost:8000/docs
 ```
+
 ---
 
 ## Stop the project
@@ -128,6 +144,7 @@ docker compose down -v
 ## Notes
 
 * PostgreSQL runs inside a Docker container.
-* Database data is stored using a Docker volume.
+* Database data is persisted using a Docker volume.
+* Alembic migrations are automatically executed when the application container starts.
 * Sensitive information is stored in `.env` and is **not** committed to Git.
-* `.env.example` is provided as a template for configuration.
+* `.env.example` is provided as a template for local configuration.
