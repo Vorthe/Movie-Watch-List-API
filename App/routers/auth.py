@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+import os
 from datetime import datetime, timedelta, timezone
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, Request
@@ -9,13 +11,17 @@ from passlib.context import CryptContext
 from starlette import status
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from jose import jwt, JWTError
+
 # from fastapi.templating import Jinja2Templates
+
+load_dotenv()
+
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
 
-SECRET_KEY = "e7021fced3e98641c1e280c0fa6bc89b09cd9f523e97bec7071aae1ec3e18c72"
-ALGORITHM = "HS256"
+SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = os.getenv("ALGORITHM")
 
 bycrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl="auth/token")

@@ -7,7 +7,7 @@ from .database import engine
 
 app = FastAPI()
 
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 # app.mount("/static", StaticFiles(directory="App/static"), name="static")
 
