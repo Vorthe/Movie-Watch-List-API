@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "echo 'Waiting for database to be ready...'; for i in $(seq 1 10); do alembic upgrade head && break; echo \"Migration attempt $i failed. Retrying in 10 seconds...\"; sleep 10; done; echo 'Starting application...'; uvicorn App.main:app --host 0.0.0.0 --port 8000"]
+CMD ["sh", "-c", "echo 'Starting application...'; uvicorn App.main:app --host 0.0.0.0 --port 8000 & echo 'Waiting for database and running migrations in background...'; for i in $(seq 1 10); do alembic upgrade head && break; echo \"Migration attempt $i failed. Retrying in 10 seconds...\"; sleep 10; done; echo 'Migration finished or max retries reached.'; wait"]
