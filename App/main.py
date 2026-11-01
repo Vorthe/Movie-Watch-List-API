@@ -1,15 +1,25 @@
+import os
 from fastapi import FastAPI, Request, status
 from fastapi.responses import RedirectResponse
+from fastapi.middleware.cors import CORSMiddleware
 from .routers import auth, movies, admin, users
 from .models import Base
 from .database import engine
-# from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-# Base.metadata.create_all(bind=engine)
+cors_origins = os.getenv(
+    "CORS_ORIGINS",
+    "http://localhost:5173,http://127.0.0.1:5173",
+).split(",")
 
-# app.mount("/static", StaticFiles(directory="App/static"), name="static")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=cors_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
