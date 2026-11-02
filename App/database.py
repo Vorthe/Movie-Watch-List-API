@@ -12,13 +12,7 @@ engine = create_engine(
     DATABASE_URL,
     pool_pre_ping=True,
     poolclass=NullPool,
-    connect_args={
-        "sslmode": "require",
-        "keepalives": 1,
-        "keepalives_idle": 30,
-        "keepalives_interval": 10,
-        "keepalives_count": 5,
-    },
+    connect_args={"sslmode": "require"},
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "echo 'Starting application...'; uvicorn App.main:app --host 0.0.0.0 --port 8000 & echo 'Waiting for DB...'; python wait_for_db.py && alembic upgrade head; echo 'Migrations done!'; wait"]
+CMD ["python", "start.py"]
