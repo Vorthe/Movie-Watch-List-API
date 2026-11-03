@@ -11,9 +11,8 @@ if not db_url:
     exit(1)
 
 print("Waiting for database to wake up and accept connections...")
-for i in range(30):  # 30 بار تلاش (حدود 2.5 دقیقه)
+for i in range(30):
     try:
-        # تلاش برای اتصال ساده
         conn = psycopg2.connect(db_url, connect_timeout=5)
         conn.close()
         print("Database is fully awake and ready!")

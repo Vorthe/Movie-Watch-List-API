@@ -13,4 +13,12 @@ frontend/.env.local
 frontend/.env.*.local
 
 # scratch files
+project_export.txttestdb.db
+ci_test.db
+
+# test artifacts
+testdb.db
+ci_test.db
+
+# scratch
 project_export.txt

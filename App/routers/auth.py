@@ -129,7 +129,11 @@ def login_for_access_token(
 ):
     user = authentication_user(form_data.username, form_data.password, db)
     if not user:
-        return "Failed Authentication"
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Failed Authentication",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
     token = create_access_token(
         user.username, user.id, user.role, timedelta(minutes=20)
     )

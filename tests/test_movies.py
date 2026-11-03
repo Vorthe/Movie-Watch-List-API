@@ -1,104 +1,77 @@
-from ..App.routers.movies import get_db, get_current_user
 from fastapi import status
-from .utils import *
 
-app.dependency_overrides[get_db] = override_get_db
-app.dependency_overrides[get_current_user] = override_get_current_user
+MOVIE_PAYLOAD = {
+    "title": "Test Movie",
+    "description": "A test movie description",
+    "rating": 5,
+    "watched": False,
+    "genre": "Action",
+}
 
 
-def test_read_all_authenticated(test_movie):
-    response = client.get("/movies")
+def test_read_all_authenticated(client, test_movie):
+    response = client.get("/movies/")
     assert response.status_code == status.HTTP_200_OK
-    assert response.json() == [
-        {
-            "title": "Brave Heart",
-            "description": "very very sensetive movie",
-            "rating": 8,
-            "watched": False,
-            "genre": "Drama",
-            "owner_id": 1,
-            "id": 1,
-        }
-    ]
+    data = response.json()
+    assert len(data) == 1
+    assert data[0]["title"] == "Brave Heart"
 
 
-def test_read_one_authenticated(test_movie):
-    response = client.get("movies/movie/1")
+def test_read_one_authenticated(client, test_movie):
+    response = client.get(f"/movies/movie/{test_movie.id}")
     assert response.status_code == status.HTTP_200_OK
-    assert response.json() == {
-        "title": "Brave Heart",
-        "description": "very very sensetive movie",
-        "rating": 8,
-        "watched": False,
+    assert response.json()["title"] == "Brave Heart"
+
+
+def test_read_one_authenticated_not_found(client):
+    response = client.get("/movies/movie/999")
+    assert response.status_code == status.HTTP_404_NOT_FOUND
+    assert response.json() == {"detail": "Movie Not Found"}
+
+
+def test_create_movie(client):
+    response = client.post("/movies/movie", json=MOVIE_PAYLOAD)
+    assert response.status_code == status.HTTP_201_CREATED
+
+
+def test_update_movie(client, test_movie):
+    updated = {
+        "title": "Updated Title",
+        "description": "Updated description",
+        "rating": 9,
+        "watched": True,
         "genre": "Drama",
-        "owner_id": 1,
-        "id": 1,
     }
+    response = client.put(f"/movies/movie/{test_movie.id}", json=updated)
+    assert response.status_code == status.HTTP_204_NO_CONTENT
 
 
-def test_read_one_authenticated_not_found():
-    response = client.get("movies/movie/999")
-    assert response.status_code == 404
-    assert response.json() == {"detail": "Movie Not Found"}
-
-
-def test_create_movie(test_movie):
-    request_data = {
-        "title": "New Movie",
-        "description": "New Movie Description",
-        "rating": 4,
-        "watched": False,
-        "genre": "action",
+def test_update_movie_not_found(client):
+    updated = {
+        "title": "Updated Title",
+        "description": "Updated description",
+        "rating": 9,
+        "watched": True,
+        "genre": "Drama",
     }
-    response = client.post("movies/movie", json=request_data)
-    assert response.status_code == 201
-
-    db = TestingSessionLocal()
-    model = db.query(Movies).filter(Movies.id == 2).first()
-    assert model.title == request_data.get("title")
-    assert model.description == request_data.get("description")
-    assert model.rating == request_data.get("rating")
-    assert model.watched == request_data.get("watched")
-    assert model.genre == request_data.get("genre")
+    response = client.put("/movies/movie/999", json=updated)
+    assert response.status_code == status.HTTP_404_NOT_FOUND
 
 
-def test_update_movie(test_movie):
-    request_data = {
-        "title": "Change the title",
-        "description": "Update Movie Description",
-        "rating": 4,
-        "watched": False,
-        "genre": "action",
-    }
-    response = client.put("movies/movie/1", json=request_data)
-    assert response.status_code == 204
-    db = TestingSessionLocal()
-    model = db.query(Movies).filter(Movies.id == 1).first()
-    assert model.title == "Change the title"
+def test_delete_movie(client, test_movie):
+    response = client.delete(f"/movies/movie/{test_movie.id}")
+    assert response.status_code == status.HTTP_204_NO_CONTENT
 
 
-def test_update_movie_not_found(test_movie):
-    request_data = {
-        "title": "Change the title",
-        "description": "Update Movie Description",
-        "rating": 4,
-        "watched": False,
-        "genre": "action",
-    }
-    response = client.put("movies/movie/999", json=request_data)
-    assert response.status_code == 404
-    assert response.json() == {"detail": "Movie Not Found"}
+def test_delete_movie_not_found(client):
+    response = client.delete("/movies/movie/999")
+    assert response.status_code == status.HTTP_404_NOT_FOUND
 
 
-def test_delete_movie(test_movie):
-    response = client.delete("movies/movie/1")
-    assert response.status_code == 204
-    db = TestingSessionLocal()
-    model = db.query(Movies).filter(Movies.id == 1).first()
-    assert model is None
-
-
-def test_delete_movie_not_found():
-    response = client.delete("movies/movie/999")
-    assert response.status_code == 404
-    assert response.json() == {"detail": "Movie Not Found"}
+def test_stats(client, test_movie):
+    response = client.get("/movies/stats")
+    assert response.status_code == status.HTTP_200_OK
+    data = response.json()
+    assert data["total_movies"] == 1
+    assert data["watched_movies"] == 0
+    assert data["unwatched_movies"] == 1

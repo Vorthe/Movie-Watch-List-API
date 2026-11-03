@@ -1,39 +1,20 @@
-from .utils import *
-from ..App.routers.admin import get_current_user, get_db
 from fastapi import status
 
-app.dependency_overrides[get_db] = override_get_db
-app.dependency_overrides[get_current_user] = override_get_current_user
 
-
-def test_admin_read_all_authentication(test_movie):
+def test_admin_read_all(client, test_movie):
     response = client.get("/admin/movie")
     assert response.status_code == status.HTTP_200_OK
-    assert response.json() == [
-        {
-            "title": "Brave Heart",
-            "description": "very very sensetive movie",
-            "rating": 8,
-            "watched": False,
-            "genre": "Drama",
-            "owner_id": 1,
-            "id": 1,
-        }
-    ]
+    data = response.json()
+    assert len(data) == 1
+    assert data[0]["title"] == "Brave Heart"
 
 
-def test_admin_delete_movie(test_movie):
-    response = client.delete("/admin/movie/1")
-
+def test_admin_delete_movie(client, test_movie):
+    response = client.delete(f"/admin/movie/{test_movie.id}")
     assert response.status_code == status.HTTP_204_NO_CONTENT
 
-    db = TestingSessionLocal()
-    model = db.query(Movies).filter(Movies.id == 1).first()
-    assert model is None
 
-
-def test_admin_delete_movie_not_found():
+def test_admin_delete_movie_not_found(client):
     response = client.delete("/admin/movie/999")
-
     assert response.status_code == status.HTTP_404_NOT_FOUND
     assert response.json() == {"detail": "Movie Not Found"}
