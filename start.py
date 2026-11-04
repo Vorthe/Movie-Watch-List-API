@@ -7,10 +7,14 @@ from dotenv import load_dotenv
 load_dotenv()
 db_url = os.getenv("DATABASE_URL")
 
+# SSL is required only on managed DBs (e.g. Render); local Docker has no SSL.
+_require_ssl = os.getenv("DB_REQUIRE_SSL", "false").lower() == "true"
+_connect_args = {"sslmode": "require"} if _require_ssl else {}
+
 print("Waiting for database to wake up...")
 for i in range(20):
     try:
-        conn = psycopg2.connect(db_url, connect_timeout=5)
+        conn = psycopg2.connect(db_url, connect_timeout=5, **_connect_args)
         conn.close()
         print("Database is ready!")
         break

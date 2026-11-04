@@ -8,11 +8,14 @@ load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
+_require_ssl = os.getenv("DB_REQUIRE_SSL", "false").lower() == "true"
+_connect_args = {"sslmode": "require"} if _require_ssl else {}
+
 engine = create_engine(
     DATABASE_URL,
     pool_pre_ping=True,
     poolclass=NullPool,
-    connect_args={"sslmode": "require"},
+    connect_args=_connect_args,
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

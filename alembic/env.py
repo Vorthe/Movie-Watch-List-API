@@ -65,14 +65,14 @@ def run_migrations_offline() -> None:
 
 def run_migrations_online() -> None:
     """Run migrations in 'online' mode."""
+    _require_ssl = os.getenv("DB_REQUIRE_SSL", "false").lower() == "true"
+    _connect_args = {"sslmode": "require"} if _require_ssl else {}
 
     connectable = engine_from_config(
         config.get_section(config.config_ini_section, {}),
         prefix="sqlalchemy.",
         poolclass=NullPool,
-        connect_args={
-            "sslmode": "require",
-        },
+        connect_args=_connect_args,
     )
 
     with connectable.connect() as connection:
