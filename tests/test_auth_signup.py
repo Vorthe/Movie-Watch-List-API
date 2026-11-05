@@ -18,16 +18,16 @@ def test_signup_success(client):
 
 def test_signup_missing_required_fields(client):
     response = client.post("/auth/", json={"username": "x"})
-    assert response.status_code == status.HTTP_422_UNPROCESSABLE_ENTITY
+    assert response.status_code == status.HTTP_422_UNPROCESSABLE_CONTENT
 
 
 def test_signup_short_phone_number(client):
     payload = {**SIGNUP_PAYLOAD, "phone_number": "123"}
     response = client.post("/auth/", json=payload)
-    assert response.status_code == status.HTTP_422_UNPROCESSABLE_ENTITY
+    assert response.status_code == status.HTTP_422_UNPROCESSABLE_CONTENT
 
 
 def test_signup_too_long_phone_number(client):
     payload = {**SIGNUP_PAYLOAD, "phone_number": "123456789012345"}
     response = client.post("/auth/", json=payload)
-    assert response.status_code == status.HTTP_422_UNPROCESSABLE_ENTITY
+    assert response.status_code == status.HTTP_422_UNPROCESSABLE_CONTENT
