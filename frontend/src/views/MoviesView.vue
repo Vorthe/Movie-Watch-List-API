@@ -63,7 +63,7 @@ function handleRatingInput(movie, event) {
   if (ratingTimers[movieId]) clearTimeout(ratingTimers[movieId])
 
   ratingTimers[movieId] = setTimeout(async () => {
-    const rating = raw === '' ? null : Number(raw)
+    const rating = raw === '' ? null : Math.round(Number(raw))
     if (rating !== null && (rating < 1 || rating > 10)) return
 
     const watched = movie.user_status?.watched || false
@@ -191,6 +191,7 @@ onMounted(() => {
               type="number"
               min="1"
               max="10"
+              step="1"
               :value="movie.user_status?.rating ?? ''"
               @input="handleRatingInput(movie, $event)"
             />
