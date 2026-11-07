@@ -87,11 +87,16 @@ def fetch_genre_map(api_key: str) -> dict[int, str]:
     return {g["id"]: g["name"] for g in data["genres"]}
 
 
-def fetch_top_rated(api_key: str, target: int = TARGET_MOVIE_COUNT) -> list[dict]:
-    """Fetch up to `target` top-rated movies, one page at a time.
+def fetch_top_rated(
+    api_key: str,
+    target: int = TARGET_MOVIE_COUNT,
+    min_vote_count: int = 10000,
+) -> list[dict]:
+    """Fetch top-rated movies with at least min_vote_count votes.
 
-    Stops early if TMDB runs out of pages. Returns raw TMDB movie dicts.
-    Deduplicates by TMDB id in case pages overlap.
+    Uses /discover/movie (not /movie/top_rated) because discover lets us
+    filter by vote count. Without this filter, obscure movies with 20 votes
+    and a 9.5 average would rank above classics with 500,000 votes and 8.7.
     """
     movies: list[dict] = []
     seen_ids: set[int] = set()
@@ -101,8 +106,13 @@ def fetch_top_rated(api_key: str, target: int = TARGET_MOVIE_COUNT) -> list[dict
     while len(movies) < target and page <= total_pages:
         print(f"Fetching page {page} (collected {len(movies)}/{target})...")
         data = _request_json(
-            f"{TMDB_BASE_URL}/movie/top_rated",
-            params={"api_key": api_key, "page": page},
+            f"{TMDB_BASE_URL}/discover/movie",
+            params={
+                "api_key": api_key,
+                "page": page,
+                "sort_by": "vote_average.desc",
+                "vote_count.gte": min_vote_count,
+            },
         )
         total_pages = data["total_pages"]
 

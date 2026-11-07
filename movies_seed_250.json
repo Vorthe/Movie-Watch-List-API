@@ -1,53 +1,5 @@
 [
   {
-    "title": "Batman: Knightfall Part 1: Knightfall",
-    "description": "Arkham Asylum has been destroyed, and all its inmates have been unleashed upon Gotham City. As Batman races to round up some of his greatest enemies, he is pushed to his physical and mental limits and",
-    "genre": "Animation",
-    "external_rating": 9.1,
-    "external_id": "1560520",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Avatar Aang: The Last Airbender",
-    "description": "Avatar Aang, the world's last Airbender, learns of an ancient power that could save his culture from extinction. With the help of his friends, he embarks on a global quest to find it before it falls i",
-    "genre": "Animation",
-    "external_rating": 9.0,
-    "external_id": "980431",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Swapped",
-    "description": "A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a g",
-    "genre": "Adventure",
-    "external_rating": 8.8,
-    "external_id": "1007757",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Accidental Partners",
-    "description": "Two women discover they were both scammed by the same man (who also got them pregnant). They form an alliance to take revenge.",
-    "genre": "Comedy",
-    "external_rating": 8.8,
-    "external_id": "1632181",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
-    "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji beg",
-    "genre": "Animation",
-    "external_rating": 8.8,
-    "external_id": "1311031",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Facing El Chapo",
-    "description": "Two Mexican officers must survive the final hours of their shift after crossing a ruthless cartel boss.",
-    "genre": "Crime",
-    "external_rating": 8.8,
-    "external_id": "1621552",
-    "external_source": "tmdb"
-  },
-  {
     "title": "The Shawshank Redemption",
     "description": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an a",
     "genre": "Drama",
@@ -64,43 +16,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Project Hail Mary",
-    "description": "Science teacher Ryland Grace wakes up on a spaceship light years from home with no recollection of who he is or how he got there. As his memory returns, he begins to uncover his mission: solve the rid",
-    "genre": "Science Fiction",
-    "external_rating": 8.6,
-    "external_id": "687163",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Young Hearts",
-    "description": "14-year-old Elias increasingly feels like an outsider in his village. When he meets his new neighbour of the same age, Alexander, Elias is confronted with his burgeoning sexuality.",
-    "genre": "Drama",
-    "external_rating": 8.6,
-    "external_id": "1232449",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Michael",
-    "description": "The story of Michael Jackson, one of the most influential artists the world has ever known, and his life beyond the music. His journey from the discovery of his extraordinary talent as the lead of the",
-    "genre": "Music",
-    "external_rating": 8.6,
-    "external_id": "936075",
-    "external_source": "tmdb"
-  },
-  {
     "title": "12 Angry Men",
     "description": "The defense and the prosecution have rested and the jury is filing into the jury room to decide if a young Spanish-American is guilty or innocent of murdering his father. What begins as an open and sh",
     "genre": "Drama",
     "external_rating": 8.6,
     "external_id": "389",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "My Dearest Assassin",
-    "description": "Hunted for her rare blood type, a caged woman vows to fight alongside the assassin she loves to protect their future when an old enemy resurfaces.",
-    "genre": "Action",
-    "external_rating": 8.6,
-    "external_id": "1630423",
     "external_source": "tmdb"
   },
   {
@@ -117,14 +37,6 @@
     "genre": "Drama",
     "external_rating": 8.6,
     "external_id": "424",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Chainsaw Man - The Movie: Reze Arc",
-    "description": "In a brutal war between devils, hunters, and secret enemies, a mysterious girl named Reze has stepped into Denji's world, and he faces his deadliest battle yet, fueled by love in a world where surviva",
-    "genre": "Animation",
-    "external_rating": 8.5,
-    "external_id": "1218925",
     "external_source": "tmdb"
   },
   {
@@ -160,14 +72,6 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Dilwale Dulhania Le Jayenge",
-    "description": "Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran ha",
-    "genre": "Comedy",
-    "external_rating": 8.5,
-    "external_id": "19404",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Interstellar",
     "description": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
     "genre": "Adventure",
@@ -192,14 +96,6 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Spider-Man: Brand New Day",
-    "description": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to ",
-    "genre": "Science Fiction",
-    "external_rating": 8.5,
-    "external_id": "969681",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Pulp Fiction",
     "description": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that i",
     "genre": "Thriller",
@@ -208,27 +104,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Harakiri",
-    "description": "Down-on-his-luck veteran Tsugumo Hanshirō enters the courtyard of the prosperous House of Iyi. Unemployed, and with no family, he hopes to find a place to commit seppuku—and a worthy second to deliver",
-    "genre": "Action",
-    "external_rating": 8.5,
-    "external_id": "14537",
-    "external_source": "tmdb"
-  },
-  {
     "title": "The Good, the Bad and the Ugly",
     "description": "While the Civil War rages on between the Union and the Confederacy, three men – a quiet loner, a ruthless hitman, and a Mexican bandit – comb the American Southwest in search of a strongbox containing",
     "genre": "Western",
     "external_rating": 8.5,
     "external_id": "429",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Impossible Things",
-    "description": "After the death of her abusive husband, Matilde finds her new best friend in Miguel, her young, insecure, and disoriented neighbor.",
-    "genre": "Family",
-    "external_rating": 8.5,
-    "external_id": "667257",
     "external_source": "tmdb"
   },
   {
@@ -248,35 +128,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Seven Samurai",
-    "description": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend ",
-    "genre": "Action",
-    "external_rating": 8.5,
-    "external_id": "346",
-    "external_source": "tmdb"
-  },
-  {
     "title": "The Lord of the Rings: The Fellowship of the Ring",
     "description": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowshi",
     "genre": "Adventure",
     "external_rating": 8.4,
     "external_id": "120",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Grave of the Fireflies",
-    "description": "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move",
-    "genre": "Animation",
-    "external_rating": 8.5,
-    "external_id": "12477",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "¿Quieres ser mi hijo?",
-    "description": "Lu, a conformist woman in her forties, learns that her 15-year partner has been having extramarital affairs. Starting from scratch, she gets involved in an unexpected relationship with a young womaniz",
-    "genre": "Comedy",
-    "external_rating": 8.4,
-    "external_id": "1181678",
     "external_source": "tmdb"
   },
   {
@@ -296,43 +152,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Cinema Paradiso",
-    "description": "A filmmaker recalls his childhood, when he fell in love with the movies at his village's theater and formed a deep friendship with the theater's projectionist.",
-    "genre": "Drama",
-    "external_rating": 8.4,
-    "external_id": "11216",
-    "external_source": "tmdb"
-  },
-  {
     "title": "The Lord of the Rings: The Two Towers",
     "description": "Frodo Baggins and the other members of the Fellowship continue on their sacred quest to destroy the One Ring--but on separate paths. Their destinies lie at two towers - Orthanc Tower in Isengard, wher",
     "genre": "Adventure",
     "external_rating": 8.4,
     "external_id": "121",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "City of God",
-    "description": "In the poverty-stricken favelas of Rio de Janeiro in the 1970s, two young men choose different paths. Rocket is a budding photographer who documents the increasing drug-related violence of his neighbo",
-    "genre": "Drama",
-    "external_rating": 8.4,
-    "external_id": "598",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Lucy Shimmers and the Prince of Peace",
-    "description": "Second chances start when a hardened criminal crosses paths with a precocious little girl who is helped by an angel to change hearts during the holiday season.",
-    "genre": "Drama",
-    "external_rating": 8.4,
-    "external_id": "770156",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Legend of Hei",
-    "description": "When cat spirit Luo Xiaohei's home is deforested by humans, he must find a new one. He runs into a group of other spirit creatures who take him under their wing with dreams of reconquering the land th",
-    "genre": "Animation",
-    "external_rating": 8.4,
-    "external_id": "620249",
     "external_source": "tmdb"
   },
   {
@@ -360,30 +184,6 @@
     "external_source": "tmdb"
   },
   {
-    "title": "A Dog's Will",
-    "description": "The lively João Grilo and the sly Chicó are poor guys living in the hinterland who cheat a bunch of people in a small town in Northeastern Brazil. When they die, they have to be judged by Christ, the ",
-    "genre": "Comedy",
-    "external_rating": 8.4,
-    "external_id": "40096",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "A Silent Voice: The Movie",
-    "description": "Shouya Ishida starts bullying the new girl in class, Shouko Nishimiya, because she is deaf. But as the teasing continues, the rest of the class starts to turn on Shouya for his lack of compassion. Whe",
-    "genre": "Animation",
-    "external_rating": 8.4,
-    "external_id": "378064",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Hope",
-    "description": "After 8-year-old So-won narrowly survives a brutal sexual assault, her family labors to help her heal while coping with their own rage and grief.",
-    "genre": "Drama",
-    "external_rating": 8.4,
-    "external_id": "255709",
-    "external_source": "tmdb"
-  },
-  {
     "title": "The Empire Strikes Back",
     "description": "The epic saga continues as Luke Skywalker, in hopes of defeating the evil Galactic Empire, learns the ways of the Jedi from aging master Yoda. But Darth Vader is more determined than ever to capture L",
     "genre": "Adventure",
@@ -400,35 +200,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Protector",
-    "description": "Nikki's life is shattered when her daughter is kidnapped. Thrust into the criminal underworld while hunted by cops and military, she must fight to rescue her child.",
-    "genre": "Action",
-    "external_rating": 8.4,
-    "external_id": "1383731",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "High and Low",
-    "description": "A Yokohama shoe executive faces a wrenching choice when kidnappers mistakenly seize his chauffeur’s son but demand the ransom anyway.",
-    "genre": "Drama",
-    "external_rating": 8.4,
-    "external_id": "12493",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Se7en",
     "description": "Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the \"seven deadly sins\" in this dark and haunting film that takes viewers from the tortured remains of one",
     "genre": "Crime",
     "external_rating": 8.4,
     "external_id": "807",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Gabriel's Inferno",
-    "description": "An intriguing and sinful exploration of seduction, forbidden love, and redemption, Gabriel's Inferno is a captivating and wildly passionate tale of one man's escape from his own personal hell as he tr",
-    "genre": "Romance",
-    "external_rating": 8.4,
-    "external_id": "696374",
     "external_source": "tmdb"
   },
   {
@@ -456,67 +232,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Once Upon a Time in America",
-    "description": "A former Prohibition-era Jewish gangster returns to the Lower East Side of Manhattan over thirty years later, where he once again must confront the ghosts and regrets of his old life.",
-    "genre": "Drama",
-    "external_rating": 8.4,
-    "external_id": "311",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Shadow's Edge",
-    "description": "Macau Police brings the tracking expert police officer out of retirement to help catch a dangerous group of professional thieves.",
-    "genre": "Action",
-    "external_rating": 8.4,
-    "external_id": "1419406",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Remarkably Bright Creatures",
-    "description": "Through unlikely bonds formed during night shifts at a local aquarium, Tova, an elderly widow, learns of a life-changing discovery that may bring her joy and wonder once again.",
-    "genre": "Drama",
-    "external_rating": 8.3,
-    "external_id": "1330021",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Spider-Man: Across the Spider-Verse",
-    "description": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged wit",
-    "genre": "Animation",
-    "external_rating": 8.3,
-    "external_id": "569094",
-    "external_source": "tmdb"
-  },
-  {
     "title": "The Silence of the Lambs",
     "description": "Clarice Starling is a top student at the FBI's training academy.  Jack Crawford wants Clarice to interview Dr. Hannibal Lecter, a brilliant psychiatrist who is also a violent psychopath, serving life ",
     "genre": "Crime",
     "external_rating": 8.3,
     "external_id": "274",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Radical",
-    "description": "In a Mexican border town plagued by neglect, corruption, and violence, a frustrated teacher tries an unorthodox new method to break through his students’ apathy and unlock their curiosity, their poten",
-    "genre": "Drama",
-    "external_rating": 8.3,
-    "external_id": "1058694",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Gabriel's Inferno: Part II",
-    "description": "Professor Gabriel Emerson finally learns the truth about Julia Mitchell's identity, but his realization comes a moment too late. Julia is done waiting for the well-respected Dante specialist to rememb",
-    "genre": "Romance",
-    "external_rating": 8.3,
-    "external_id": "724089",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Rear Window",
-    "description": "A wheelchair-bound photographer spies on his neighbors from his apartment window and becomes convinced one of them has committed murder.",
-    "genre": "Thriller",
-    "external_rating": 8.3,
-    "external_id": "567",
     "external_source": "tmdb"
   },
   {
@@ -528,75 +248,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Gabriel's Inferno: Part III",
-    "description": "The final part of the film adaption of the erotic romance novel Gabriel's Inferno written by an anonymous Canadian author under the pen name Sylvain Reynard.",
-    "genre": "Romance",
-    "external_rating": 8.3,
-    "external_id": "761053",
-    "external_source": "tmdb"
-  },
-  {
     "title": "American History X",
     "description": "Derek Vineyard is paroled after serving 3 years in prison for killing two African-American men. Through his brother, Danny Vineyard's narration, we learn that before going to prison, Derek was a skinh",
     "genre": "Drama",
     "external_rating": 8.3,
     "external_id": "73",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Princess Mononoke",
-    "description": "Ashitaka, a prince of the disappearing Emishi people, is cursed by a demonized boar god and must journey to the west to find a cure. Along the way, he encounters San, a young human woman fighting to p",
-    "genre": "Adventure",
-    "external_rating": 8.3,
-    "external_id": "128",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Ikiru",
-    "description": "Kanji Watanabe is a middle-aged man who has worked in the same monotonous bureaucratic position for decades. Learning he has cancer, he starts to look for the meaning of his life.",
-    "genre": "Drama",
-    "external_rating": 8.3,
-    "external_id": "3782",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Wild Robot",
-    "description": "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
-    "genre": "Family",
-    "external_rating": 8.3,
-    "external_id": "1184918",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Violet Evergarden: The Movie",
-    "description": "As the world moves on from the war and technological advances bring changes to her life, Violet still hopes to see her lost commanding officer again.",
-    "genre": "Animation",
-    "external_rating": 8.3,
-    "external_id": "533514",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "I Swear",
-    "description": "Diagnosed with Tourette Syndrome at 15, John Davidson navigates his way against the odds through troubled teenage years and into adulthood, finding inspiration in the kindness of others to discover hi",
-    "genre": "Drama",
-    "external_rating": 8.3,
-    "external_id": "1317149",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Dou kyu sei – Classmates",
-    "description": "Rihito Sajo, an honor student with a perfect score on the entrance exam and Hikaru Kusakabe, in a band and popular among girls, would have never crossed paths. Until one day they started talking at th",
-    "genre": "Romance",
-    "external_rating": 8.3,
-    "external_id": "372754",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Perfect Blue",
-    "description": "Rising pop star Mima Kirigoe quits singing to pursue a career as an actress. After she takes up a role on a popular detective show, her handlers and collaborators begin turning up murdered. Harboring ",
-    "genre": "Animation",
-    "external_rating": 8.3,
-    "external_id": "10494",
     "external_source": "tmdb"
   },
   {
@@ -616,115 +272,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Modern Times",
-    "description": "A bumbling tramp desires to build a home with a young woman, yet is thwarted time and time again by his lack of experience and habit of being in the wrong place at the wrong time...",
-    "genre": "Comedy",
-    "external_rating": 8.3,
-    "external_id": "3082",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Quintessential Quintuplets Movie",
-    "description": "When five lovely young girls who hate studying hire part-time tutor Futaro, he guides not only their education but also their hearts. Time spent has brought them all closer, with feelings growing with",
-    "genre": "Animation",
-    "external_rating": 8.3,
-    "external_id": "820067",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Voicemails for Isabelle",
-    "description": "A young woman's hilariously confessional voicemails to her late sister are unknowingly redirected to a stranger, who begins to fall in love from afar.",
-    "genre": "Romance",
-    "external_rating": 8.3,
-    "external_id": "614945",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Great Dictator",
-    "description": "Dictator Adenoid Hynkel tries to expand his empire while a poor Jewish barber tries to avoid persecution from Hynkel's regime.",
-    "genre": "Comedy",
-    "external_rating": 8.3,
-    "external_id": "914",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "We All Loved Each Other So Much",
-    "description": "Three partisans bound by a strong friendship return home after the war, but the clash with everyday reality puts a strain on their bond.",
-    "genre": "Drama",
-    "external_rating": 8.3,
-    "external_id": "42269",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Dedicated to my ex",
-    "description": "The film tells the story of Ariel, a 21-year-old who decides to form a rock band to compete for a prize of ten thousand dollars in a musical band contest, this as a last option when trying to get mone",
-    "genre": "Drama",
-    "external_rating": 8.3,
-    "external_id": "644479",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "It's a Wonderful Life",
-    "description": "George Bailey has spent his entire life giving to the people of Bedford Falls.  All that prevents rich skinflint Mr. Potter from taking over the entire town is George's modest building and loan compan",
-    "genre": "Drama",
-    "external_rating": 8.3,
-    "external_id": "1585",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Runner",
-    "description": "A former soldier is thrown into a brutal race against time when a critical medical delivery makes him and his unlikely partner the targets of a ruthless cartel. As the mission spirals into a deadly ma",
-    "genre": "Action",
-    "external_rating": 8.3,
-    "external_id": "1377237",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Toy Story 5",
-    "description": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new",
-    "genre": "Animation",
-    "external_rating": 8.3,
-    "external_id": "1084244",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Counterattack",
-    "description": "When a hostage rescue mission creates a new enemy, Capt. Guerrero and his elite soldiers must face an ambush by a criminal group.",
-    "genre": "Action",
-    "external_rating": 8.3,
-    "external_id": "1356039",
-    "external_source": "tmdb"
-  },
-  {
     "title": "The Intouchables",
     "description": "A true story of two men who should never have met – a quadriplegic aristocrat who was injured in a paragliding accident and a young man from the projects.",
     "genre": "Drama",
     "external_rating": 8.3,
     "external_id": "77338",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Sunset Boulevard",
-    "description": "A hack screenwriter writes a screenplay for a former silent film star who has faded into Hollywood obscurity.",
-    "genre": "Drama",
-    "external_rating": 8.3,
-    "external_id": "599",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Out of the Clear Blue Sky",
-    "description": "Returning to Earth as an imitator, the legendary Mexican artist Pedro Infante must prove that he is no longer a womanizer to enter paradise.",
-    "genre": "Comedy",
-    "external_rating": 8.3,
-    "external_id": "654299",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Neon Genesis Evangelion: The End of Evangelion",
-    "description": "SEELE orders an all-out attack on NERV, aiming to destroy the Evas before Gendo can advance his own plans for the Human Instrumentality Project. Shinji is pushed to the limits of his sanity as he is f",
-    "genre": "Animation",
-    "external_rating": 8.3,
-    "external_id": "18491",
     "external_source": "tmdb"
   },
   {
@@ -736,115 +288,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Once Upon a Time in the West",
-    "description": "As the railroad builders advance unstoppably through the Arizona desert on their way to the sea, Jill arrives in the small town of Flagstone with the intention of starting a new life.",
-    "genre": "Drama",
-    "external_rating": 8.3,
-    "external_id": "335",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Apocalypse Now",
-    "description": "At the height of the Vietnam war, Captain Benjamin Willard is sent on a dangerous mission that, officially, \"does not exist, nor will it ever exist.\" His goal is to locate - and eliminate - a mysterio",
-    "genre": "Drama",
-    "external_rating": 8.3,
-    "external_id": "28",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Paths of Glory",
-    "description": "A commanding officer defends three scapegoats on trial for a failed offensive that occurred within the French Army in 1916.",
-    "genre": "War",
-    "external_rating": 8.3,
-    "external_id": "975",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "I Want to Eat Your Pancreas",
-    "description": "After his classmate and crush is diagnosed with a pancreatic disease, an average high schooler sets out to make the most of her final days.",
-    "genre": "Animation",
-    "external_rating": 8.3,
-    "external_id": "504253",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Michael Jackson's Thriller",
-    "description": "A night at the movies turns terrifying when Michael and his date are attacked by zombies.",
-    "genre": "Horror",
-    "external_rating": 8.3,
-    "external_id": "92060",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Punisher: One Last Kill",
-    "description": "As Frank Castle searches for meaning beyond revenge, an unexpected force pulls him back into the fight.",
-    "genre": "Action",
-    "external_rating": 8.3,
-    "external_id": "1439930",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Once Upon a Studio",
-    "description": "Created for Disney's 100th anniversary, the short features Mickey Mouse corralling a gallery of legendary Disney characters for a group photo.",
-    "genre": "Animation",
-    "external_rating": 8.3,
-    "external_id": "1139087",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Hotarubi no Mori e",
-    "description": "One hot summer day a little girl gets lost in an enchanted forest of the mountain god where spirits reside. A young boy appears before her, but she cannot touch him for fear of making him disappear. A",
-    "genre": "Romance",
-    "external_rating": 8.3,
-    "external_id": "92321",
-    "external_source": "tmdb"
-  },
-  {
     "title": "The Lion King",
     "description": "Young lion prince Simba, eager to one day become king of the Pride Lands, grows up under the watchful eye of his father Mufasa; all the while his villainous uncle Scar conspires to take the throne for",
     "genre": "Animation",
     "external_rating": 8.3,
     "external_id": "8587",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Miracle in Cell No. 7",
-    "description": "Separated from his daughter, a father with an intellectual disability must prove his innocence when he is jailed for the death of a commander's child.",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "637920",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Innocent Voices",
-    "description": "A young boy, attempting to have a normal childhood in 1980s El Salvador, is caught up in a dramatic fight for his life when he desperately tries to avoid the war that is raging all around him.",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "20941",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Josee, the Tiger and the Fish",
-    "description": "With dreams of diving abroad, Tsuneo gets a job assisting Josee, an artist whose imagination takes her far beyond her wheelchair. But when the tide turns against them, they push each other to places t",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "652837",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Avengers: Endgame",
-    "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in",
-    "genre": "Adventure",
-    "external_rating": 8.2,
-    "external_id": "299534",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "City Lights",
-    "description": "A tramp falls in love with a beautiful blind flower girl. His on-and-off friendship with a wealthy man allows him to be the girl's benefactor and suitor.",
-    "genre": "Comedy",
-    "external_rating": 8.2,
-    "external_id": "901",
     "external_source": "tmdb"
   },
   {
@@ -856,43 +304,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Clouds",
-    "description": "Young musician Zach Sobiech discovers his cancer has spread, leaving him just a few months to live. With limited time, he follows his dream and makes an album, unaware that it will soon be a viral mus",
-    "genre": "Music",
+    "title": "Avengers: Endgame",
+    "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in",
+    "genre": "Adventure",
     "external_rating": 8.2,
-    "external_id": "630566",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Furious",
-    "description": "When Wang Wei's daughter is abducted by a criminal organization and law enforcement declines to intervene due to corruption, Wei embarks on a solo mission to find her. His sole ally is Navin, a determ",
-    "genre": "Action",
-    "external_rating": 8.2,
-    "external_id": "1280738",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Bound by Honor",
-    "description": "Based on the true life experiences of poet Jimmy Santiago Baca, the film focuses on half-brothers Paco and Cruz, and their bi-racial cousin Miklo. It opens in 1972, as the three are members of an East",
-    "genre": "Crime",
-    "external_rating": 8.2,
-    "external_id": "9702",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Le Trou",
-    "description": "Four prison inmates have been hatching a plan to literally dig out of jail when another prisoner, Claude Gaspard, is moved into their cell. They take a risk and share their plan with the newcomer. Ove",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "29259",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "To Live",
-    "description": "Married couple Fugui and Jiazhen endure tumultuous events in mid-20th century mainland China as their personal fortunes move from wealthy landownership to peasantry.",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "31439",
+    "external_id": "299534",
     "external_source": "tmdb"
   },
   {
@@ -901,14 +317,6 @@
     "genre": "War",
     "external_rating": 8.2,
     "external_id": "857",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Il Sorpasso",
-    "description": "Roberto, a shy law student in Rome, meets Bruno, a forty-year-old exuberant, capricious man, who takes him for a drive through the Roman and Tuscany countries in the summer. When their journey starts ",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "24188",
     "external_source": "tmdb"
   },
   {
@@ -928,75 +336,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
-    "description": "Tanjiro Kamado, joined with Inosuke Hashibira, a boy raised by boars who wears a boar's head, and Zenitsu Agatsuma, a scared boy who reveals his true power when he sleeps, boards the Infinity Train on",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "635302",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Legend of 1900",
-    "description": "Musician Max Tooney goes to sell his prized Conn trumpet to a music shop, where he plays the instrument one last time. The shopkeeper recognises the song as one on a record matrix he found and asks wh",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "10376",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Life in a Year",
-    "description": "A 17 year old finds out that his girlfriend is dying, so he sets out to give her an entire life, in the last year she has left.",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "447362",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Rascal Does Not Dream of a Dreaming Girl",
-    "description": "In Fujisawa, Sakuta Azusagawa is in his second year of high school. Blissful days with his girlfriend and upperclassman, Mai Sakurajima, are interrupted by the appearance of his first crush, Shoko Mak",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "572154",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Green Book",
     "description": "Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segr",
     "genre": "Drama",
     "external_rating": 8.2,
     "external_id": "490132",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Given",
-    "description": "Haruki secretly had feelings for Akihiko for years, but Akihiko was still in a relationship with his roommate, the violinist Ugetsu Murata. Haruki, Akihiko, and Ugetsu's love clashes and starts to mov",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "632632",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
-    "description": "In the aftermath of the Fourth Impact, stranded without their Evangelions, Shinji, Asuka and Rei find refuge in one of the rare pockets of humanity that still exist on the ruined planet Earth. There, ",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "283566",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Puss in Boots: The Last Wish",
-    "description": "Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find ",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "315162",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Coyote vs. Acme",
-    "description": "After Acme products fail him one too many times in his dogged pursuit of the Roadrunner, Wile E. Coyote decides to hire a billboard lawyer to sue the Acme Corporation.",
-    "genre": "Comedy",
-    "external_rating": 8.2,
-    "external_id": "1204680",
     "external_source": "tmdb"
   },
   {
@@ -1008,59 +352,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Wolf Children",
-    "description": "After her werewolf lover unexpectedly dies in an accident, a woman must find a way to raise the son and daughter that she had with him. However, their inheritance of their father's traits prove to be ",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "110420",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Klaus",
-    "description": "A selfish postman and a reclusive toymaker form an unlikely friendship, delivering joy to a cold, dark town that desperately needs it.",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "508965",
-    "external_source": "tmdb"
-  },
-  {
     "title": "The Prestige",
     "description": "A mysterious story of two magicians whose intense rivalry leads them on a life-long battle for supremacy -- full of obsession, deceit and jealousy with dangerous and deadly consequences.",
     "genre": "Drama",
     "external_rating": 8.2,
     "external_id": "1124",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Witness for the Prosecution",
-    "description": "An ailing barrister is thrust back into the courtroom in what becomes one of the most unusual and eventful murder cases of the lawyer's career when he finds himself defending a man being tried for the",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "37257",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "A Brighter Summer Day",
-    "description": "A boy experiences first love, friendships and injustices growing up in 1960s Taiwan.",
-    "genre": "Crime",
-    "external_rating": 8.2,
-    "external_id": "15804",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Five Feet Apart",
-    "description": "Seventeen-year-old Stella spends most of her time in the hospital as a cystic fibrosis patient. Her life is full of routines, boundaries and self-control — all of which get put to the test when she me",
-    "genre": "Romance",
-    "external_rating": 8.2,
-    "external_id": "527641",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Colony",
-    "description": "Professor Se-jeong is thrust into a bloody nightmare when a rapidly mutating virus is released during a biotech conference causing authorities to seal the facility. Trapped inside with no escape, Se-j",
-    "genre": "Horror",
-    "external_rating": 8.2,
-    "external_id": "1375646",
     "external_source": "tmdb"
   },
   {
@@ -1077,38 +373,6 @@
     "genre": "Adventure",
     "external_rating": 8.2,
     "external_id": "11",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Ne Zha 2",
-    "description": "After a catastrophic event leaves their bodies destroyed, Ne Zha and Ao Bing are granted a fragile second chance at life. As tensions rise between the dragon clans and celestial forces, the two must u",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "980477",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Help",
-    "description": "Aibileen Clark is a middle-aged African-American maid who has spent her life raising white children and has recently lost her only son; Minny Jackson is an African-American maid who has often offended",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "50014",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Steven Universe: The Movie",
-    "description": "Two years after bringing peace to the galaxy, Steven Universe sees his past come back to haunt him in the form of a deranged Gem who wants to destroy the Earth.",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "537061",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Boy, the Mole, the Fox and the Horse",
-    "description": "The unlikely friendship of a boy, a mole, a fox and a horse traveling together in the boy's search for home.",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "995133",
     "external_source": "tmdb"
   },
   {
@@ -1136,99 +400,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Investigation of a Citizen Above Suspicion",
-    "description": "Rome, Italy. After committing a heinous crime, a senior police officer exposes evidence incriminating him because his moral commitment prevents him from circumventing the law and the social order it p",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "26451",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Hacksaw Ridge",
     "description": "WWII American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people and becomes the first Conscientious Objector in American history to receive the Congressional ",
     "genre": "Drama",
     "external_rating": 8.2,
     "external_id": "324786",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Justice League Dark: Apokolips War",
-    "description": "Earth is decimated after intergalactic tyrant Darkseid has devastated the Justice League in a poorly executed war by the DC Super Heroes. Now the remaining bastions of good – the Justice League, Teen ",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "618344",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Taylor Swift: Reputation Stadium Tour",
-    "description": "Taylor Swift takes the stage in Dallas for the Reputation Stadium Tour and celebrates a monumental night of music, memories and visual magic.",
-    "genre": "Music",
-    "external_rating": 8.2,
-    "external_id": "568332",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Mommy",
-    "description": "A peculiar neighbor offers hope to a recent widow who is struggling to raise a teenager who is unpredictable and, sometimes, violent.",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "265177",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Apartment",
-    "description": "Bud Baxter is a minor clerk in a huge New York insurance company, until he discovers a quick way to climb the corporate ladder. He lends out his apartment to the executives as a place to take their mi",
-    "genre": "Comedy",
-    "external_rating": 8.2,
-    "external_id": "284",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Come and See",
-    "description": "The invasion of a village in Belarus by German forces sends young Flyora into the forest to join the weary Resistance fighters, against his family's wishes. There he meets a girl, Glasha, who accompan",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "25237",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Look Back",
-    "description": "Popular, outgoing Fujino is celebrated by her classmates for her funny comics in the class newspaper. One day, her teacher asks her to share the space with Kyomoto, a truant recluse whose beautiful ar",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "1244492",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Super Mario Galaxy Movie",
-    "description": "Having thwarted Bowser's previous plot to marry Princess Peach, Mario and Luigi now face a fresh threat in Bowser Jr., who is determined to liberate his father from captivity and restore the family le",
-    "genre": "Family",
-    "external_rating": 8.2,
-    "external_id": "1226863",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Forge",
-    "description": "19 year old Isaiah Wright lives for basketball and video games. A year out of high school, he has no job, no plans, and no idea how to be a man. At odds with his single mother Cynthia, Isaiah is given",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "1186532",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Doctor Who: The Day of the Doctor",
-    "description": "In 2013, something terrible is awakening in London's National Gallery; in 1562, a murderous plot is afoot in Elizabethan England; and somewhere in space an ancient battle reaches its devastating concl",
-    "genre": "Science Fiction",
-    "external_rating": 8.2,
-    "external_id": "313106",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Handmaiden",
-    "description": "1930s Korea, in the period of Japanese occupation, a new girl, Sook-hee, is hired as a handmaiden to a Japanese heiress, Hideko, who lives a secluded life on a large countryside estate with her domine",
-    "genre": "Thriller",
-    "external_rating": 8.2,
-    "external_id": "290098",
     "external_source": "tmdb"
   },
   {
@@ -1256,59 +432,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "My Mom Is a Character 3",
-    "description": "Dona Hermínia will have to rediscover and reinvent herself because her children are forming new families. This supermom will have to deal with a new life scenario: Marcelina is pregnant and Juliano is",
-    "genre": "Comedy",
-    "external_rating": 8.2,
-    "external_id": "620683",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Obsession",
-    "description": "After breaking the mysterious \"One Wish Willow\" to win his crush's heart, a hopeless romantic finds himself getting exactly what he asked for but soon discovers that some desires come at a dark, sinis",
-    "genre": "Horror",
-    "external_rating": 8.2,
-    "external_id": "1339713",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Red Beard",
-    "description": "Aspiring to an easy job as personal physician to a wealthy family, Noboru Yasumoto is disappointed when his first post after medical school takes him to a small country clinic under the gruff doctor R",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "3780",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "TAYLOR SWIFT | THE ERAS TOUR",
-    "description": "A concert film documenting Taylor Swift's record-breaking Eras Tour (2023-2024). Filmed during the Los Angeles shows, the film captures the tour's ten acts, each representing a different musical era f",
-    "genre": "Music",
-    "external_rating": 8.2,
-    "external_id": "1160164",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Good Will Hunting",
     "description": "Will Hunting is a headstrong, working-class genius who is failing the lessons of life. After one too many run-ins with the law, Will's last chance is a psychology professor, who might be the only man ",
     "genre": "Drama",
     "external_rating": 8.2,
     "external_id": "489",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "20th Century Girl",
-    "description": "In 1999, a teen girl keeps close tabs on a boy in school on behalf of her deeply smitten best friend – then she gets swept up in a love story of her own.",
-    "genre": "Romance",
-    "external_rating": 8.2,
-    "external_id": "851644",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Wolfwalkers",
-    "description": "In a time of superstition and magic, when wolves are seen as demonic and nature an evil to be tamed, a young apprentice hunter comes to Ireland with her father to wipe out the last pack. But when she ",
-    "genre": "Animation",
-    "external_rating": 8.2,
-    "external_id": "441130",
     "external_source": "tmdb"
   },
   {
@@ -1325,22 +453,6 @@
     "genre": "Drama",
     "external_rating": 8.2,
     "external_id": "629",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Human Condition I: No Greater Love",
-    "description": "After handing in a report on the treatment of Chinese colonial labor, Kaji is offered the post of labour chief at a large mining operation in Manchuria, which also grants him exemption from military s",
-    "genre": "War",
-    "external_rating": 8.2,
-    "external_id": "31217",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Bicycle Thieves",
-    "description": "Unemployed Antonio is elated when he finally finds work hanging posters around war-torn Rome. However on his first day, his bicycle—essential to his work—gets stolen. His job is doomed unless he can f",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "5156",
     "external_source": "tmdb"
   },
   {
@@ -1368,131 +480,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Silenced",
-    "description": "Based on actual events that took place at Gwangju Inhwa School for the hearing-impaired, where young deaf students were the victims of repeated sexual assaults by faculty members over a period of five",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "81481",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Love Hurts",
-    "description": "Family and friends try to sabotage the budding romance between a young upper class girl and a humble student.",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "51822",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Scarface",
     "description": "After getting a green card in exchange for assassinating a Cuban government official, Tony Montana stakes a claim on the drug trade in Miami. Viciously murdering anyone who stands in his way, Tony eve",
     "genre": "Action",
     "external_rating": 8.2,
     "external_id": "111",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Tokyo Story",
-    "description": "The elderly Shukishi and his wife, Tomi, take the long journey from their small seaside village to visit their adult children in Tokyo. Their elder son, Koichi, a doctor, and their daughter, Shige, a ",
-    "genre": "Drama",
-    "external_rating": 8.2,
-    "external_id": "18148",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Art of Racing in the Rain",
-    "description": "A family dog – with a near-human soul and a philosopher's mind – evaluates his life through the lessons learned by his human owner, a race-car driver.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "522924",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Dune: Part Two",
-    "description": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his ",
-    "genre": "Science Fiction",
-    "external_rating": 8.1,
-    "external_id": "693134",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Capernaum",
-    "description": "After running away from his negligent parents, committing a violent crime and being sentenced to five years in jail, a hardened, streetwise 12-year-old Lebanese boy sues his parents in protest of the ",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "517814",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Casablanca",
-    "description": "In Casablanca, Morocco in December 1941, a cynical American expatriate meets a former lover, with unforeseen complications.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "289",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Maquia: When the Promised Flower Blooms",
-    "description": "Fleeing the war, the immortal Maquia, graced with eternal youth, finds a baby abandoned in the forest and decides to raise it as her own child, sparking a moving story between a mortal and a being who",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "476292",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Togo",
-    "description": "The untold true story set in the winter of 1925 that takes you across the treacherous terrain of the Alaskan tundra for an exhilarating and uplifting adventure that will test the strength, courage and",
-    "genre": "Adventure",
-    "external_rating": 8.1,
-    "external_id": "606856",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Better Days",
-    "description": "A bullied teenage girl forms an unlikely friendship with a mysterious young man who protects her from her assailants, while she copes with the pressures of her final examinations.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "575813",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Kid",
-    "description": "A tramp cares for a boy after he's abandoned as a newborn by his mother. Later the mother has a change of heart and aches to be reunited with her son.",
-    "genre": "Comedy",
-    "external_rating": 8.1,
-    "external_id": "10098",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Seventh Seal",
-    "description": "When disillusioned Swedish knight Antonius Block returns home from the Crusades to find his country in the grips of the Black Death, he challenges Death to a chess match for his life. Tormented by the",
-    "genre": "Fantasy",
-    "external_rating": 8.1,
-    "external_id": "490",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Piper",
-    "description": "A mother bird tries to teach her little one how to find food by herself. In the process, she encounters a traumatic experience that she must overcome in order to survive.",
-    "genre": "Family",
-    "external_rating": 8.1,
-    "external_id": "399106",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "My Hero Academia: Heroes Rising",
-    "description": "Class 1-A visits Nabu Island where they finally get to do some real hero work. The place is so peaceful that it's more like a vacation... until they're attacked by a villain with an unfathomable Quirk",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "592350",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Vertigo",
-    "description": "A retired San Francisco detective suffering from acrophobia investigates the strange activities of an old friend's wife, all the while becoming dangerously obsessed with her.",
-    "genre": "Mystery",
-    "external_rating": 8.1,
-    "external_id": "426",
     "external_source": "tmdb"
   },
   {
@@ -1504,75 +496,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Singin' in the Rain",
-    "description": "In 1927 Hollywood, a silent film star falls for a chorus girl just as he and his paranoid screen partner struggle to make the difficult transition to talking pictures.",
-    "genre": "Comedy",
-    "external_rating": 8.1,
-    "external_id": "872",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Hoppers",
-    "description": "Scientists have discovered how to 'hop' human consciousness into lifelike robotic animals, allowing people to communicate with animals as animals. Animal lover Mabel seizes an opportunity to use the t",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "1327819",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "How to Make Millions Before Grandma Dies",
-    "description": "M, a university dropout low on money and luck, volunteers to take care of his terminally ill grandmother, in the hope of pocketing an inheritance.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "1103621",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Persona",
-    "description": "A young nurse, Alma, is put in charge of Elisabeth Vogler: an actress who is seemingly healthy in all respects, but will not talk. As they spend time together, Alma speaks to Elisabeth constantly, nev",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "797",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Central Station",
-    "description": "An emotional journey of a former school teacher, who writes letters for illiterate people, and a young boy, whose mother has just died, as they search for the father he never knew.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "666",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Full Metal Jacket",
     "description": "A pragmatic U.S. Marine observes the dehumanizing effects the U.S.-Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
     "genre": "Drama",
     "external_rating": 8.1,
     "external_id": "600",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Palmer",
-    "description": "After 12 years in prison, former high school football star Eddie Palmer returns home to put his life back together—and forms an unlikely bond with Sam, an outcast boy from a troubled home. But Eddie's",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "458220",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
-    "description": "After the insane General Jack D. Ripper initiates a nuclear strike on the Soviet Union, a war room full of politicians, generals and a Russian diplomat all frantically try to stop it.",
-    "genre": "Comedy",
-    "external_rating": 8.1,
-    "external_id": "935",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "“The Shorts” by Aldo, Giovanni and Giacomo",
-    "description": "I Corti (\"Shorts\") by Aldo, Giovanni & Giacomo was the first stage show of the comedy trio, with the participation of Marina Massironi. It was recorded live at the Teatro Nuovo in Ferrara on 28 and 29",
-    "genre": "Comedy",
-    "external_rating": 8.1,
-    "external_id": "38288",
     "external_source": "tmdb"
   },
   {
@@ -1592,35 +520,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Violet Evergarden: Eternity and the Auto Memory Doll",
-    "description": "Violet Evergarden, a former soldier returned from war, comes to teach at a women's academy and changes a young girl's life.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "610892",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Kill Bill: The Whole Bloody Affair",
-    "description": "A former assassin, known simply as The Bride, wakes from a coma four years after her jealous ex-lover Bill attempts to murder her on her wedding day. Fueled by an insatiable desire for revenge, she vo",
-    "genre": "Action",
-    "external_rating": 8.1,
-    "external_id": "414419",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Reservoir Dogs",
     "description": "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic ",
     "genre": "Crime",
     "external_rating": 8.1,
     "external_id": "500",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Jujutsu Kaisen 0",
-    "description": "Yuta Okkotsu is a nervous high school student who is suffering from a serious problem—his childhood friend Rika has turned into a curse and won't leave him alone. Since Rika is no ordinary curse, his ",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "810693",
     "external_source": "tmdb"
   },
   {
@@ -1632,107 +536,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "Incendies",
-    "description": "A mother's last wishes send twins Jeanne and Simon on a journey to Middle East in search of their tangled roots. Adapted from Wajdi Mouawad's acclaimed play, Incendies tells the powerful and moving ta",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "46738",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Ghosts",
-    "description": "In the town of Normal Valley, an eccentric magician named Maestro entertains the local children every day in his spooky mansion. One stormy night, the town's mayor leads a group of angry citizens to t",
-    "genre": "Music",
-    "external_rating": 8.1,
-    "external_id": "37793",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Hunt",
-    "description": "A teacher lives a lonely life, all the while struggling over his son’s custody. His life slowly gets better as he finds love and receives good news from his son, but his new luck is about to be brutal",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "103663",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Wonder",
-    "description": "The story of August Pullman – a boy with facial differences – who enters fifth grade, attending a mainstream elementary school for the first time.",
-    "genre": "Family",
-    "external_rating": 8.1,
-    "external_id": "406997",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Lock, Stock and Two Smoking Barrels",
-    "description": "A card shark and his unwillingly-enlisted friends need to make a lot of cash quick after losing a sketchy poker match. To do this they decide to pull a heist on a small-time gang who happen to be oper",
-    "genre": "Comedy",
-    "external_rating": 8.1,
-    "external_id": "100",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Mortal Kombat Legends: Scorpion's Revenge",
-    "description": "After the vicious slaughter of his family by stone-cold mercenary Sub-Zero, Hanzo Hasashi is exiled to the torturous Netherrealm. There, in exchange for his servitude to the sinister Quan Chi, he’s gi",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "664767",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Double Indemnity",
-    "description": "An insurance representative is seduced by a dissatisfied housewife into a scheme of insurance fraud and murder that arouses the suspicion of his colleague, a claims investigator.",
-    "genre": "Crime",
-    "external_rating": 8.1,
-    "external_id": "996",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Eternal Sunshine of the Spotless Mind",
     "description": "Joel Barish, heartbroken that his girlfriend underwent a procedure to erase him from her memory, decides to do the same. However, as he watches his memories of her fade away, he realises that he still",
     "genre": "Science Fiction",
     "external_rating": 8.1,
     "external_id": "38",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Father",
-    "description": "A man refuses all assistance from his daughter as he ages and, as he tries to make sense of his changing circumstances, he begins to doubt his loved ones, his own mind and even the fabric of his reali",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "600354",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Portrait of a Lady on Fire",
-    "description": "On an isolated island in Brittany at the end of the eighteenth century, a female painter is obliged to paint a wedding portrait of a young woman.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "531428",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "My Friends",
-    "description": "Four inseparable friends try to face their midlife crisis with daytrips and pranks at the expense of their families and the people around them.",
-    "genre": "Comedy",
-    "external_rating": 8.1,
-    "external_id": "20914",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "La Haine",
-    "description": "After a chaotic night of rioting in a marginal suburb of Paris, three young friends, Vinz, Hubert and Saïd, wander around unoccupied waiting for news about the state of health of a mutual friend who h",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "406",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Das Boot",
-    "description": "A German submarine hunts allied ships during the Second World War, but it soon becomes the hunted. The crew tries to survive below the surface, while stretching both the boat and themselves to their l",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "387",
     "external_source": "tmdb"
   },
   {
@@ -1752,51 +560,11 @@
     "external_source": "tmdb"
   },
   {
-    "title": "In the Mood for Love",
-    "description": "In 1960s Hong Kong, two neighbors form an intimate bond after making a discovery about their spouses in this visually stunning tale of unrequited love.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "843",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Tale of The Princess Kaguya",
-    "description": "Found inside a shining stalk of bamboo by an old bamboo cutter and his wife, a tiny girl grows rapidly into an exquisite young lady. The mysterious young princess enthrals all who encounter her. But, ",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "149871",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Harry Potter and the Deathly Hallows: Part 2",
     "description": "Harry, Ron and Hermione continue their quest to vanquish the evil Voldemort once and for all. Just as things begin to look hopeless for the young wizards, Harry discovers a trio of magical objects tha",
     "genre": "Adventure",
     "external_rating": 8.1,
     "external_id": "12445",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Miraculous World: New York, United HeroeZ",
-    "description": "Marinette's class is headed to New York, the city of superheroes, for French-American Friendship Week. But the arrival of Hawk Moth will complicate everything.",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "755812",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Big Deal on Madonna Street",
-    "description": "Best friends Peppe and Mario are thieves, but they're not very good at it. Still, Peppe thinks that he's finally devised a master heist that will make them rich. With the help of some fellow criminals",
-    "genre": "Comedy",
-    "external_rating": 8.1,
-    "external_id": "24382",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Metropolis",
-    "description": "In a futuristic city sharply divided between the rich and the poor, the son of the city's mastermind meets a prophet who predicts the coming of a savior to mediate their differences.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "19",
     "external_source": "tmdb"
   },
   {
@@ -1808,118 +576,6 @@
     "external_source": "tmdb"
   },
   {
-    "title": "The Great War",
-    "description": "Italy, 1916. Oreste Jacovacci and Giovanni Busacca are called, as all the Italian youths, to serve the army in the WWI. They both try in every way to avoid serving the army.",
-    "genre": "Comedy",
-    "external_rating": 8.1,
-    "external_id": "55823",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Yojimbo",
-    "description": "A nameless ronin, or samurai with no master, enters a small village in feudal Japan where two rival businessmen are struggling for control of the local gambling trade. Taking the name Sanjuro Kuwabata",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "11878",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Some Like It Hot",
-    "description": "In Prohibition-era Chicago, musicians Joe and Jerry witness a mob hit, and flee the state in an all-female band disguised as Josephine and Daphne, but further complications set in.",
-    "genre": "Comedy",
-    "external_rating": 8.1,
-    "external_id": "239",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Voice of Hind Rajab",
-    "description": "January 29, 2024. Red Crescent volunteers receive an emergency call. A five-year old girl is trapped in a car under fire in Gaza, pleading for rescue. While trying to keep her on the line, they do eve",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "1480382",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Paris, Texas",
-    "description": "A man wanders out of the desert not knowing who he is. His brother finds him, and helps to pull his memory back of the life he led before he walked out on his family and disappeared four years earlier",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "655",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Wild Strawberries",
-    "description": "Crotchety retired doctor Isak Borg travels from Stockholm to Lund, Sweden, with his unhappy daughter-in-law, Marianne, in order to receive an honorary degree from his alma mater. Along the way, they e",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "614",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Far from the Tree",
-    "description": "On an idyllic beach in the Pacific Northwest, curiosity gets the better of a young raccoon whose frustrated parent attempts to keep them both safe.",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "831827",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Stalker",
-    "description": "Near a gray and unnamed city is the Zone, a place guarded by barbed wire and soldiers, and where the normal laws of physics are victim to frequent anomalies. A stalker guides two men into the Zone, sp",
-    "genre": "Science Fiction",
-    "external_rating": 8.1,
-    "external_id": "1398",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Thing",
-    "description": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims.",
-    "genre": "Horror",
-    "external_rating": 8.1,
-    "external_id": "1091",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Sansho the Bailiff",
-    "description": "In 11th-century feudal Japan, following the exile of an idealistic governor, his wife and children are separated by slave traders; the children, Zushio and Anju, are sold into brutal servitude under t",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "20532",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "My Neighbor Totoro",
-    "description": "Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When t",
-    "genre": "Fantasy",
-    "external_rating": 8.1,
-    "external_id": "8392",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "8½",
-    "description": "Guido Anselmi, a film director, finds himself creatively barren at the peak of his career. Urged by his doctors to rest, Anselmi heads for a luxurious resort, but a sorry group gathers—his producer, s",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "422",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Invisible Guest",
-    "description": "Barcelona, Spain. Adrián Doria, a young and successful businessman accused of murder, meets one night with Virginia Goodman, an expert interrogation lawyer, in order to devise a defense strategy.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "411088",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Doctor Who: The Time of the Doctor",
-    "description": "Orbiting a quiet backwater planet, the massed forces of the universe's deadliest species gather, drawn to a mysterious message that echoes out to the stars. And amongst them, the Doctor. Rescuing Clar",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "282848",
-    "external_source": "tmdb"
-  },
-  {
     "title": "Zack Snyder's Justice League",
     "description": "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching thre",
     "genre": "Action",
@@ -1928,75 +584,1419 @@
     "external_source": "tmdb"
   },
   {
-    "title": "A Special Day",
-    "description": "Two neighbours — a persecuted journalist and a resigned housewife — forge a strong bond on the day of Adolf Hitler's historic 1938 visit to Rome.",
+    "title": "Hidden Figures",
+    "description": "The untold story of Katherine G. Johnson, Dorothy Vaughan and Mary Jackson – brilliant African-American women working at NASA and serving as the brains behind one of the greatest operations in history",
     "genre": "Drama",
     "external_rating": 8.1,
-    "external_id": "42229",
+    "external_id": "381284",
     "external_source": "tmdb"
   },
   {
-    "title": "Memoir of a Snail",
-    "description": "Forcibly separated from her twin brother when they are orphaned, a melancholic misfit learns how to find confidence within herself amid the clutter of misfortunes and everyday life.",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "1064486",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Farewell My Concubine",
-    "description": "In an epic tale of theater, gender, love and class, two Beijing opera actors navigate political turmoil as their friendship evolves over decades.",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "10997",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Memories of Murder",
-    "description": "A sadistic serial rapist and murderer of young women terrorizes a small province in 1980s South Korea. To prevent further crimes, three increasingly desperate detectives with conflicting methods race ",
+    "title": "Three Billboards Outside Ebbing, Missouri",
+    "description": "After seven months have passed without a culprit in her daughter's murder case, Mildred Hayes makes a bold move, painting three signs leading into her town with a controversial message directed at Bil",
     "genre": "Crime",
     "external_rating": 8.1,
-    "external_id": "11423",
+    "external_id": "359940",
     "external_source": "tmdb"
   },
   {
-    "title": "Green Snake",
-    "description": "While trying to free her sister from Fahai's clutches, Xiao Qing winds up in a dystopian city and meets a mysterious man who can't recall his past life.",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "795607",
+    "title": "2001: A Space Odyssey",
+    "description": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
+    "genre": "Science Fiction",
+    "external_rating": 8.0,
+    "external_id": "62",
     "external_source": "tmdb"
   },
   {
-    "title": "Black Clover: Sword of the Wizard King",
-    "description": "As a lionhearted boy who can't wield magic strives for the title of Wizard King, four banished Wizard Kings of yore return to crush the Clover Kingdom.",
-    "genre": "Animation",
-    "external_rating": 8.1,
-    "external_id": "812225",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "Scenes from a Marriage",
-    "description": "Johan and Marianne are married and seem to have it all. Their happiness, however, is a façade for a troubled relationship, which becomes even rockier when Johan admits that he's having an affair. Befo",
-    "genre": "Drama",
-    "external_rating": 8.1,
-    "external_id": "133919",
-    "external_source": "tmdb"
-  },
-  {
-    "title": "The Hate U Give",
-    "description": "Raised in a poverty-stricken slum, a 16-year-old girl named Starr now attends a suburban prep school. After she witnesses a police officer shoot her unarmed best friend, she's torn between her two ver",
+    "title": "The Wolf of Wall Street",
+    "description": "A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort's autobiography.",
     "genre": "Crime",
-    "external_rating": 8.1,
-    "external_id": "470044",
+    "external_rating": 8.0,
+    "external_id": "106646",
     "external_source": "tmdb"
   },
   {
-    "title": "Along with the Gods: The Two Worlds",
-    "description": "Having died unexpectedly, firefighter Ja-hong is taken to the afterlife by 3 afterlife guardians. Only when he passes 7 trials over 49 days and proves he was innocent in human life, he’s able to reinc",
+    "title": "The Grand Budapest Hotel",
+    "description": "The Grand Budapest Hotel tells of a legendary concierge at a famous European hotel between the wars and his friendship with a young employee who becomes his trusted protégé. The story involves the the",
+    "genre": "Comedy",
+    "external_rating": 8.0,
+    "external_id": "120467",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Oppenheimer",
+    "description": "The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.",
+    "genre": "Drama",
+    "external_rating": 8.0,
+    "external_id": "872585",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "description": "Year three at Hogwarts means new fun and new challenges as Harry learns the delicate art of approaching a Hippogriff, transforming shape-shifting Boggarts into hilarity and even turning back time. But",
+    "genre": "Adventure",
+    "external_rating": 8.0,
+    "external_id": "673",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Requiem for a Dream",
+    "description": "The drug-induced utopias of four Coney Island residents are shattered when their addictions run deep.",
+    "genre": "Drama",
+    "external_rating": 8.0,
+    "external_id": "641",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "American Beauty",
+    "description": "Lester Burnham, a depressed suburban father in a mid-life crisis, decides to turn his hectic life around after developing an infatuation with his daughter's attractive friend.",
+    "genre": "Drama",
+    "external_rating": 8.0,
+    "external_id": "14",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Toy Story",
+    "description": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstan",
+    "genre": "Family",
+    "external_rating": 8.0,
+    "external_id": "862",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Gran Torino",
+    "description": "Disgruntled Korean War veteran Walt Kowalski sets out to reform his neighbor, Thao Lor, a Hmong teenager who tried to steal Kowalski's prized possession: a 1972 Gran Torino.",
+    "genre": "Drama",
+    "external_rating": 8.0,
+    "external_id": "13223",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "1917",
+    "description": "At the height of the First World War, two young British soldiers must cross enemy territory and deliver a message that will stop a deadly attack on hundreds of soldiers.",
+    "genre": "War",
+    "external_rating": 8.0,
+    "external_id": "530915",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Catch Me If You Can",
+    "description": "A true story about Frank Abagnale Jr. who, before his 19th birthday, successfully conned millions of dollars worth of checks as a Pan Am pilot, doctor, and legal prosecutor. An FBI agent makes it his ",
+    "genre": "Drama",
+    "external_rating": 8.0,
+    "external_id": "640",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Jurassic Park",
+    "description": "A wealthy entrepreneur secretly creates a theme park featuring living dinosaurs drawn from prehistoric DNA. Before opening day, he invites a team of experts and his two eager grandchildren to experien",
+    "genre": "Adventure",
+    "external_rating": 8.0,
+    "external_id": "329",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Imitation Game",
+    "description": "Based on the real life story of legendary cryptanalyst Alan Turing, the film portrays the nail-biting race against time by Turing and his brilliant team of code-breakers at Britain's top-secret Govern",
+    "genre": "History",
+    "external_rating": 8.0,
+    "external_id": "205596",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Kill Bill: Vol. 1",
+    "description": "An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.",
     "genre": "Action",
-    "external_rating": 8.1,
-    "external_id": "397567",
+    "external_rating": 8.0,
+    "external_id": "24",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Jojo Rabbit",
+    "description": "Jojo, a lonely German boy during World War II has his world shaken when he learns that his single mother is hiding a Jewish girl in their home. Influenced by a buffoonish imaginary version of Adolf Hi",
+    "genre": "Comedy",
+    "external_rating": 8.0,
+    "external_id": "515001",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Aliens",
+    "description": "Ripley, the sole survivor of the Nostromo's deadly encounter with the monstrous Alien, returns to Earth after drifting through space in hypersleep for 57 years. Although her story is initially met wit",
+    "genre": "Action",
+    "external_rating": 8.0,
+    "external_id": "679",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Up",
+    "description": "Carl Fredricksen spent his entire life dreaming of exploring the globe and experiencing life to its fullest. But at age 78, life seems to have passed him by, until a twist of fate (and a persistent 8-",
+    "genre": "Animation",
+    "external_rating": 8.0,
+    "external_id": "14160",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Cruella",
+    "description": "In 1970s London amidst the punk rock revolution, a young grifter named Estella is determined to make a name for herself with her designs. She befriends a pair of young thieves who appreciate her appet",
+    "genre": "Comedy",
+    "external_rating": 8.0,
+    "external_id": "337404",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Trainspotting",
+    "description": "Heroin addict Mark Renton stumbles through bad ideas and sobriety attempts with his unreliable friends --Sick Boy, Begbie, Spud and Tommy. He also has an underage girlfriend, Diane, along for the ride",
+    "genre": "Drama",
+    "external_rating": 8.0,
+    "external_id": "627",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Sixth Sense",
+    "description": "Following an unexpected tragedy, child psychologist Malcolm Crowe meets a nine year old boy named Cole Sear, who is hiding a dark secret.",
+    "genre": "Mystery",
+    "external_rating": 8.0,
+    "external_id": "745",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Million Dollar Baby",
+    "description": "Despondent over a painful estrangement from his daughter, trainer Frankie Dunn isn't prepared for boxer Maggie Fitzgerald to enter his life. But Maggie's determined to go pro and to convince Dunn and ",
+    "genre": "Drama",
+    "external_rating": 8.0,
+    "external_id": "70",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "No Country for Old Men",
+    "description": "Llewelyn Moss stumbles upon dead bodies, $2 million and a hoard of heroin in a Texas desert, but methodical killer Anton Chigurh comes looking for it, with local sheriff Ed Tom Bell hot on his trail. ",
+    "genre": "Crime",
+    "external_rating": 7.9,
+    "external_id": "6977",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Bohemian Rhapsody",
+    "description": "Singer Freddie Mercury, guitarist Brian May, drummer Roger Taylor and bass guitarist John Deacon take the music world by storm when they form the rock 'n' roll band Queen in 1970. Hit songs become ins",
+    "genre": "Music",
+    "external_rating": 7.9,
+    "external_id": "424694",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Braveheart",
+    "description": "Enraged at the slaughter of Murron, his new bride and childhood love, Scottish warrior William Wallace slays a platoon of the local English lord's soldiers. This leads the village to revolt and, event",
+    "genre": "History",
+    "external_rating": 7.9,
+    "external_id": "197",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Spider-Man: No Way Home",
+    "description": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, for",
+    "genre": "Action",
+    "external_rating": 7.9,
+    "external_id": "634649",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Blade Runner",
+    "description": "In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way t",
+    "genre": "Science Fiction",
+    "external_rating": 7.9,
+    "external_id": "78",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Me Before You",
+    "description": "Lou Clark, a directionless 26-year-old from the English countryside, takes a job at the local castle as a caregiver and companion to a wealthy young banker, Will Traynor. Wheelchair-bound from an acci",
+    "genre": "Drama",
+    "external_rating": 7.9,
+    "external_id": "296096",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Raiders of the Lost Ark",
+    "description": "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up agai",
+    "genre": "Adventure",
+    "external_rating": 7.9,
+    "external_id": "85",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "12 Years a Slave",
+    "description": "In the pre-Civil War United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery. Facing cruelty as well as unexpected kindnesses Solomon struggles not on",
+    "genre": "Drama",
+    "external_rating": 7.9,
+    "external_id": "76203",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Amélie",
+    "description": "At a tiny Parisian café, the adorable yet painfully shy Amélie accidentally discovers a gift for helping others. Soon Amelie is spending her days as a matchmaker, guardian angel, and all-around do-goo",
+    "genre": "Comedy",
+    "external_rating": 7.9,
+    "external_id": "194",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Return of the Jedi",
+    "description": "Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, the Emperor prepares to crush the Rebellion with a more powerful Death Star, and the Rebel fleet mount",
+    "genre": "Adventure",
+    "external_rating": 7.9,
+    "external_id": "1892",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Guardians of the Galaxy",
+    "description": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
+    "genre": "Action",
+    "external_rating": 7.9,
+    "external_id": "118340",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Inside Out",
+    "description": "When 11-year-old Riley moves to a new city, her Emotions team up to help her through the transition. Joy, Fear, Anger, Disgust and Sadness work together, but when Joy and Sadness get lost, they must j",
+    "genre": "Animation",
+    "external_rating": 7.9,
+    "external_id": "150540",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "description": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for him at the Hogwarts School of ",
+    "genre": "Adventure",
+    "external_rating": 7.9,
+    "external_id": "671",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Mulan",
+    "description": "When Imperial China calls one man from every family to defend the empire from invading Huns, a young woman disguises herself as a soldier to take her ailing father’s place. Facing ruthless invaders, b",
+    "genre": "Animation",
+    "external_rating": 7.9,
+    "external_id": "10674",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Titanic",
+    "description": "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic, 84 years later. A young Rose boards the ship with her mother and fiancé. Meanwhile, Jack Dawson and Fabrizio De Rossi w",
+    "genre": "Drama",
+    "external_rating": 7.9,
+    "external_id": "597",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "V for Vendetta",
+    "description": "In a world in which Great Britain has become a fascist state, a masked vigilante known only as “V” conducts guerrilla warfare against the oppressive British government. When V rescues a young woman fr",
+    "genre": "Action",
+    "external_rating": 7.9,
+    "external_id": "752",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "La La Land",
+    "description": "Mia, an aspiring actress, serves lattes to movie stars in between auditions and Sebastian, a jazz musician, scrapes by playing cocktail party gigs in dingy bars, but as success mounts they are faced w",
+    "genre": "Comedy",
+    "external_rating": 7.9,
+    "external_id": "313369",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Gone Girl",
+    "description": "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
+    "genre": "Mystery",
+    "external_rating": 7.9,
+    "external_id": "210577",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Notebook",
+    "description": "An epic love story centered around an older man who reads aloud to a woman with Alzheimer's. From a faded notebook, the old man's words bring to life the story about a couple who is separated by World",
+    "genre": "Romance",
+    "external_rating": 7.9,
+    "external_id": "11036",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Pursuit of Happyness",
+    "description": "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career.",
+    "genre": "Drama",
+    "external_rating": 7.9,
+    "external_id": "1402",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Kill Bill: Vol. 2",
+    "description": "The Bride unwaveringly continues on her roaring rampage of revenge against the band of assassins who had tried to kill her and her unborn child. She visits each of her former associates one-by-one, ch",
+    "genre": "Action",
+    "external_rating": 7.9,
+    "external_id": "393",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "How to Train Your Dragon",
+    "description": "As the son of a Viking leader on the cusp of manhood, shy Hiccup Horrendous Haddock III faces a rite of passage: he must kill a dragon to prove his warrior mettle. But after downing a feared dragon, h",
+    "genre": "Fantasy",
+    "external_rating": 7.9,
+    "external_id": "10191",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Nightmare Before Christmas",
+    "description": "Tired of scaring humans every October 31 with the same old bag of tricks, Jack Skellington, the spindly Pumpkin King of Halloween Town, kidnaps Santa Claus and plans to deliver shrunken heads and othe",
+    "genre": "Fantasy",
+    "external_rating": 7.9,
+    "external_id": "9479",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Monsters, Inc.",
+    "description": "Lovable Sulley and his wisecracking sidekick Mike Wazowski are the top scare team at Monsters, Inc., the scream-processing factory in Monstropolis. When a little girl named Boo wanders into their worl",
+    "genre": "Animation",
+    "external_rating": 7.9,
+    "external_id": "585",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Indiana Jones and the Last Crusade",
+    "description": "In 1938, an art collector appeals to eminent archaeologist Dr. Indiana Jones to embark on a search for the Holy Grail. Indy learns that a medieval historian has vanished while searching for it, and th",
+    "genre": "Adventure",
+    "external_rating": 7.9,
+    "external_id": "89",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Big Lebowski",
+    "description": "Jeffrey 'The Dude' Lebowski, a Los Angeles slacker who only wants to bowl and drink White Russians, is mistaken for another Jeffrey Lebowski, a wheelchair-bound millionaire, and finds himself dragged ",
+    "genre": "Comedy",
+    "external_rating": 7.9,
+    "external_id": "115",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "A Beautiful Mind",
+    "description": "From the heights of notoriety to the depths of depravity, John Forbes Nash Jr. experiences it all. As a brilliant but socially awkward mathematician, he made a groundbreaking discovery early in his ca",
+    "genre": "Drama",
+    "external_rating": 7.9,
+    "external_id": "453",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Greatest Showman",
+    "description": "The story of American showman P.T. Barnum, founder of the circus that became the famous traveling Ringling Bros. and Barnum & Bailey Circus.",
+    "genre": "Drama",
+    "external_rating": 7.8,
+    "external_id": "316029",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Ratatouille",
+    "description": "In one of Paris's finest restaurants, Remy, a determined young rat, dreams of becoming a renowned French chef. Torn between his family's wishes and his true calling, Remy and his pal Linguini set in m",
+    "genre": "Animation",
+    "external_rating": 7.8,
+    "external_id": "2062",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Knives Out",
+    "description": "When renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From",
+    "genre": "Comedy",
+    "external_rating": 7.8,
+    "external_id": "546554",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "description": "When wily pirate Captain Barbossa seizes Jack Sparrow’s beloved ship, the Black Pearl, and kidnaps the governor’s daughter, Elizabeth Swann, blacksmith Will Turner reluctantly teams up with the unpred",
+    "genre": "Adventure",
+    "external_rating": 7.8,
+    "external_id": "22",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Her",
+    "description": "In the not so distant future, Theodore, a lonely writer, purchases a newly developed operating system designed to meet the user's every need. To Theodore's surprise, a romantic relationship develops b",
+    "genre": "Romance",
+    "external_rating": 7.8,
+    "external_id": "152601",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Snatch",
+    "description": "Unscrupulous boxing promoters, violent bookies, a Russian gangster, incompetent amateur robbers, and supposedly Jewish jewellers fight to track down a priceless stolen diamond.",
+    "genre": "Crime",
+    "external_rating": 7.8,
+    "external_id": "107",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Logan",
+    "description": "In the near future, a weary Logan cares for an ailing Professor X in a hideout on the Mexican border. But Logan's attempts to hide from the world and his legacy are upended when a young mutant arrives",
+    "genre": "Action",
+    "external_rating": 7.8,
+    "external_id": "263115",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Finding Nemo",
+    "description": "Nemo, an adventurous young clownfish, is unexpectedly taken from his Great Barrier Reef home to a dentist's office aquarium. It's up to his worrisome father Marlin and a friendly but forgetful fish Do",
+    "genre": "Animation",
+    "external_rating": 7.8,
+    "external_id": "12",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Toy Story 3",
+    "description": "Woody, Buzz, and the rest of Andy's toys haven't been played with in years. With Andy about to go to college, the gang find themselves accidentally left at a nefarious day care center. The toys must b",
+    "genre": "Animation",
+    "external_rating": 7.8,
+    "external_id": "10193",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Theory of Everything",
+    "description": "Once a healthy, active young man, Hawking received an earth-shattering diagnosis at 21 years of age. With Jane fighting tirelessly by his side, Stephen embarks on his most ambitious scientific work, s",
+    "genre": "Drama",
+    "external_rating": 7.8,
+    "external_id": "266856",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Die Hard",
+    "description": "High above the city of L.A. a team of terrorists has seized a building, taken hostages, and declared war. One man has manages to escape... An off-duty cop hiding somewhere inside. He's alone, tired...",
+    "genre": "Action",
+    "external_rating": 7.8,
+    "external_id": "562",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Perks of Being a Wallflower",
+    "description": "Pittsburgh, Pennsylvania, 1991. High school freshman Charlie is a wallflower, always watching life from the sidelines, until two senior students, Sam and her stepbrother Patrick, become his mentors, h",
+    "genre": "Drama",
+    "external_rating": 7.8,
+    "external_id": "84892",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Harry Potter and the Goblet of Fire",
+    "description": "After his name emerges from the Goblet of Fire, Harry Potter becomes a competitor in a grueling battle for glory among three wizarding schools in the Triwizard Tournament. But if Harry never submitted",
+    "genre": "Adventure",
+    "external_rating": 7.8,
+    "external_id": "674",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Dark Knight Rises",
+    "description": "Following the death of District Attorney Harvey Dent, Batman assumes responsibility for Dent's crimes to protect the late attorney's reputation and is subsequently hunted by the Gotham City Police Dep",
+    "genre": "Action",
+    "external_rating": 7.8,
+    "external_id": "49026",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Into the Wild",
+    "description": "After graduating from Emory University in 1992, top student and athlete Christopher McCandless abandons his possessions, gives his entire $24,000 savings account to charity, and hitchhikes to Alaska t",
+    "genre": "Adventure",
+    "external_rating": 7.8,
+    "external_id": "5915",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Dune",
+    "description": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his ",
+    "genre": "Science Fiction",
+    "external_rating": 7.8,
+    "external_id": "438631",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Back to the Future Part II",
+    "description": "Marty and Doc are at it again as the time-traveling duo head to 2015 to nip some McFly family woes in the bud. But things go awry thanks to bully Biff Tannen and a pesky sports almanac. In a last-ditc",
+    "genre": "Adventure",
+    "external_rating": 7.8,
+    "external_id": "165",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Shrek",
+    "description": "It ain't easy bein' green -- especially if you're a likable (albeit smelly) ogre named Shrek. On a mission to retrieve a gorgeous princess from the clutches of a fire-breathing dragon, Shrek teams up ",
+    "genre": "Animation",
+    "external_rating": 7.8,
+    "external_id": "808",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Pan's Labyrinth",
+    "description": "In post–civil war Spain, 10-year-old Ofelia moves with her pregnant mother to live under the control of her cruel stepfather. Drawn into a mysterious labyrinth, she meets a faun who reveals that she m",
+    "genre": "Fantasy",
+    "external_rating": 7.8,
+    "external_id": "1417",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Zootopia",
+    "description": "Determined to prove herself, Officer Judy Hopps, the first bunny on Zootopia's police force, jumps at the chance to crack her first case - even if it means partnering with scam-artist fox Nick Wilde t",
+    "genre": "Animation",
+    "external_rating": 7.8,
+    "external_id": "269149",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Donnie Darko",
+    "description": "After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a large bunny rabbit that manipulates him to commit a series of crimes.",
+    "genre": "Fantasy",
+    "external_rating": 7.8,
+    "external_id": "141",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Hateful Eight",
+    "description": "Bounty hunters seek shelter from a raging blizzard and get caught up in a plot of betrayal and deception.",
+    "genre": "Drama",
+    "external_rating": 7.8,
+    "external_id": "273248",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Harry Potter and the Deathly Hallows: Part 1",
+    "description": "Harry, Ron and Hermione walk away from their last year at Hogwarts to find and destroy the remaining Horcruxes, putting an end to Voldemort's bid for immortality. But with Harry's beloved Dumbledore d",
+    "genre": "Adventure",
+    "external_rating": 7.7,
+    "external_id": "12444",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Batman Begins",
+    "description": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new",
+    "genre": "Drama",
+    "external_rating": 7.7,
+    "external_id": "272",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Incredibles",
+    "description": "Bob Parr has given up his superhero days to log in time as an insurance adjuster and raise his three children with his formerly heroic wife in suburbia. But when he receives a mysterious assignment, i",
+    "genre": "Action",
+    "external_rating": 7.7,
+    "external_id": "9806",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Slumdog Millionaire",
+    "description": "A teenager reflects on his life after being accused of cheating on the Indian version of \"Who Wants to be a Millionaire?\".",
+    "genre": "Drama",
+    "external_rating": 7.7,
+    "external_id": "12405",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Beauty and the Beast",
+    "description": "Follow the adventures of Belle, a bright young woman who finds herself in the castle of a prince who's been turned into a mysterious beast. With the help of the castle's enchanted staff, Belle soon le",
+    "genre": "Romance",
+    "external_rating": 7.7,
+    "external_id": "10020",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Big Hero 6",
+    "description": "A special bond develops between plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who team up with a group of friends to form a band of high-tech heroes.",
+    "genre": "Adventure",
+    "external_rating": 7.7,
+    "external_id": "177572",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Edward Scissorhands",
+    "description": "A small suburban town receives a visit from a castaway unfinished science experiment named Edward.",
+    "genre": "Fantasy",
+    "external_rating": 7.7,
+    "external_id": "162",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Martian",
+    "description": "During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile pl",
+    "genre": "Science Fiction",
+    "external_rating": 7.7,
+    "external_id": "286217",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Harry Potter and the Chamber of Secrets",
+    "description": "Cars fly, trees fight back, and a mysterious house-elf comes to warn Harry Potter at the start of his second year at Hogwarts. Adventure and danger await when bloody writing on a wall announces: The C",
+    "genre": "Adventure",
+    "external_rating": 7.7,
+    "external_id": "672",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Nightcrawler",
+    "description": "When Lou Bloom, desperate for work, muscles into the world of L.A. crime journalism, he blurs the line between observer and participant to become the star of his own story. Aiding him in his effort is",
+    "genre": "Crime",
+    "external_rating": 7.7,
+    "external_id": "242582",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Terminator",
+    "description": "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassin known as the \"Terminator\" back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgen",
+    "genre": "Action",
+    "external_rating": 7.7,
+    "external_id": "218",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Jaws",
+    "description": "When the seaside community of Amity finds itself under attack by a dangerous great white shark, the town's chief of police, a young marine biologist, and a grizzled shark hunter embark on a desperate ",
+    "genre": "Horror",
+    "external_rating": 7.7,
+    "external_id": "578",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "How to Train Your Dragon 2",
+    "description": "Five years after uniting the dragons and Vikings of Berk, Hiccup and Toothless soar beyond their homeland, charting the vast unknown. During one of their adventures, the pair discover a secret cave th",
+    "genre": "Fantasy",
+    "external_rating": 7.7,
+    "external_id": "82702",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Black Swan",
+    "description": "A committed dancer struggles to maintain her sanity after winning the lead role in a production of Tchaikovsky's \"Swan Lake.\"",
+    "genre": "Drama",
+    "external_rating": 7.7,
+    "external_id": "44214",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Harry Potter and the Half-Blood Prince",
+    "description": "As Lord Voldemort tightens his grip on both the Muggle and wizarding worlds, Hogwarts is no longer a safe haven. Harry suspects perils may even lie within the castle, but Dumbledore is more intent upo",
+    "genre": "Adventure",
+    "external_rating": 7.7,
+    "external_id": "767",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Batman",
+    "description": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
+    "genre": "Crime",
+    "external_rating": 7.7,
+    "external_id": "414906",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Harry Potter and the Order of the Phoenix",
+    "description": "Returning for his fifth year at Hogwarts, Harry is stunned to find that his warnings about the return of Lord Voldemort have been ignored. Left with no choice, Harry takes matters into his own hands, ",
+    "genre": "Adventure",
+    "external_rating": 7.7,
+    "external_id": "675",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Iron Man",
+    "description": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+    "genre": "Action",
+    "external_rating": 7.7,
+    "external_id": "1726",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Cast Away",
+    "description": "Chuck Noland, a top international manager for FedEx, and Kelly, a Ph.D. student, are in love and heading towards marriage. Then Chuck's plane to Malaysia crashes at sea during a terrible storm. He's t",
+    "genre": "Adventure",
+    "external_rating": 7.7,
+    "external_id": "8358",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Aladdin",
+    "description": "In the boorish city of Agrabah, kind-hearted street urchin Aladdin and Princess Jasmine fall in love, although she can only marry a prince. He and power-hungry Grand Vizier Jafar vie for a magic lamp ",
+    "genre": "Animation",
+    "external_rating": 7.7,
+    "external_id": "812",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Captain America: The Winter Soldier",
+    "description": "After the cataclysmic events in New York with The Avengers, Steve Rogers, aka Captain America is living quietly in Washington, D.C. and trying to adjust to the modern world. But when a S.H.I.E.L.D. co",
+    "genre": "Action",
+    "external_rating": 7.7,
+    "external_id": "100402",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Edge of Tomorrow",
+    "description": "Major Bill Cage is an officer who has never seen a day of combat when he is unceremoniously demoted and dropped into combat. Cage is killed within minutes, managing to take an alpha alien down with hi",
+    "genre": "Action",
+    "external_rating": 7.6,
+    "external_id": "137113",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "description": "An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and most everyone is crazed fighting for the necessities of life. Within this worl",
+    "genre": "Action",
+    "external_rating": 7.6,
+    "external_id": "76341",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Arrival",
+    "description": "Taking place after alien crafts land around the world, an expert linguist is recruited by the military to determine whether they come in peace or are a threat.",
+    "genre": "Drama",
+    "external_rating": 7.6,
+    "external_id": "329865",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Deadpool",
+    "description": "The origin story of former Special Forces operative turned mercenary Wade Wilson, who, after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego",
+    "genre": "Action",
+    "external_rating": 7.6,
+    "external_id": "293660",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Get Out",
+    "description": "Chris and his girlfriend Rose go upstate to visit her parents for the weekend. At first, Chris reads the family's overly accommodating behavior as nervous attempts to deal with their daughter's interr",
+    "genre": "Mystery",
+    "external_rating": 7.6,
+    "external_id": "419430",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Toy Story 2",
+    "description": "Andy heads off to Cowboy Camp, leaving his toys to their own devices. Things shift into high gear when an obsessive toy collector named Al McWhiggen, owner of Al's Toy Barn kidnaps Woody. Andy's toys ",
+    "genre": "Animation",
+    "external_rating": 7.6,
+    "external_id": "863",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Tangled",
+    "description": "Feisty teenager Rapunzel, who has long and magical hair, wants to go and see sky lanterns on her eighteenth birthday, but she's bound to a tower by her overprotective mother. She strikes a deal with F",
+    "genre": "Animation",
+    "external_rating": 7.6,
+    "external_id": "38757",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Kingsman: The Secret Service",
+    "description": "The story of a super-secret spy organization that recruits an unrefined but promising street kid into the agency's ultra-competitive training program just as a global threat emerges from a twisted tec",
+    "genre": "Crime",
+    "external_rating": 7.6,
+    "external_id": "207703",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Blade Runner 2049",
+    "description": "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery lea",
+    "genre": "Science Fiction",
+    "external_rating": 7.6,
+    "external_id": "335984",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Avatar",
+    "description": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+    "genre": "Science Fiction",
+    "external_rating": 7.6,
+    "external_id": "19995",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Guardians of the Galaxy Vol. 2",
+    "description": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage.",
+    "genre": "Science Fiction",
+    "external_rating": 7.6,
+    "external_id": "283995",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Curious Case of Benjamin Button",
+    "description": "Born under unusual circumstances, Benjamin Button springs into being as an elderly man in a New Orleans nursing home and ages in reverse. Twelve years after his birth, he meets Daisy, a child who flit",
+    "genre": "Drama",
+    "external_rating": 7.6,
+    "external_id": "4922",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Corpse Bride",
+    "description": "In a 19th-century European village, a young man about to be married is whisked away to the underworld and wed to a mysterious corpse bride, while his real bride waits bereft in the land of the living.",
+    "genre": "Romance",
+    "external_rating": 7.6,
+    "external_id": "3933",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Fifth Element",
+    "description": "In 2263, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity.",
+    "genre": "Science Fiction",
+    "external_rating": 7.6,
+    "external_id": "18",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Fault in Our Stars",
+    "description": "Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a patient named Augustus W",
+    "genre": "Romance",
+    "external_rating": 7.6,
+    "external_id": "222935",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Super Mario Bros. Movie",
+    "description": "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are sepa",
+    "genre": "Family",
+    "external_rating": 7.6,
+    "external_id": "502356",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Ready Player One",
+    "description": "When the creator of a popular video game system dies, a virtual contest is created to compete for his fortune.",
+    "genre": "Adventure",
+    "external_rating": 7.6,
+    "external_id": "333339",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Drive",
+    "description": "Driver is a skilled Hollywood stuntman who moonlights as a getaway driver for criminals. Though he projects an icy exterior, lately he's been warming up to a pretty neighbor named Irene and her young ",
+    "genre": "Drama",
+    "external_rating": 7.6,
+    "external_id": "64690",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Casino Royale",
+    "description": "Le Chiffre, a banker to the world's terrorists, is scheduled to participate in a high-stakes poker game in Montenegro, where he intends to use his winnings to establish his financial grip on the terro",
+    "genre": "Adventure",
+    "external_rating": 7.6,
+    "external_id": "36557",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Avatar: The Way of Water",
+    "description": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other sa",
+    "genre": "Action",
+    "external_rating": 7.6,
+    "external_id": "76600",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Hobbit: The Desolation of Smaug",
+    "description": "The Dwarves, Bilbo and Gandalf have successfully escaped the Misty Mountains, and Bilbo has gained the One Ring. They all continue their journey to get their gold back from the Dragon, Smaug.",
+    "genre": "Fantasy",
+    "external_rating": 7.6,
+    "external_id": "57158",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Thor: Ragnarok",
+    "description": "Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his home-world and the end of Asgardian civiliz",
+    "genre": "Action",
+    "external_rating": 7.6,
+    "external_id": "284053",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Ex Machina",
+    "description": "Caleb, a coder at the world's largest internet company, wins a competition to spend a week at a private mountain retreat belonging to Nathan, the reclusive CEO of the company. But when Caleb arrives a",
+    "genre": "Drama",
+    "external_rating": 7.6,
+    "external_id": "264660",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Moana",
+    "description": "In Ancient Polynesia, when a terrible curse incurred by Maui reaches an impetuous Chieftain's daughter's island, she answers the Ocean's call to seek out the demigod to set things right.",
+    "genre": "Adventure",
+    "external_rating": 7.6,
+    "external_id": "277834",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Encanto",
+    "description": "The tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of th",
+    "genre": "Animation",
+    "external_rating": 7.6,
+    "external_id": "568124",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Fury",
+    "description": "April, 1945. As the Allies make their final push in the European Theater, a battle-hardened army sergeant commands a Sherman tank with a five-man crew on a deadly mission behind enemy lines.",
+    "genre": "War",
+    "external_rating": 7.5,
+    "external_id": "228150",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Conjuring",
+    "description": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse. Forced to confront a powerful entity, the Warrens find themselves caught in the ",
+    "genre": "Horror",
+    "external_rating": 7.5,
+    "external_id": "138843",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Revenant",
+    "description": "In the 1820s, a frontiersman, Hugh Glass, sets out on a path of vengeance against those who left him for dead after a bear mauling.",
+    "genre": "Western",
+    "external_rating": 7.5,
+    "external_id": "281957",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "X-Men: Days of Future Past",
+    "description": "The ultimate X-Men ensemble fights a war for the survival of the species across two time periods as they join forces with their younger selves in an epic battle that must change the past – to save our",
+    "genre": "Action",
+    "external_rating": 7.5,
+    "external_id": "127585",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Zodiac",
+    "description": "Police conduct a manhunt for the Zodiac Killer, a serial killer who terrorized the San Francisco Bay Area during the late 1960s and early 1970s, taunting police with letters, bloodstained clothing, an",
+    "genre": "Crime",
+    "external_rating": 7.5,
+    "external_id": "1949",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "E.T. the Extra-Terrestrial",
+    "description": "An alien is left behind on Earth and saved by the 10-year-old Elliott who decides to keep him hidden in his home. While a task force hunts for the extra-terrestrial, Elliott, his brother, and his litt",
+    "genre": "Adventure",
+    "external_rating": 7.5,
+    "external_id": "601",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Rogue One: A Star Wars Story",
+    "description": "A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.",
+    "genre": "Action",
+    "external_rating": 7.5,
+    "external_id": "330459",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Godzilla vs. Kong",
+    "description": "In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spe",
+    "genre": "Action",
+    "external_rating": 7.5,
+    "external_id": "399566",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Ghostbusters",
+    "description": "After losing their university jobs, three parapsychologists start a ghost-catching business in New York City and uncover a supernatural threat that could destroy the world.",
+    "genre": "Comedy",
+    "external_rating": 7.5,
+    "external_id": "620",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Back to the Future Part III",
+    "description": "The final installment finds Marty digging the trusty DeLorean out of a mineshaft and looking for Doc in the Wild West of 1885. But when their time machine breaks down, the travelers are stranded in a ",
+    "genre": "Adventure",
+    "external_rating": 7.5,
+    "external_id": "196",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Bourne Identity",
+    "description": "Wounded to the brink of death and suffering from amnesia, Jason Bourne is rescued at sea by a fisherman. With nothing to go on but a Swiss bank account number, he starts to reconstruct his life, but f",
+    "genre": "Action",
+    "external_rating": 7.5,
+    "external_id": "2501",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Deadpool 2",
+    "description": "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.",
+    "genre": "Action",
+    "external_rating": 7.5,
+    "external_id": "383498",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "A Star Is Born",
+    "description": "Seasoned musician Jackson Maine discovers — and falls in love with — struggling artist Ally. She has just about given up on her dream to make it big as a singer — until Jack coaxes her into the spotli",
+    "genre": "Music",
+    "external_rating": 7.5,
+    "external_id": "332562",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "description": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+    "genre": "Action",
+    "external_rating": 7.5,
+    "external_id": "566525",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "District 9",
+    "description": "Thirty years ago, aliens arrive on Earth. Not to conquer or give aid, but to find refuge from their dying planet. Separated from humans in a South African area called District 9, the aliens are manage",
+    "genre": "Science Fiction",
+    "external_rating": 7.5,
+    "external_id": "17654",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Star Wars: Episode III - Revenge of the Sith",
+    "description": "When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker must choose a side.",
+    "genre": "Adventure",
+    "external_rating": 7.5,
+    "external_id": "1895",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Home Alone",
+    "description": "Eight-year-old Kevin McCallister makes the most of the situation after his family unwittingly leaves him behind when they go on Christmas vacation. When thieves try to break into his home, he puts up ",
+    "genre": "Comedy",
+    "external_rating": 7.5,
+    "external_id": "771",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "John Wick",
+    "description": "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
+    "genre": "Action",
+    "external_rating": 7.5,
+    "external_id": "245891",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Ocean's Eleven",
+    "description": "Less than 24 hours into his parole, charismatic thief Danny Ocean is already rolling out his next plan: In one night, Danny's hand-picked crew of specialists will attempt to steal more than $150 milli",
+    "genre": "Thriller",
+    "external_rating": 7.5,
+    "external_id": "161",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Toy Story 4",
+    "description": "Woody has always been confident about his place in the world, devoted to taking care of his kid—whether that's Andy or Bonnie. But after Bonnie creates a reluctant new toy called \"Forky\", a road trip ",
+    "genre": "Family",
+    "external_rating": 7.5,
+    "external_id": "301528",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Captain America: Civil War",
+    "description": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factio",
+    "genre": "Adventure",
+    "external_rating": 7.5,
+    "external_id": "271110",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Incredibles 2",
+    "description": "Elastigirl springs into action to save the day, while Mr. Incredible faces his greatest challenge yet – taking care of the problems of his three children.",
+    "genre": "Action",
+    "external_rating": 7.5,
+    "external_id": "260513",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Dunkirk",
+    "description": "The story of the miraculous evacuation of Allied soldiers from Belgium, Britain, Canada and France, who were cut off and surrounded by the German army from the beaches and harbour of Dunkirk between M",
+    "genre": "War",
+    "external_rating": 7.5,
+    "external_id": "374720",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Baby Driver",
+    "description": "After being coerced into working for a crime boss, a young getaway driver finds himself taking part in a heist doomed to fail.",
+    "genre": "Action",
+    "external_rating": 7.4,
+    "external_id": "339403",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "John Wick: Chapter 3 - Parabellum",
+    "description": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the ",
+    "genre": "Action",
+    "external_rating": 7.4,
+    "external_id": "458156",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Sicario",
+    "description": "An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.",
+    "genre": "Action",
+    "external_rating": 7.4,
+    "external_id": "273481",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Star Trek",
+    "description": "The fate of the galaxy rests in the hands of bitter rivals. One, James Kirk, is a delinquent, thrill-seeking Iowa farm boy. The other, Spock, a Vulcan, was raised in a logic-based society that rejects",
+    "genre": "Science Fiction",
+    "external_rating": 7.4,
+    "external_id": "13475",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Suicide Squad",
+    "description": "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infu",
+    "genre": "Action",
+    "external_rating": 7.4,
+    "external_id": "436969",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Birdman or (The Unexpected Virtue of Ignorance)",
+    "description": "A fading actor best known for his portrayal of a popular superhero attempts to mount a comeback by appearing in a Broadway play. As opening night approaches, his attempts to become more altruistic, re",
+    "genre": "Drama",
+    "external_rating": 7.4,
+    "external_id": "194662",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Devil Wears Prada",
+    "description": "A young woman from the Midwest gets more than she bargained for when she moves to New York to become a writer and ends up as the assistant to the tyrannical, larger-than-life editor-in-chief of a majo",
+    "genre": "Drama",
+    "external_rating": 7.4,
+    "external_id": "350",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Saw",
+    "description": "Two men wake up to find themselves shackled in a grimy, abandoned bathroom. As they struggle to comprehend their predicament, they discover a disturbing tape left behind by the sadistic mastermind kno",
+    "genre": "Horror",
+    "external_rating": 7.4,
+    "external_id": "176",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Doctor Strange",
+    "description": "After his career is destroyed, a brilliant but arrogant surgeon gets a new lease on life when a sorcerer takes him under her wing and trains him to defend the world against evil.",
+    "genre": "Fantasy",
+    "external_rating": 7.4,
+    "external_id": "284052",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Free Guy",
+    "description": "A bank teller discovers he is actually a background player in an open-world video game, and decides to become the hero of his own story. Now, in a world where there are no limits, he is determined to ",
+    "genre": "Comedy",
+    "external_rating": 7.4,
+    "external_id": "550988",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Hunger Games: Catching Fire",
+    "description": "After surviving the Hunger Games, Katniss and Peeta struggle with the consequences of their victory as unrest spreads across Panem. Forced back into the spotlight, they become symbols of hope and resi",
+    "genre": "Adventure",
+    "external_rating": 7.4,
+    "external_id": "101299",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Life of Pi",
+    "description": "The story of an Indian boy named Pi, a zookeeper's son who finds himself in the company of a hyena, zebra, orangutan, and a Bengal tiger after a shipwreck sets them adrift in the Pacific Ocean.",
+    "genre": "Adventure",
+    "external_rating": 7.4,
+    "external_id": "87827",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Once Upon a Time... in Hollywood",
+    "description": "Los Angeles, 1969. TV star Rick Dalton, a struggling actor specializing in westerns, and stuntman Cliff Booth, his best friend, try to survive in a constantly changing movie industry. Dalton is the ne",
+    "genre": "Comedy",
+    "external_rating": 7.4,
+    "external_id": "466272",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Taken",
+    "description": "Bryan Mills, a former government operative, is trying to reconnect with his teenage daughter Kim. After reluctantly agreeing with his ex-wife to let Kim go to Paris on vacation with a friend, his wors",
+    "genre": "Action",
+    "external_rating": 7.4,
+    "external_id": "8681",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "American Sniper",
+    "description": "U.S. Navy SEAL Chris Kyle takes his sole mission—protect his comrades—to heart and becomes one of the most lethal snipers in American history. His pinpoint accuracy not only saves countless lives but ",
+    "genre": "War",
+    "external_rating": 7.4,
+    "external_id": "190859",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "American Psycho",
+    "description": "A wealthy New York investment banking executive hides his alternate psychopathic ego from his co-workers and friends as he escalates deeper into his illogical, gratuitous fantasies.",
+    "genre": "Thriller",
+    "external_rating": 7.4,
+    "external_id": "1359",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "A Quiet Place",
+    "description": "A family is forced to live in silence while hiding from creatures that hunt by sound.",
+    "genre": "Horror",
+    "external_rating": 7.4,
+    "external_id": "447332",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Pirates of the Caribbean: Dead Man's Chest",
+    "description": "Captain Jack Sparrow’s got a blood debt to pay: he owes his soul to the legendary Davy Jones, ghastly Ruler of the Ocean Depths. To escape eternal servitude aboard the Flying Dutchman, ever-crafty Jac",
+    "genre": "Adventure",
+    "external_rating": 7.4,
+    "external_id": "58",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Hobbit: An Unexpected Journey",
+    "description": "Bilbo Baggins, a hobbit enjoying his quiet life, is swept into an epic quest by Gandalf the Grey and thirteen dwarves who seek to reclaim their mountain home from Smaug, the dragon.",
+    "genre": "Adventure",
+    "external_rating": 7.4,
+    "external_id": "49051",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Ice Age",
+    "description": "Manny the mammoth, Sid the loquacious sloth, and Diego the sabre-toothed tiger go on a comical quest to return a human baby back to his father, across a world on the brink of an ice age.",
+    "genre": "Animation",
+    "external_rating": 7.4,
+    "external_id": "425",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Spider-Man: Far From Home",
+    "description": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural d",
+    "genre": "Action",
+    "external_rating": 7.4,
+    "external_id": "429617",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Social Network",
+    "description": "In 2003, Harvard undergrad and computer programmer Mark Zuckerberg begins work on a new concept that eventually turns into the global social network known as Facebook. Six years later, Mark is one of ",
+    "genre": "Drama",
+    "external_rating": 7.4,
+    "external_id": "37799",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Big Short",
+    "description": "The men who made millions from a global economic meltdown.",
+    "genre": "Comedy",
+    "external_rating": 7.4,
+    "external_id": "318846",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Spider-Man",
+    "description": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man.",
+    "genre": "Action",
+    "external_rating": 7.4,
+    "external_id": "557",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Black Panther",
+    "description": "King T'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne ",
+    "genre": "Action",
+    "external_rating": 7.4,
+    "external_id": "284054",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Wreck-It Ralph",
+    "description": "Wreck-It Ralph is the 9-foot-tall, 643-pound villain of an arcade video game named Fix-It Felix Jr., in which the game's titular hero fixes buildings that Ralph destroys. Wanting to prove he can be a ",
+    "genre": "Family",
+    "external_rating": 7.4,
+    "external_id": "82690",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Minority Report",
+    "description": "John Anderton is a top 'Precrime' cop in the late-21st century, when technology can predict crimes before they're committed. But Anderton becomes the quarry when another investigator targets him for a",
+    "genre": "Science Fiction",
+    "external_rating": 7.4,
+    "external_id": "180",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Rise of the Planet of the Apes",
+    "description": "A highly intelligent chimpanzee named Caesar has been living a peaceful suburban life ever since he was born. But when he gets taken to a cruel primate facility, Caesar decides to revolt against those",
+    "genre": "Thriller",
+    "external_rating": 7.4,
+    "external_id": "61791",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Watchmen",
+    "description": "In a gritty and alternate 1985, the glory days of costumed vigilantes have been brought to a close by a government crackdown. But after one of the masked veterans is brutally murdered, an investigatio",
+    "genre": "Mystery",
+    "external_rating": 7.4,
+    "external_id": "13183",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "John Wick: Chapter 2",
+    "description": "John Wick is forced out of retirement by a former associate looking to seize control of a shadowy international assassins’ guild. Bound by a blood oath to aid him, Wick travels to Rome and does battle",
+    "genre": "Action",
+    "external_rating": 7.3,
+    "external_id": "324552",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Great Gatsby",
+    "description": "Nick Carraway arrives in New York in 1922, an era of loose morals, glittering jazz and bootleg kings. Chasing his own American Dream, Nick encounters the mysterious millionaire Gatsby and his bewitchi",
+    "genre": "Drama",
+    "external_rating": 7.3,
+    "external_id": "64682",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Kung Fu Panda",
+    "description": "Chosen by prophecy but doubted by all, Po is an unlikely choice for the mystical title of the Dragon Warrior—a clumsy panda thrust into the world of kung fu as a deadly enemy threatens the Valley of P",
+    "genre": "Action",
+    "external_rating": 7.3,
+    "external_id": "9502",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Dawn of the Planet of the Apes",
+    "description": "A group of scientists in San Francisco struggle to stay alive in the aftermath of a plague that is wiping out humanity, while Caesar tries to maintain dominance over his community of intelligent apes.",
+    "genre": "Science Fiction",
+    "external_rating": 7.3,
+    "external_id": "119450",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "The Hobbit: The Battle of the Five Armies",
+    "description": "Following Smaug's attack on Laketown, Bilbo and the dwarves try to defend Erebor's mountain of treasure from others who claim it: the men of the ruined Laketown and the elves of Mirkwood. Meanwhile an",
+    "genre": "Action",
+    "external_rating": 7.3,
+    "external_id": "122917",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Split",
+    "description": "Though Kevin has evidenced 23 personalities to his trusted psychiatrist, Dr. Fletcher, there remains one still submerged who is set to materialize and dominate all the others. Compelled to abduct thre",
+    "genre": "Horror",
+    "external_rating": 7.3,
+    "external_id": "381288",
+    "external_source": "tmdb"
+  },
+  {
+    "title": "Spider-Man 2",
+    "description": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by th",
+    "genre": "Action",
+    "external_rating": 7.3,
+    "external_id": "558",
     "external_source": "tmdb"
   }
 ]
