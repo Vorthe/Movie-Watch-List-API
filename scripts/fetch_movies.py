@@ -6,6 +6,12 @@ Fetch 250 top-rated movies from TMDB and save them as a JSON seed file.
 Run this script ONCE (locally) to generate movies_seed_250.json.
 After that, the JSON is committed to git and the project no longer
 needs TMDB or an API key at runtime.
+
+Output schema matches the `movies` table (see App/models.py):
+  - title, description, genre: strings
+  - external_rating: float 0-10 (from TMDB vote_average)
+  - external_id: TMDB id as string
+  - external_source: always "tmdb"
 """
 
 import os
@@ -16,10 +22,10 @@ import time
 import requests
 from dotenv import load_dotenv
 
-# --- Configuration ---
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
 OUTPUT_FILE = "movies_seed_250.json"
 TARGET_MOVIE_COUNT = 250
+EXTERNAL_SOURCE = "tmdb"
 
 
 def load_api_key() -> str:
@@ -45,7 +51,7 @@ def _request_json(url: str, params: dict, max_retries: int = 3) -> dict:
             response = requests.get(url, params=params, timeout=10)
         except (requests.Timeout, requests.ConnectionError) as e:
             last_error = e
-            wait = 2**attempt  # 2, 4, 8 seconds
+            wait = 2**attempt
             print(
                 f"Network error (attempt {attempt}/{max_retries}): "
                 f"{type(e).__name__}. Retrying in {wait}s...",
@@ -68,7 +74,6 @@ def _request_json(url: str, params: dict, max_retries: int = 3) -> dict:
         response.raise_for_status()
         return response.json()
 
-    # If we get here, all retries failed
     assert last_error is not None
     raise last_error
 
@@ -85,12 +90,13 @@ def fetch_genre_map(api_key: str) -> dict[int, str]:
 def fetch_top_rated(api_key: str, target: int = TARGET_MOVIE_COUNT) -> list[dict]:
     """Fetch up to `target` top-rated movies, one page at a time.
 
-    Stops early if TMDB runs out of pages (rare, but possible).
-    Returns raw TMDB movie dicts — normalization happens later.
+    Stops early if TMDB runs out of pages. Returns raw TMDB movie dicts.
+    Deduplicates by TMDB id in case pages overlap.
     """
     movies: list[dict] = []
+    seen_ids: set[int] = set()
     page = 1
-    total_pages = 1  # will be updated from first response
+    total_pages = 1
 
     while len(movies) < target and page <= total_pages:
         print(f"Fetching page {page} (collected {len(movies)}/{target})...")
@@ -99,49 +105,56 @@ def fetch_top_rated(api_key: str, target: int = TARGET_MOVIE_COUNT) -> list[dict
             params={"api_key": api_key, "page": page},
         )
         total_pages = data["total_pages"]
-        movies.extend(data["results"])
+
+        for movie in data["results"]:
+            tmdb_id = movie.get("id")
+            if tmdb_id is None or tmdb_id in seen_ids:
+                continue
+            seen_ids.add(tmdb_id)
+            movies.append(movie)
+
         page += 1
 
-    # Trim overshoot: page-based APIs may give us a few extra
     return movies[:target]
 
 
 def normalize_movie(raw: dict, genre_map: dict[int, str]) -> dict:
-    """Convert a raw TMDB movie dict into the project's seed schema.
+    """Convert a raw TMDB movie dict into the project's movies table schema.
 
-    Enforces all project constraints:
+    Constraints:
       - title, description: <= 200 characters (truncated)
-      - rating: integer, clamped to [1, 10]
-      - genre: always non-empty (falls back to "Unknown")
-      - watched: False
-      - owner_id: 1
+      - genre: always non-empty (falls back to "Unknown"), max 50 chars
+      - external_rating: float in [0, 10], rounded to 1 decimal
+      - external_id: TMDB id as string
+      - external_source: "tmdb"
     """
-    # --- title: required, max 200 chars ---
     title = (raw.get("title") or "Untitled").strip()[:200]
 
-    # --- description: from overview, max 200 chars, never empty ---
     description = (raw.get("overview") or "").strip()[:200]
     if not description:
         description = "No description available."
 
-    # --- rating: round float, clamp to [1, 10] ---
-    rating = round(raw.get("vote_average") or 0)
-    rating = max(1, min(10, rating))
+    # Keep the real TMDB score as a float, clamped to [0, 10]
+    rating_raw = raw.get("vote_average")
+    if rating_raw is None:
+        external_rating = 0.0
+    else:
+        external_rating = round(float(rating_raw), 1)
+        external_rating = max(0.0, min(10.0, external_rating))
 
-    # --- genre: first known genre from genre_ids ---
     genre_ids = raw.get("genre_ids") or []
     genre = next(
         (genre_map[gid] for gid in genre_ids if gid in genre_map),
         "Unknown",
-    )
+    )[:50]
 
     return {
         "title": title,
         "description": description,
-        "rating": rating,
-        "watched": False,
         "genre": genre,
-        "owner_id": 1,
+        "external_rating": external_rating,
+        "external_id": str(raw["id"]),
+        "external_source": EXTERNAL_SOURCE,
     }
 
 
@@ -149,7 +162,7 @@ def save_movies(movies: list[dict], output_path: str) -> None:
     """Write movies to a JSON file (pretty-printed, UTF-8)."""
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(movies, f, indent=2, ensure_ascii=False)
-        f.write("\n")  # POSIX convention: files end with a newline
+        f.write("\n")
 
 
 def main() -> None:

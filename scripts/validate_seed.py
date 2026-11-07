@@ -1,12 +1,17 @@
 """
 scripts/validate_seed.py
 
-Validate movies_seed_250.json against the project's schema constraints.
+Validate movies_seed_250.json against the current movies table schema.
 
-Run after fetch_movies.py to confirm the generated seed file is safe
-to import into the database.
+Checks:
+  - Exactly 250 entries
+  - title, description, genre are non-empty strings within length limits
+  - external_rating is a float in [0, 10]
+  - external_id is a non-empty string
+  - external_source is "tmdb"
+  - external_id values are unique (no duplicates)
 
-Exit code 0 = all good. Exit code 1 = validation failed (details on stderr).
+Run from repo root:  python scripts/validate_seed.py
 """
 
 import json
@@ -14,106 +19,90 @@ import sys
 
 SEED_FILE = "movies_seed_250.json"
 EXPECTED_COUNT = 250
-MAX_TEXT_LEN = 200
-MIN_RATING = 1
-MAX_RATING = 10
-REQUIRED_FIELDS = {"title", "description", "rating", "watched", "genre", "owner_id"}
+
+TITLE_MAX = 200
+DESCRIPTION_MAX = 200
+GENRE_MAX = 50
+EXTERNAL_ID_MAX = 50
+EXTERNAL_SOURCE_MAX = 20
 
 
-def validate(movies: list) -> list[str]:
-    """Return list of error messages. Empty list = valid."""
+def validate(data: list[dict]) -> list[str]:
     errors: list[str] = []
 
-    if len(movies) != EXPECTED_COUNT:
-        errors.append(f"Expected {EXPECTED_COUNT} movies, got {len(movies)}")
+    if len(data) != EXPECTED_COUNT:
+        errors.append(f"Expected {EXPECTED_COUNT} movies, got {len(data)}.")
 
-    for i, m in enumerate(movies):
-        prefix = f"[{i}]"
+    seen_external_ids: set[str] = set()
 
-        # 1. All required fields present, no extras
-        keys = set(m.keys())
-        missing = REQUIRED_FIELDS - keys
-        extra = keys - REQUIRED_FIELDS
-        if missing:
-            errors.append(f"{prefix} Missing fields: {missing}")
-        if extra:
-            errors.append(f"{prefix} Unexpected fields: {extra}")
+    for i, movie in enumerate(data):
+        prefix = f"[{i}] {movie.get('title', '<no title>')!r}"
 
-        # 2. title: non-empty string, <= 200 chars
-        title = m.get("title")
-        if not isinstance(title, str) or not title:
-            errors.append(f"{prefix} Invalid title: {title!r}")
-        elif len(title) > MAX_TEXT_LEN:
-            errors.append(f"{prefix} title too long: {len(title)} chars")
+        title = movie.get("title")
+        if not isinstance(title, str) or not title.strip():
+            errors.append(f"{prefix}: title is missing or empty.")
+        elif len(title) > TITLE_MAX:
+            errors.append(f"{prefix}: title exceeds {TITLE_MAX} chars ({len(title)}).")
 
-        # 3. description: non-empty string, <= 200 chars
-        desc = m.get("description")
-        if not isinstance(desc, str) or not desc:
-            errors.append(f"{prefix} Invalid description: {desc!r}")
-        elif len(desc) > MAX_TEXT_LEN:
-            errors.append(f"{prefix} description too long: {len(desc)} chars")
+        description = movie.get("description")
+        if not isinstance(description, str) or not description.strip():
+            errors.append(f"{prefix}: description is missing or empty.")
+        elif len(description) > DESCRIPTION_MAX:
+            errors.append(
+                f"{prefix}: description exceeds {DESCRIPTION_MAX} chars "
+                f"({len(description)})."
+            )
 
-        # 4. rating: integer in [1, 10]
-        rating = m.get("rating")
-        if not isinstance(rating, int) or isinstance(rating, bool):
-            errors.append(f"{prefix} rating must be int, got {type(rating).__name__}")
-        elif not (MIN_RATING <= rating <= MAX_RATING):
-            errors.append(f"{prefix} rating out of range: {rating}")
-
-        # 5. watched: exactly False
-        if m.get("watched") is not False:
-            errors.append(f"{prefix} watched must be False, got {m.get('watched')!r}")
-
-        # 6. genre: non-empty string
-        genre = m.get("genre")
+        genre = movie.get("genre")
         if not isinstance(genre, str) or not genre.strip():
-            errors.append(f"{prefix} Invalid genre: {genre!r}")
+            errors.append(f"{prefix}: genre is missing or empty.")
+        elif len(genre) > GENRE_MAX:
+            errors.append(f"{prefix}: genre exceeds {GENRE_MAX} chars ({len(genre)}).")
 
-        # 7. owner_id: exactly 1
-        if m.get("owner_id") != 1:
-            errors.append(f"{prefix} owner_id must be 1, got {m.get('owner_id')!r}")
+        rating = movie.get("external_rating")
+        if not isinstance(rating, (int, float)):
+            errors.append(f"{prefix}: external_rating must be numeric.")
+        elif not (0 <= rating <= 10):
+            errors.append(f"{prefix}: external_rating {rating} out of range [0, 10].")
+
+        external_id = movie.get("external_id")
+        if not isinstance(external_id, str) or not external_id.strip():
+            errors.append(f"{prefix}: external_id is missing or empty.")
+        elif len(external_id) > EXTERNAL_ID_MAX:
+            errors.append(f"{prefix}: external_id exceeds {EXTERNAL_ID_MAX} chars.")
+        elif external_id in seen_external_ids:
+            errors.append(f"{prefix}: duplicate external_id {external_id!r}.")
+        else:
+            seen_external_ids.add(external_id)
+
+        external_source = movie.get("external_source")
+        if not isinstance(external_source, str) or not external_source.strip():
+            errors.append(f"{prefix}: external_source is missing or empty.")
+        elif len(external_source) > EXTERNAL_SOURCE_MAX:
+            errors.append(
+                f"{prefix}: external_source exceeds " f"{EXTERNAL_SOURCE_MAX} chars."
+            )
+        elif external_source != "tmdb":
+            errors.append(f"{prefix}: unexpected external_source {external_source!r}.")
 
     return errors
 
 
 def main() -> None:
-    try:
-        with open(SEED_FILE, encoding="utf-8") as f:
-            movies = json.load(f)
-    except FileNotFoundError:
-        print(
-            f"ERROR: {SEED_FILE} not found. Run fetch_movies.py first.", file=sys.stderr
-        )
-        sys.exit(1)
-    except json.JSONDecodeError as e:
-        print(f"ERROR: {SEED_FILE} is not valid JSON: {e}", file=sys.stderr)
-        sys.exit(1)
+    print(f"Reading {SEED_FILE}...")
+    with open(SEED_FILE, encoding="utf-8") as f:
+        data = json.load(f)
 
-    if not isinstance(movies, list):
-        print(
-            f"ERROR: expected a JSON array, got {type(movies).__name__}",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-
-    errors = validate(movies)
+    print(f"Loaded {len(data)} entries. Validating...")
+    errors = validate(data)
 
     if errors:
-        print(f"FAILED: {len(errors)} error(s):", file=sys.stderr)
-        for e in errors[:50]:  # cap output
-            print(f"  {e}", file=sys.stderr)
-        if len(errors) > 50:
-            print(f"  ... and {len(errors) - 50} more", file=sys.stderr)
+        print(f"\n{len(errors)} validation error(s):", file=sys.stderr)
+        for err in errors:
+            print(f"  - {err}", file=sys.stderr)
         sys.exit(1)
 
-    # Success summary
-    print(f"✅ {SEED_FILE} is valid.")
-    print(f"   Movies: {len(movies)}")
-    print(f"   All constraints satisfied:")
-    print(f"     - title, description <= {MAX_TEXT_LEN} chars")
-    print(f"     - rating in [{MIN_RATING}, {MAX_RATING}] (int)")
-    print(f"     - genre non-empty")
-    print(f"     - watched == False, owner_id == 1")
+    print(f"OK. {len(data)} movies are valid.")
 
 
 if __name__ == "__main__":
