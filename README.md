@@ -31,15 +31,16 @@ A full-stack movie tracking application where users manage their personal watch 
 
 ## Features
 
+- Shared movie catalog with per-user status (no data duplication)
 - User registration and login with JWT authentication
-- Personal movie watch list (create, read, update, delete)
-- Search movies by title
-- Filter by watched/unwatched status
-- Sort by rating or title
-- Pagination (12 movies per page)
-- Statistics dashboard: total, watched, unwatched, average rating
-- User profile management (change password, update phone number)
-- Admin panel with read/delete permissions
+- Browse catalog with search, filter, sort, and pagination
+- Mark movies as watched / unwatched
+- Personal rating (1–10) per user, debounced autosave
+- Public rating from TMDB displayed alongside personal rating
+- Reset personal status back to "untouched"
+- Statistics dashboard (total, watched, unwatched, average of your ratings)
+- User profile: change password, update phone number
+- Admin panel to manage the catalog (read, create, update, delete)
 
 ## Project Structure
 
