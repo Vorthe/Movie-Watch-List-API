@@ -1,37 +1,28 @@
 # Development Phases
 
-## Phase 0 — Bootstrap (DONE)
-
-Goal: Get a skeleton app running.
-
-- FastAPI with health check
-- Docker Compose with PostgreSQL
-- Alembic migrations
-- Deploy on Render
-- Basic JWT auth
-- Basic per-user movie CRUD
-
-## Phase 1 — Foundation (CURRENT)
+## Phase 1 — Foundation (DONE)
 
 Goal: Refactor to a clean, scalable architecture.
 
 - Lazy join refactor: shared catalog plus per-user status
 - Dual rating: external (TMDB) plus personal
 - Rewrite all endpoints for new data model
-- Rewrite tests
-- Rewrite frontend
-- Documentation: overview, phases, ERD, ADRs
+- Rewrite tests (37 passing)
+- Rewrite frontend with inline status editing
+- Documentation: overview, phases, ERD, ADR-001, ADR-002
 - CI/CD pipeline with deploy hook
 
-## Phase 2 — Real Data (NEXT)
+## Phase 2 — Real Data (CURRENT)
 
 Goal: Replace fake data with real TMDB data.
 
-- Delete old fake data
-- Fetch 250 real movies from TMDB
-- Seed script for production
-- End-to-end test on Render
-- Remove test users
+- Update fetch_movies.py to include external_rating, external_id, external_source
+- Regenerate movies_seed_250.json with the new fields
+- Write seed_production.py for bulk insert
+- Decide hook strategy (start.py vs manual)
+- Delete old fake data, seed 250 real movies on Render
+- Delete test users
+- Verify end-to-end on production
 
 ## Phase 3 — Async Tasks
 
