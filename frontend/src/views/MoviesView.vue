@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
-import { listMovies, createMovie, deleteMovie, getStats, updateMovie } from '../api/movies'
+import { listMovies, updateStatus, deleteStatus, getStats } from '../api/movies'
 
 const movies = ref([])
 const stats = ref(null)
@@ -9,24 +9,14 @@ const error = ref('')
 
 const search = ref('')
 const filterWatched = ref('')
+const sortBy = ref('')
 const page = ref(0)
-const pageSize = 12
-
-const showForm = ref(false)
-const form = ref({
-  title: '',
-  description: '',
-  rating: 5,
-  watched: false,
-  genre: '',
-})
+const pageSize = 48
 
 const hasNext = computed(() => movies.value.length === pageSize)
 const hasPrev = computed(() => page.value > 0)
 
-function resetForm() {
-  form.value = { title: '', description: '', rating: 5, watched: false, genre: '' }
-}
+const ratingTimers = {}
 
 async function loadMovies() {
   loading.value = true
@@ -35,6 +25,7 @@ async function loadMovies() {
     const params = { limit: pageSize, skip: page.value * pageSize }
     if (search.value.trim()) params.search = search.value.trim()
     if (filterWatched.value !== '') params.watched = filterWatched.value === 'true'
+    if (sortBy.value) params.sort_by = sortBy.value
     movies.value = await listMovies(params)
   } catch (e) {
     error.value = e.response?.data?.detail || 'Failed to load movies.'
@@ -51,41 +42,47 @@ async function loadStats() {
   }
 }
 
-async function handleCreate() {
-  error.value = ''
+async function handleToggleWatched(movie) {
+  const currentWatched = movie.user_status?.watched || false
+  const currentRating = movie.user_status?.rating ?? null
   try {
-    await createMovie({ ...form.value, rating: Number(form.value.rating) })
-    showForm.value = false
-    resetForm()
-    page.value = 0
-    await Promise.all([loadMovies(), loadStats()])
-  } catch (e) {
-    error.value = e.response?.data?.detail || 'Failed to create movie.'
-  }
-}
-
-async function handleDelete(id) {
-  if (!confirm('Delete this movie?')) return
-  try {
-    await deleteMovie(id)
-    await Promise.all([loadMovies(), loadStats()])
-  } catch (e) {
-    error.value = e.response?.data?.detail || 'Failed to delete movie.'
-  }
-}
-
-async function toggleWatched(movie) {
-  try {
-    await updateMovie(movie.id, {
-      title: movie.title,
-      description: movie.description,
-      rating: movie.rating,
-      watched: !movie.watched,
-      genre: movie.genre,
+    await updateStatus(movie.id, {
+      watched: !currentWatched,
+      rating: currentRating,
     })
     await Promise.all([loadMovies(), loadStats()])
   } catch (e) {
-    error.value = e.response?.data?.detail || 'Failed to update movie.'
+    error.value = e.response?.data?.detail || 'Failed to update status.'
+  }
+}
+
+function handleRatingInput(movie, event) {
+  const movieId = movie.id
+  const raw = event.target.value
+
+  if (ratingTimers[movieId]) clearTimeout(ratingTimers[movieId])
+
+  ratingTimers[movieId] = setTimeout(async () => {
+    const rating = raw === '' ? null : Number(raw)
+    if (rating !== null && (rating < 1 || rating > 10)) return
+
+    const watched = movie.user_status?.watched || false
+    try {
+      await updateStatus(movieId, { watched, rating })
+      await Promise.all([loadMovies(), loadStats()])
+    } catch (e) {
+      error.value = e.response?.data?.detail || 'Failed to update rating.'
+    }
+  }, 700)
+}
+
+async function handleResetStatus(movie) {
+  if (!confirm('Reset your status for this movie?')) return
+  try {
+    await deleteStatus(movie.id)
+    await Promise.all([loadMovies(), loadStats()])
+  } catch (e) {
+    error.value = e.response?.data?.detail || 'Failed to reset status.'
   }
 }
 
@@ -113,10 +110,8 @@ onMounted(() => {
 <template>
   <div class="movies-view">
     <div class="header-row">
-      <h1>My Movies</h1>
-      <button class="btn-primary" @click="showForm = !showForm">
-        {{ showForm ? 'Cancel' : '+ Add Movie' }}
-      </button>
+      <h1>Movie Catalog</h1>
+      <span v-if="loading" class="loading-indicator">Updating…</span>
     </div>
 
     <div class="stats" v-if="stats">
@@ -133,42 +128,10 @@ onMounted(() => {
         <span class="stat-value">{{ stats.unwatched_movies }}</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">Avg (watched)</span>
+        <span class="stat-label">Your avg</span>
         <span class="stat-value">{{ stats.average_rating.toFixed(1) }}</span>
       </div>
     </div>
-
-    <form v-if="showForm" class="movie-form" @submit.prevent="handleCreate">
-      <div class="form-row">
-        <label>
-          Title
-          <input v-model="form.title" type="text" required minlength="4" maxlength="20" />
-        </label>
-        <label>
-          Genre
-          <input v-model="form.genre" type="text" required minlength="4" maxlength="20" />
-        </label>
-        <label>
-          Rating (1-10)
-          <input v-model.number="form.rating" type="number" min="1" max="10" required />
-        </label>
-        <label class="checkbox-label">
-          <input v-model="form.watched" type="checkbox" />
-          Watched
-        </label>
-      </div>
-      <label class="full">
-        Description
-        <textarea
-          v-model="form.description"
-          rows="2"
-          required
-          minlength="4"
-          maxlength="200"
-        ></textarea>
-      </label>
-      <button type="submit" class="btn-primary">Create</button>
-    </form>
 
     <div class="filters">
       <input
@@ -177,33 +140,65 @@ onMounted(() => {
         placeholder="Search by title…"
         @keyup.enter="applyFilters"
       />
-      <select v-model="filterWatched" @change="applyFilters">
-        <option value="">All</option>
-        <option value="true">Watched</option>
-        <option value="false">Unwatched</option>
-      </select>
+      <label class="filter-label">
+        Status
+        <select v-model="filterWatched" @change="applyFilters">
+          <option value="">All</option>
+          <option value="true">Watched</option>
+          <option value="false">Unwatched</option>
+        </select>
+      </label>
+      <label class="filter-label">
+        Sort by
+        <select v-model="sortBy" @change="applyFilters">
+          <option value="">Default</option>
+          <option value="title">Title (A–Z)</option>
+          <option value="rating">My rating (high → low)</option>
+          <option value="external_rating">IMDb rating (high → low)</option>
+        </select>
+      </label>
       <button class="btn-secondary" @click="applyFilters">Apply</button>
     </div>
 
     <p v-if="error" class="error">{{ error }}</p>
-    <p v-if="loading" class="muted">Loading…</p>
-    <p v-else-if="movies.length === 0" class="muted">No movies found.</p>
 
-    <div class="movies-grid">
+    <p v-if="!loading && movies.length === 0" class="muted">No movies found.</p>
+
+    <div class="movies-grid" :class="{ 'is-loading': loading }">
       <div v-for="movie in movies" :key="movie.id" class="movie-card">
         <div class="movie-head">
           <h3>{{ movie.title }}</h3>
-          <span class="rating">⭐ {{ movie.rating }}</span>
+          <span v-if="movie.external_rating" class="external-rating">
+            IMDb {{ movie.external_rating }}
+          </span>
         </div>
         <p class="desc">{{ movie.description }}</p>
         <div class="movie-foot">
           <span class="genre">{{ movie.genre }}</span>
           <label class="watched-toggle">
-            <input type="checkbox" :checked="movie.watched" @change="toggleWatched(movie)" />
+            <input
+              type="checkbox"
+              :checked="movie.user_status?.watched || false"
+              @change="handleToggleWatched(movie)"
+            />
             Watched
           </label>
         </div>
-        <button class="btn-delete" @click="handleDelete(movie.id)">Delete</button>
+        <div class="user-controls">
+          <label class="rating-input">
+            Your rating:
+            <input
+              type="number"
+              min="1"
+              max="10"
+              :value="movie.user_status?.rating ?? ''"
+              @input="handleRatingInput(movie, $event)"
+            />
+          </label>
+          <button v-if="movie.user_status" class="btn-reset" @click="handleResetStatus(movie)">
+            Reset
+          </button>
+        </div>
       </div>
     </div>
 
@@ -217,29 +212,31 @@ onMounted(() => {
 
 <style scoped>
 .movies-view {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .header-row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   margin-bottom: 1.5rem;
 }
 h1 {
   margin: 0;
 }
-.btn-primary {
-  background: #3b82f6;
-  color: white;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9rem;
+.loading-indicator {
+  color: #60a5fa;
+  font-size: 0.85rem;
+  animation: pulse 1s ease-in-out infinite;
 }
-.btn-primary:hover {
-  background: #2563eb;
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 .btn-secondary {
   background: #334155;
@@ -280,36 +277,20 @@ h1 {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.movie-form {
-  background: #1e293b;
-  padding: 1.25rem;
-  border-radius: 10px;
-  border: 1px solid #334155;
-  margin-bottom: 1.5rem;
+.filters {
   display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-.form-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr auto;
-  gap: 0.8rem;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
   align-items: end;
 }
-.movie-form label {
+.filter-label {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  font-size: 0.85rem;
-  color: #cbd5e1;
+  font-size: 0.8rem;
+  color: #94a3b8;
 }
-.checkbox-label {
-  flex-direction: row !important;
-  align-items: center;
-  gap: 0.4rem !important;
-}
-.movie-form input,
-.movie-form textarea,
 .filters input,
 .filters select {
   padding: 0.5rem 0.7rem;
@@ -320,25 +301,24 @@ h1 {
   font-size: 0.9rem;
   font-family: inherit;
 }
-.movie-form input:focus,
-.movie-form textarea:focus,
+.filters input {
+  flex: 1;
+  min-width: 200px;
+}
 .filters input:focus,
 .filters select:focus {
   outline: none;
   border-color: #3b82f6;
 }
-.filters {
-  display: flex;
-  gap: 0.6rem;
-  margin-bottom: 1.25rem;
-}
-.filters input {
-  flex: 1;
-}
 .movies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1rem;
+  transition: opacity 0.15s ease;
+}
+.movies-grid.is-loading {
+  opacity: 0.6;
+  pointer-events: none;
 }
 .movie-card {
   background: #1e293b;
@@ -353,14 +333,16 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  gap: 0.5rem;
 }
 .movie-head h3 {
   margin: 0;
   font-size: 1rem;
 }
-.rating {
+.external-rating {
   color: #fbbf24;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
 .desc {
   color: #94a3b8;
@@ -388,18 +370,46 @@ h1 {
   color: #cbd5e1;
   cursor: pointer;
 }
-.btn-delete {
-  background: transparent;
-  color: #f87171;
-  border: 1px solid #7f1d1d;
-  padding: 0.4rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  align-self: start;
+.user-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #334155;
 }
-.btn-delete:hover {
-  background: #7f1d1d33;
+.rating-input {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+.rating-input input {
+  width: 60px;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 0.8rem;
+}
+.rating-input input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+.btn-reset {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid #475569;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+.btn-reset:hover {
+  color: #f87171;
+  border-color: #7f1d1d;
 }
 .pagination {
   display: flex;

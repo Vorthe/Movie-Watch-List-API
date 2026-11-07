@@ -6,23 +6,16 @@ export async function listMovies(params = {}) {
 }
 
 export async function getMovie(id) {
-  const { data } = await api.get(`/movies/movie/${id}`)
+  const { data } = await api.get(`/movies/${id}`)
   return data
 }
 
-export async function createMovie(movie) {
-  const { data } = await api.post('/movies/movie', movie)
-  return data
+export async function updateStatus(movieId, { watched, rating }) {
+  await api.put(`/movies/${movieId}/status`, { watched, rating })
 }
 
-export async function updateMovie(id, movie) {
-  const { data } = await api.put(`/movies/movie/${id}`, movie)
-  return data
-}
-
-export async function deleteMovie(id) {
-  const { data } = await api.delete(`/movies/movie/${id}`)
-  return data
+export async function deleteStatus(movieId) {
+  await api.delete(`/movies/${movieId}/status`)
 }
 
 export async function getStats() {
