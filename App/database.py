@@ -8,6 +8,11 @@ load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
+
+if DATABASE_URL and DATABASE_URL.startswith("postgresql://"):
+    DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+psycopg2://", 1)
+
+
 _require_ssl = os.getenv("DB_REQUIRE_SSL", "false").lower() == "true"
 _connect_args = {"sslmode": "require"} if _require_ssl else {}
 

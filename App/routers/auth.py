@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 from ..models import Users
 from ..database import SessionLocal
 from sqlalchemy.orm import Session
-from passlib.context import CryptContext
+import bcrypt
 from starlette import status
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from jose import jwt, JWTError
@@ -23,7 +23,6 @@ router = APIRouter(prefix="/auth", tags=["auth"])
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
 
-bycrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl="auth/token")
 
 
@@ -75,7 +74,9 @@ def authentication_user(username: str, password: str, db):
     user = db.query(Users).filter(Users.username == username).first()
     if not user:
         return False
-    if not bycrypt_context.verify(password, user.hashed_password):
+    password_bytes = password.encode("utf-8")[:72]
+    hashed_password_bytes = user.hashed_password.encode("utf-8")
+    if not bcrypt.checkpw(password_bytes, hashed_password_bytes):
         return False
     return user
 
@@ -110,12 +111,15 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):
 
 @router.post("/", status_code=status.HTTP_201_CREATED)
 async def create_user(db: db_dep, create_user_request: CreateUserRequest):
+    password_bytes = create_user_request.password.encode("utf-8")[:72]
+    hashed_password = bcrypt.hashpw(password_bytes, bcrypt.gensalt()).decode("utf-8")
+
     create_user_model = Users(
         username=create_user_request.username,
         email=create_user_request.email,
         first_name=create_user_request.first_name,
         last_name=create_user_request.last_name,
-        hashed_password=bycrypt_context.hash(create_user_request.password),
+        hashed_password=hashed_password,
         role=create_user_request.role,
         is_active=True,
         phone_number=create_user_request.phone_number,

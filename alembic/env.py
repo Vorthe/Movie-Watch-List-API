@@ -65,6 +65,11 @@ def run_migrations_offline() -> None:
 
 def run_migrations_online() -> None:
     """Run migrations in 'online' mode."""
+    _db_url = config.get_main_option("sqlalchemy.url")
+    if _db_url and _db_url.startswith("postgresql://"):
+        _db_url = _db_url.replace("postgresql://", "postgresql+psycopg2://", 1)
+        config.set_main_option("sqlalchemy.url", _db_url)
+
     _require_ssl = os.getenv("DB_REQUIRE_SSL", "false").lower() == "true"
     _connect_args = {"sslmode": "require"} if _require_ssl else {}
 

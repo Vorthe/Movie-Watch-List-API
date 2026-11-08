@@ -22,3 +22,4 @@ ci_test.db
 
 # scratch
 project_export.txt
+requirements.lock.txt

@@ -58,8 +58,10 @@ async function handleToggleWatched(movie) {
 
 function handleRatingInput(movie, event) {
   const movieId = movie.id
-  const raw = event.target.value
-
+  const raw = event.target.value.replace(/[^0-9]/g, '')
+  if (event.target.value !== raw) {
+    event.target.value = raw
+  }
   if (ratingTimers[movieId]) clearTimeout(ratingTimers[movieId])
 
   ratingTimers[movieId] = setTimeout(async () => {
@@ -193,6 +195,11 @@ onMounted(() => {
               max="10"
               step="1"
               :value="movie.user_status?.rating ?? ''"
+              @keydown="
+                (e) => {
+                  if (['.', ','].includes(e.key)) e.preventDefault()
+                }
+              "
               @input="handleRatingInput(movie, $event)"
             />
           </label>

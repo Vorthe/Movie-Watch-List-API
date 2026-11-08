@@ -1,12 +1,14 @@
 from typing import Annotated
+
+import bcrypt
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
-from fastapi import APIRouter, Depends, HTTPException, Path
-from ..models import Users
-from ..database import SessionLocal
 from starlette import status
+
+from ..database import SessionLocal
+from ..models import Users
 from .auth import get_current_user
-from passlib.context import CryptContext
 
 router = APIRouter(prefix="/users", tags=["users"])
 
@@ -21,7 +23,6 @@ def get_db():
 
 db_dep = Annotated[Session, Depends(get_db)]
 user_dep = Annotated[dict, Depends(get_current_user)]
-bycrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 class UserVerification(BaseModel):
@@ -41,14 +42,18 @@ async def change_password(
     user: user_dep, db: db_dep, user_verification: UserVerification
 ):
     if user is None:
-        raise HTTPException(status_code=401, detail="Authentiction Failed")
+        raise HTTPException(status_code=401, detail="Authentication Failed")
     user_model = db.query(Users).filter(Users.id == user.get("id")).first()
 
-    if not bycrypt_context.verify(
-        user_verification.password, user_model.hashed_password
-    ):
+    password_bytes = user_verification.password.encode("utf-8")[:72]
+    hashed_password_bytes = user_model.hashed_password.encode("utf-8")
+    if not bcrypt.checkpw(password_bytes, hashed_password_bytes):
         raise HTTPException(status_code=401, detail="Error On Password Change")
-    user_model.hashed_password = bycrypt_context.hash(user_verification.new_password)
+
+    new_password_bytes = user_verification.new_password.encode("utf-8")[:72]
+    user_model.hashed_password = bcrypt.hashpw(
+        new_password_bytes, bcrypt.gensalt()
+    ).decode("utf-8")
     db.add(user_model)
     db.commit()
 

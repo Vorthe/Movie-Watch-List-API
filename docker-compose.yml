@@ -19,15 +19,29 @@ services:
       timeout: 5s
       retries: 10
 
+  redis:
+    image: redis:7-alpine
+    container_name: moviewatchlist_redis
+    restart: always
+    ports:
+      - '6379:6379'
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
   app:
     build:
       context: .
       args:
-        PIP_INDEX_URL: https://mirror-pypi.runflare.com/simple
-        PIP_TRUSTED_HOST: mirror-pypi.runflare.com
+        PIP_INDEX_URL: https://pypi.tuna.tsinghua.edu.cn/simple
+        PIP_TRUSTED_HOST: pypi.tuna.tsinghua.edu.cn
     container_name: moviewatchlist_app
     depends_on:
       db:
+        condition: service_healthy
+      redis:
         condition: service_healthy
     env_file:
       - .env
@@ -38,6 +52,24 @@ services:
     command: >
       sh -c "alembic upgrade head &&
              uvicorn App.main:app --host 0.0.0.0 --port 8000"
+
+  worker:
+    build:
+      context: .
+      args:
+        PIP_INDEX_URL: https://pypi.tuna.tsinghua.edu.cn/simple
+        PIP_TRUSTED_HOST: pypi.tuna.tsinghua.edu.cn
+    container_name: moviewatchlist_worker
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: celery -A App.celery_app worker --loglevel=info
 
 volumes:
   postgres_data:

@@ -1,3 +1,4 @@
+import bcrypt
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, text
@@ -7,8 +8,6 @@ import os
 from App.database import Base
 from App.main import app
 from App.models import Movie, UserMovieStatus, Users
-from App.routers.auth import bycrypt_context
-
 from App.routers.auth import get_db as auth_get_db, get_current_user
 from App.routers.movies import get_db as movies_get_db
 from App.routers.admin import get_db as admin_get_db
@@ -93,12 +92,15 @@ def clean_db():
 @pytest.fixture
 def test_user():
     db = TestingSessionLocal()
+    password_bytes = "test1234".encode("utf-8")[:72]
+    hashed_password = bcrypt.hashpw(password_bytes, bcrypt.gensalt()).decode("utf-8")
+
     user = Users(
         email="test@example.com",
         username="testuser",
         first_name="Test",
         last_name="User",
-        hashed_password=bycrypt_context.hash("test1234"),
+        hashed_password=hashed_password,
         is_active=True,
         role="admin",
         phone_number="09121234567",
