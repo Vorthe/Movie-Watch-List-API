@@ -12,17 +12,19 @@ Goal: Refactor to a clean, scalable architecture.
 - Documentation: overview, phases, ERD, ADR-001, ADR-002
 - CI/CD pipeline with deploy hook
 
-## Phase 2 — Real Data (CURRENT)
+## Phase 2 — Real Data (DONE)
 
 Goal: Replace fake data with real TMDB data.
 
-- Update fetch_movies.py to include external_rating, external_id, external_source
-- Regenerate movies_seed_250.json with the new fields
-- Write seed_production.py for bulk insert
-- Decide hook strategy (start.py vs manual)
-- Delete old fake data, seed 250 real movies on Render
-- Delete test users
-- Verify end-to-end on production
+- Updated fetch_movies.py to filter by vote_count >= 10000
+  (avoids obscure movies with few votes)
+- Regenerated movies_seed_250.json with real data
+  (Shawshank #1, Godfather #2, 12 Angry Men #3)
+- Added external_rating, external_id, external_source fields
+- Wrote seed_production.py (idempotent, safe to re-run)
+- Seeded 250 movies on Render via local terminal
+- Cleaned up test users
+- Fixed decimal input on rating
 
 ## Phase 3 — Async Tasks
 

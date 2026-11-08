@@ -17,8 +17,8 @@ Last updated: 2026-11-07 (end of Phase 1).
 ## Still open
 
 | #   | Issue                                                   | Severity | Notes                                                         |
-| --- | ------------------------------------------------------- | -------- | ------------------------------------------------------------- |
-| 4   | Seed data will use real TMDB data (Phase 2)             | Low      | In progress                                                   |
+| --- | ------------------------------------------------------- | -------- | ------------------------------------------------------------- | --- | ----------- |
+| 4   | Seed data from TMDB (Phase 2)                           | ✅ DONE  |                                                               | Low | In progress |
 | 6   | Root `/` redirects to non-existent `/movies/movie-page` | Low      | Harmless in API-only mode                                     |
 | 8   | **SECURITY: `role` accepted from client on signup**     | **HIGH** | Strip `role` from `CreateUserRequest`, always assign `"user"` |
 | 9   | No password strength validation on backend              | Medium   | Add via Pydantic                                              |

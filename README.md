@@ -42,6 +42,17 @@ A full-stack movie tracking application where users manage their personal watch 
 - User profile: change password, update phone number
 - Admin panel to manage the catalog (read, create, update, delete)
 
+  ## Data
+
+  The movie catalog contains 250 real movies from TMDB.
+  Each entry has:
+  - Real title, description, and genre
+  - IMDb rating (external_rating, e.g. 8.7)
+  - TMDB id (external_id) for future syncs
+
+  The catalog is committed to git as `movies_seed_250.json`.
+  Runtime does not depend on TMDB — the app still works if TMDB is down.
+
 ## Project Structure
 
 ```text
