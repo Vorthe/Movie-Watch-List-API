@@ -2,7 +2,7 @@ import os
 from fastapi import FastAPI, Request, status
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
-from .routers import auth, movies, admin, users, notifications
+from .routers import auth, movies, admin, users, notifications, schedule
 from .models import Base
 from .database import engine
 
@@ -37,3 +37,4 @@ app.include_router(movies.router)
 app.include_router(admin.router)
 app.include_router(users.router)
 app.include_router(notifications.router)
+app.include_router(schedule.router)
