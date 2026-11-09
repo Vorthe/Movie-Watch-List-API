@@ -5,6 +5,7 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, Field
 from ..models import Users
+from ..tasks import send_welcome_notification
 from ..database import SessionLocal
 from sqlalchemy.orm import Session
 import bcrypt
@@ -126,6 +127,9 @@ async def create_user(db: db_dep, create_user_request: CreateUserRequest):
     )
     db.add(create_user_model)
     db.commit()
+
+    # Enqueue welcome notification (runs asynchronously in Celery worker)
+    send_welcome_notification.delay(create_user_model.id)
 
 
 @router.post("/token", response_model=Token)
