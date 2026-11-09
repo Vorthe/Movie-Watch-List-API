@@ -16,6 +16,7 @@ from App.routers.auth import get_current_user, get_db as auth_get_db
 from App.routers.movies import get_db as movies_get_db
 from App.routers.notifications import get_db as notifications_get_db
 from App.routers.users import get_db as users_get_db
+from App.routers.schedule import get_db as schedule_get_db
 
 # Celery eager mode: tasks run synchronously in tests, no worker needed
 celery_app.conf.update(task_always_eager=True)
@@ -57,6 +58,7 @@ app.dependency_overrides[admin_get_db] = override_get_db
 app.dependency_overrides[users_get_db] = override_get_db
 app.dependency_overrides[notifications_get_db] = override_get_db
 app.dependency_overrides[get_current_user] = override_get_current_user
+app.dependency_overrides[schedule_get_db] = override_get_db
 
 
 @pytest.fixture
@@ -78,6 +80,7 @@ def clean_db():
     def _clean():
         with engine.connect() as conn:
             conn.execute(text("DELETE FROM notifications;"))
+            conn.execute(text("DELETE FROM watch_schedules;"))
             conn.execute(text("DELETE FROM user_movie_status;"))
             conn.execute(text("DELETE FROM movies;"))
             conn.execute(text("DELETE FROM users;"))
@@ -85,7 +88,8 @@ def clean_db():
                 conn.execute(
                     text(
                         "DELETE FROM sqlite_sequence WHERE name IN "
-                        "('notifications', 'user_movie_status', 'movies', 'users');"
+                        "('notifications', 'watch_schedules', "
+                        "'user_movie_status', 'movies', 'users');"
                     )
                 )
             except Exception:

@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from typing import Annotated, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Path, Query, status
@@ -146,7 +146,7 @@ async def update_schedule(
 
     schedule.status = payload.status
     if payload.status == "done":
-        schedule.completed_at = datetime.utcnow()
+        schedule.completed_at = datetime.now(timezone.utc).replace(tzinfo=None)
     else:
         schedule.completed_at = None
 
