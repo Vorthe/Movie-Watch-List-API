@@ -31,6 +31,10 @@ class Users(Base):
         "UserMovieStatus", back_populates="user", cascade="all, delete-orphan"
     )
 
+    notifications = relationship(
+        "Notification", back_populates="user", cascade="all, delete-orphan"
+    )
+
 
 class Movie(Base):
     """Catalog of movies shared across all users.
@@ -92,3 +96,26 @@ class UserMovieStatus(Base):
     movie = relationship("Movie", back_populates="statuses")
 
     __table_args__ = (UniqueConstraint("user_id", "movie_id", name="uq_user_movie"),)
+
+
+class Notification(Base):
+    """In-app notification for a user.
+
+    Created by background tasks (e.g. welcome on signup).
+    Read flag lets the frontend show an unread badge.
+    """
+
+    __tablename__ = "notifications"
+
+    id = Column(Integer, primary_key=True)
+    user_id = Column(
+        Integer,
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    message = Column(String(500), nullable=False)
+    read = Column(Boolean, nullable=False, default=False, index=True)
+    created_at = Column(DateTime, server_default=func.now(), nullable=False)
+
+    user = relationship("Users", back_populates="notifications")
