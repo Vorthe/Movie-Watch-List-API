@@ -1,26 +1,31 @@
 import bcrypt
+import os
+import App.database
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
-import os
+
+from App.celery_app import celery_app
 from App.database import Base
 from App.main import app
-from App.models import Movie, UserMovieStatus, Users
-from App.routers.auth import get_db as auth_get_db, get_current_user
-from App.routers.movies import get_db as movies_get_db
+from App.models import Movie, Notification, UserMovieStatus, Users
 from App.routers.admin import get_db as admin_get_db
+from App.routers.auth import get_current_user, get_db as auth_get_db
+from App.routers.movies import get_db as movies_get_db
+from App.routers.notifications import get_db as notifications_get_db
 from App.routers.users import get_db as users_get_db
 
-TEST_DB_URL = "sqlite:///./testdb.db"
+# Celery eager mode: tasks run synchronously in tests, no worker needed
+celery_app.conf.update(task_always_eager=True)
 
+TEST_DB_URL = "sqlite:///./testdb.db"
 
 # Remove stale SQLite DB so schema is always rebuilt from current models
 _TEST_DB_PATH = "./testdb.db"
 if os.path.exists(_TEST_DB_PATH):
     os.remove(_TEST_DB_PATH)
-
 
 engine = create_engine(
     TEST_DB_URL,
@@ -31,6 +36,7 @@ engine = create_engine(
 TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base.metadata.create_all(bind=engine)
+App.database.SessionLocal = TestingSessionLocal
 
 
 def override_get_db():
@@ -49,6 +55,7 @@ app.dependency_overrides[auth_get_db] = override_get_db
 app.dependency_overrides[movies_get_db] = override_get_db
 app.dependency_overrides[admin_get_db] = override_get_db
 app.dependency_overrides[users_get_db] = override_get_db
+app.dependency_overrides[notifications_get_db] = override_get_db
 app.dependency_overrides[get_current_user] = override_get_current_user
 
 
@@ -70,6 +77,7 @@ def db_session():
 def clean_db():
     def _clean():
         with engine.connect() as conn:
+            conn.execute(text("DELETE FROM notifications;"))
             conn.execute(text("DELETE FROM user_movie_status;"))
             conn.execute(text("DELETE FROM movies;"))
             conn.execute(text("DELETE FROM users;"))
@@ -77,7 +85,7 @@ def clean_db():
                 conn.execute(
                     text(
                         "DELETE FROM sqlite_sequence WHERE name IN "
-                        "('user_movie_status', 'movies', 'users');"
+                        "('notifications', 'user_movie_status', 'movies', 'users');"
                     )
                 )
             except Exception:
@@ -144,3 +152,17 @@ def test_status(test_movie):
     db.refresh(status)
     db.close()
     return status
+
+
+@pytest.fixture
+def test_notification():
+    db = TestingSessionLocal()
+    notification = Notification(
+        user_id=1,
+        message="Test notification",
+    )
+    db.add(notification)
+    db.commit()
+    db.refresh(notification)
+    db.close()
+    return notification
