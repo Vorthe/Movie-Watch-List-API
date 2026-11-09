@@ -38,6 +38,7 @@ services:
         PIP_INDEX_URL: https://pypi.tuna.tsinghua.edu.cn/simple
         PIP_TRUSTED_HOST: pypi.tuna.tsinghua.edu.cn
     container_name: moviewatchlist_app
+    user: '1000:1000'
     depends_on:
       db:
         condition: service_healthy
@@ -60,6 +61,7 @@ services:
         PIP_INDEX_URL: https://pypi.tuna.tsinghua.edu.cn/simple
         PIP_TRUSTED_HOST: pypi.tuna.tsinghua.edu.cn
     container_name: moviewatchlist_worker
+    user: '1000:1000'
     depends_on:
       db:
         condition: service_healthy

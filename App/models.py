@@ -1,6 +1,7 @@
 from sqlalchemy import (
     Boolean,
     Column,
+    Date,
     DateTime,
     ForeignKey,
     Integer,
@@ -34,6 +35,9 @@ class Users(Base):
     notifications = relationship(
         "Notification", back_populates="user", cascade="all, delete-orphan"
     )
+    watch_schedules = relationship(
+        "WatchSchedule", back_populates="user", cascade="all, delete-orphan"
+    )
 
 
 class Movie(Base):
@@ -57,7 +61,9 @@ class Movie(Base):
     statuses = relationship(
         "UserMovieStatus", back_populates="movie", cascade="all, delete-orphan"
     )
-
+    schedules = relationship(
+        "WatchSchedule", back_populates="movie", cascade="all, delete-orphan"
+    )
     __table_args__ = (
         UniqueConstraint("external_source", "external_id", name="uq_movie_external"),
     )
@@ -119,3 +125,44 @@ class Notification(Base):
     created_at = Column(DateTime, server_default=func.now(), nullable=False)
 
     user = relationship("Users", back_populates="notifications")
+
+
+class WatchSchedule(Base):
+    """User-planned movie to watch on a specific date.
+
+    status: pending (default) -> done (user marked watched)
+                              -> missed (date passed without done)
+    Celery Beat checks daily and sends notifications for today's schedules.
+    """
+
+    __tablename__ = "watch_schedules"
+
+    id = Column(Integer, primary_key=True)
+    user_id = Column(
+        Integer,
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    movie_id = Column(
+        Integer,
+        ForeignKey("movies.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    scheduled_date = Column(Date, nullable=False, index=True)
+    status = Column(String(20), nullable=False, default="pending", index=True)
+    completed_at = Column(DateTime, nullable=True)
+    created_at = Column(DateTime, server_default=func.now(), nullable=False)
+
+    user = relationship("Users", back_populates="watch_schedules")
+    movie = relationship("Movie", back_populates="schedules")
+
+    __table_args__ = (
+        UniqueConstraint(
+            "user_id",
+            "movie_id",
+            "scheduled_date",
+            name="uq_user_movie_date",
+        ),
+    )
