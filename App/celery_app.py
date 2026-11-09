@@ -5,13 +5,14 @@ This module creates the Celery app that both the worker process
 and the FastAPI app use. Keep this separate from tasks.py to avoid
 circular imports.
 
-Run worker:
-  celery -A App.celery_app worker --loglevel=info
+Run worker (with beat for scheduled tasks):
+  celery -A App.celery_app worker --beat --loglevel=info
 """
 
 import os
 
 from celery import Celery
+from celery.schedules import crontab
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -26,7 +27,6 @@ celery_app = Celery(
     include=["App.tasks"],
 )
 
-# Sensible defaults for a production worker
 celery_app.conf.update(
     task_serializer="json",
     accept_content=["json"],
@@ -37,3 +37,13 @@ celery_app.conf.update(
     task_acks_late=True,
     worker_prefetch_multiplier=1,
 )
+
+# Scheduled tasks (Celery Beat).
+# Times are in UTC. The worker runs in the same UTC timezone.
+celery_app.conf.beat_schedule = {
+    "check-todays-schedules": {
+        "task": "schedule.check_today",
+        # Every day at 08:00 UTC
+        "schedule": crontab(hour=8, minute=0),
+    },
+}

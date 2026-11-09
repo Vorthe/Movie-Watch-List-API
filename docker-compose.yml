@@ -71,7 +71,7 @@ services:
       - .env
     volumes:
       - .:/app
-    command: celery -A App.celery_app worker --loglevel=info
+    command: celery -A App.celery_app worker --beat --loglevel=info
 
 volumes:
   postgres_data:

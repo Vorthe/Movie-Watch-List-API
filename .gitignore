@@ -23,3 +23,8 @@ ci_test.db
 # scratch
 project_export.txt
 requirements.lock.txt
+
+# Celery Beat runtime files
+celerybeat-schedule
+celerybeat-schedule-shm
+celerybeat-schedule-wal

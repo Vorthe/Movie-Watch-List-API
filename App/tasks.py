@@ -4,6 +4,8 @@ Celery tasks.
 Import celery_app from celery_app.py and define tasks with @celery_app.task.
 """
 
+from datetime import date
+
 from .celery_app import celery_app
 
 
@@ -21,7 +23,6 @@ def send_welcome_notification(user_id: int):
     database session. Returns the notification id on success, or None
     if the user does not exist.
     """
-    # Lazy imports to avoid circular import at module load time
     from .database import SessionLocal
     from .models import Notification, Users
 
@@ -42,5 +43,52 @@ def send_welcome_notification(user_id: int):
         db.commit()
         db.refresh(notification)
         return notification.id
+    finally:
+        db.close()
+
+
+@celery_app.task(name="schedule.check_today")
+def check_todays_schedules():
+    """Create notifications for today's pending schedules.
+
+    Runs daily via Celery Beat. For each schedule that is scheduled for
+    today and still pending, create an in-app notification reminding
+    the user to watch the movie.
+
+    Returns the number of notifications created.
+    """
+    from .database import SessionLocal
+    from .models import Movie, Notification, WatchSchedule
+
+    today = date.today()
+    db = SessionLocal()
+    try:
+        schedules = (
+            db.query(WatchSchedule)
+            .filter(
+                WatchSchedule.scheduled_date == today,
+                WatchSchedule.status == "pending",
+            )
+            .all()
+        )
+
+        created = 0
+        for schedule in schedules:
+            movie = db.query(Movie).filter(Movie.id == schedule.movie_id).first()
+            if movie is None:
+                continue
+
+            notification = Notification(
+                user_id=schedule.user_id,
+                message=(
+                    f"Today's movie: {movie.title}. "
+                    "Enjoy, and mark it as done when finished."
+                ),
+            )
+            db.add(notification)
+            created += 1
+
+        db.commit()
+        return {"checked": len(schedules), "notifications_created": created}
     finally:
         db.close()
