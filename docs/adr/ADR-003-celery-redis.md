@@ -31,4 +31,33 @@ Use Celery as the task queue, with Redis as the broker.
 
 - Signup returns immediately. Email runs in the background.
 - Scheduled notifications work even when nobody is using the app.
-- Two new services in production: Redis and a Celery worker.
+- Two new services in local dev: Redis and a Celery worker (via docker-compose).
+
+### Where the worker runs
+
+The worker runs **locally** (on the developer's machine), connected to
+Render's Key Value instance via its External URL. It also connects to
+Render's PostgreSQL via its External Database URL.
+
+This is a deliberate choice:
+
+1. **Render's Background Worker is not free.** It requires a Starter plan
+   (~$7/month). For a portfolio project, we avoid recurring costs.
+2. **The worker is not critical for the demo.** When the demo is shown,
+   the local worker is started in a terminal. When not needed, it is
+   stopped. Zero cost.
+3. **The trade-off is acceptable.** The production Web Service still
+   works without the worker. Signup succeeds. Notifications are queued
+   but not processed until a worker is running.
+
+For a real production deployment with paying users, the worker would
+run on a paid instance (Render Worker, Fly.io, Railway, etc.). The code
+is identical; only the deployment changes.
+
+### SSRF safety note
+
+The `CELERY_BROKER_URL` on Render uses the internal URL, so traffic
+between Web Service and Key Value never leaves Render's private network.
+The local worker uses the external URL with TLS (`rediss://`), with
+`ssl_cert_reqs=CERT_NONE` only for the local dev certificate. In a real
+production setup, use `CERT_REQUIRED` with a proper CA bundle.
