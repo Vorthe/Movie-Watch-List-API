@@ -26,23 +26,19 @@ Goal: Replace fake data with real TMDB data.
 - Cleaned up test users
 - Fixed decimal input on rating
 
-## Phase 3 — Async Tasks
+## Phase 3 — Async Tasks (DONE)
 
-Goal: Add background processing.
+Goal: Add background processing with Celery + Redis.
 
-- Redis and Celery setup
-- First real use case (async welcome email on signup)
-- Worker service on Render
-- ADR for choosing Celery plus Redis
-
-## Phase 4 — Recommendations
-
-Goal: Smart suggestions from user history.
-
-- Build user preference model from ratings
-- Simple recommendation algorithm
-- "Recommended for you" section
-- ADR for algorithm choice
+- Redis (Render Key Value) as broker and result backend
+- Celery Worker (local, connects to Render Redis)
+- Celery Beat for daily scheduled tasks
+- Welcome notification on signup (async)
+- Watch Schedule: users schedule movies for specific dates
+- Daily check: notify users about today's scheduled movies
+- In-app notifications UI (bell in navbar, full page)
+- Schedule management UI (create, update status, delete)
+- 55 tests passing (was 44, added 11 for schedule)
 
 ## Phase 5 — Production
 

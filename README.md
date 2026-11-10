@@ -41,6 +41,8 @@ A full-stack movie tracking application where users manage their personal watch 
 - Statistics dashboard (total, watched, unwatched, average of your ratings)
 - User profile: change password, update phone number
 - Admin panel to manage the catalog (read, create, update, delete)
+- In-app notifications (bell in navbar, unread badge, mark as read)
+- Watch Schedule: plan movies for specific dates, with daily reminders
 
   ## Data
 

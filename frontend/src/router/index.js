@@ -3,12 +3,20 @@ import { useAuth } from '../stores/auth'
 import LoginView from '../views/LoginView.vue'
 import SignupView from '../views/SignupView.vue'
 import MoviesView from '../views/MoviesView.vue'
+import NotificationsView from '../views/NotificationsView.vue'
+import ScheduleView from '../views/ScheduleView.vue'
 
 const routes = [
   { path: '/', redirect: '/movies' },
   { path: '/login', name: 'login', component: LoginView },
   { path: '/signup', name: 'signup', component: SignupView },
   { path: '/movies', name: 'movies', component: MoviesView },
+  {
+    path: '/notifications',
+    name: 'notifications',
+    component: NotificationsView,
+  },
+  { path: '/schedule', name: 'schedule', component: ScheduleView },
 ]
 
 const router = createRouter({
