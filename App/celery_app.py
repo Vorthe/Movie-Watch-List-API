@@ -10,6 +10,7 @@ Run worker (with beat for scheduled tasks):
 """
 
 import os
+import ssl
 
 from celery import Celery
 from celery.schedules import crontab
@@ -38,12 +39,15 @@ celery_app.conf.update(
     worker_prefetch_multiplier=1,
 )
 
+# برای اتصال rediss:// (SSL) به Redis روی Render
+if CELERY_BROKER_URL.startswith("rediss://"):
+    celery_app.conf.broker_use_ssl = {"ssl_cert_reqs": ssl.CERT_NONE}
+    celery_app.conf.redis_backend_use_ssl = {"ssl_cert_reqs": ssl.CERT_NONE}
+
 # Scheduled tasks (Celery Beat).
-# Times are in UTC. The worker runs in the same UTC timezone.
 celery_app.conf.beat_schedule = {
     "check-todays-schedules": {
         "task": "schedule.check_today",
-        # Every day at 08:00 UTC
         "schedule": crontab(hour=8, minute=0),
     },
 }
