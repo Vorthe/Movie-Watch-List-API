@@ -5,7 +5,7 @@ import NotificationBell from './components/NotificationBell.vue'
 
 const router = useRouter()
 const route = useRoute()
-const { username, isAuthenticated, clearSession } = useAuth()
+const { username, isAuthenticated, isAdmin, clearSession } = useAuth()
 
 function logout() {
   clearSession()
@@ -26,6 +26,9 @@ function logout() {
         </router-link>
         <router-link to="/notifications" :class="{ active: route.name === 'notifications' }">
           Notifications
+        </router-link>
+        <router-link v-if="isAdmin" to="/admin" :class="{ active: route.name === 'admin' }">
+          Admin
         </router-link>
       </div>
       <div class="nav-right" v-if="isAuthenticated">

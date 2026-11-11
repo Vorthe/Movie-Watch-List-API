@@ -5,6 +5,7 @@ import SignupView from '../views/SignupView.vue'
 import MoviesView from '../views/MoviesView.vue'
 import NotificationsView from '../views/NotificationsView.vue'
 import ScheduleView from '../views/ScheduleView.vue'
+import AdminView from '../views/AdminView.vue'
 
 const routes = [
   { path: '/', redirect: '/movies' },
@@ -17,6 +18,12 @@ const routes = [
     component: NotificationsView,
   },
   { path: '/schedule', name: 'schedule', component: ScheduleView },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: AdminView,
+    meta: { requiresAdmin: true },
+  },
 ]
 
 const router = createRouter({
@@ -25,12 +32,16 @@ const router = createRouter({
 })
 
 router.beforeEach((to) => {
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated, isAdmin } = useAuth()
   const publicPages = ['login', 'signup']
+
   if (!publicPages.includes(to.name) && !isAuthenticated.value) {
     return { name: 'login' }
   }
   if (publicPages.includes(to.name) && isAuthenticated.value) {
+    return { name: 'movies' }
+  }
+  if (to.meta.requiresAdmin && !isAdmin.value) {
     return { name: 'movies' }
   }
 })
