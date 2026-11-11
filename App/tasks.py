@@ -17,14 +17,20 @@ def ping():
 
 @celery_app.task(name="notifications.send_welcome")
 def send_welcome_notification(user_id: int):
-    """Create a welcome notification for a newly registered user.
+    """Create a welcome notification and send a welcome email.
 
-    Runs in the Celery worker (separate process), so it opens its own
-    database session. Returns the notification id on success, or None
-    if the user does not exist.
+    In-app notification is always created.
+    Email is best-effort: if it fails, we log and continue.
     """
+    import logging
+    import os
+
+    import resend
+
     from .database import SessionLocal
     from .models import Notification, Users
+
+    logger = logging.getLogger(__name__)
 
     db = SessionLocal()
     try:
@@ -32,6 +38,7 @@ def send_welcome_notification(user_id: int):
         if user is None:
             return None
 
+        # 1. In-app notification (always)
         notification = Notification(
             user_id=user_id,
             message=(
@@ -42,6 +49,33 @@ def send_welcome_notification(user_id: int):
         db.add(notification)
         db.commit()
         db.refresh(notification)
+
+        # 2. Email (best effort)
+        api_key = os.getenv("RESEND_API_KEY")
+        from_email = os.getenv("RESEND_FROM_EMAIL", "onboarding@resend.dev")
+
+        if api_key and from_email:
+            try:
+                resend.api_key = api_key
+                resend.Emails.send(
+                    {
+                        "from": from_email,
+                        "to": user.email,
+                        "subject": "Welcome to Movie Watch List",
+                        "html": (
+                            f"<h1>Welcome, {user.first_name}!</h1>"
+                            "<p>Thanks for joining Movie Watch List.</p>"
+                            "<p>Start by rating a few movies in the catalog.</p>"
+                        ),
+                    }
+                )
+                logger.info(
+                    f"Welcome email sent to {user.email} "
+                    f"(notification id={notification.id})"
+                )
+            except Exception as e:
+                logger.warning(f"Failed to send email to {user.email}: {e}")
+
         return notification.id
     finally:
         db.close()
