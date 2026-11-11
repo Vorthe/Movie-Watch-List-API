@@ -1,5 +1,12 @@
 from fastapi import status
 
+from App.main import app
+from App.models import Users
+from App.routers.auth import get_current_user
+from tests.conftest import TestingSessionLocal, override_get_current_user
+
+# --- Existing user tests ---
+
 
 def test_return_user(client, test_user):
     response = client.get("/users/")
@@ -33,3 +40,49 @@ def test_change_password_invalid_current(client, test_user):
 def test_change_phone_number_success(client, test_user):
     response = client.put("/users/phone_number/09129999999")
     assert response.status_code == status.HTTP_204_NO_CONTENT
+
+
+# --- Role change tests (Phase 4) ---
+
+
+def test_update_role_as_admin(client, test_user):
+    """Admin can promote a user."""
+    db = TestingSessionLocal()
+    user = Users(
+        email="normal@test.com",
+        username="normal",
+        first_name="N",
+        last_name="U",
+        hashed_password="x",
+        is_active=True,
+        role="user",
+        phone_number="09120000000",
+    )
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    user_id = user.id
+    db.close()
+
+    response = client.put(f"/auth/users/{user_id}/role", json={"role": "admin"})
+    assert response.status_code == status.HTTP_200_OK
+    assert response.json()["role"] == "admin"
+
+
+def test_update_role_as_non_admin(client):
+    """Non-admin should be rejected."""
+
+    def override_user():
+        return {"username": "plain", "id": 99, "user_role": "user"}
+
+    app.dependency_overrides[get_current_user] = override_user
+    try:
+        response = client.put("/auth/users/1/role", json={"role": "admin"})
+        assert response.status_code == status.HTTP_403_FORBIDDEN
+    finally:
+        app.dependency_overrides[get_current_user] = override_get_current_user
+
+
+def test_update_role_not_found(client, test_user):
+    response = client.put("/auth/users/999/role", json={"role": "admin"})
+    assert response.status_code == status.HTTP_404_NOT_FOUND

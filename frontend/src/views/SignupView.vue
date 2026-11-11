@@ -22,7 +22,6 @@ async function handleSignup() {
   try {
     await api.post('/auth/', {
       ...form.value,
-      role: 'user', // hardcoded — backend allows any role (known issue #8)
     })
     router.push({ name: 'login', query: { registered: '1' } })
   } catch (e) {

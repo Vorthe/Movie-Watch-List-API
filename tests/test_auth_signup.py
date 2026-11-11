@@ -6,7 +6,6 @@ SIGNUP_PAYLOAD = {
     "first_name": "New",
     "last_name": "User",
     "password": "newpass1234",
-    "role": "user",
     "phone_number": "09121234567",
 }
 
@@ -31,3 +30,29 @@ def test_signup_too_long_phone_number(client):
     payload = {**SIGNUP_PAYLOAD, "phone_number": "123456789012345"}
     response = client.post("/auth/", json=payload)
     assert response.status_code == status.HTTP_422_UNPROCESSABLE_CONTENT
+
+
+def test_signup_ignores_role_from_client(client):
+    """Client cannot self-assign admin role."""
+    payload = {
+        "username": "hacker",
+        "email": "hacker@test.com",
+        "first_name": "H",
+        "last_name": "X",
+        "password": "pass1234",
+        "phone_number": "09121234567",
+        "role": "admin",  # tried to become admin
+    }
+    response = client.post("/auth/", json=payload)
+    assert response.status_code == status.HTTP_201_CREATED
+
+    from App.models import Users
+    from tests.conftest import TestingSessionLocal
+
+    db = TestingSessionLocal()
+    try:
+        user = db.query(Users).filter(Users.username == "hacker").first()
+        assert user is not None
+        assert user.role == "user"  # forced to user
+    finally:
+        db.close()

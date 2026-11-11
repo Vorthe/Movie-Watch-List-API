@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 from datetime import datetime, timedelta, timezone
 from typing import Annotated
-from fastapi import APIRouter, Depends, HTTPException, Request
+from fastapi import APIRouter, Depends, HTTPException, Request, Path
 from pydantic import BaseModel, Field
 from ..models import Users
 from ..tasks import send_welcome_notification
@@ -33,7 +33,6 @@ class CreateUserRequest(BaseModel):
     first_name: str
     last_name: str
     password: str
-    role: str
     phone_number: str = Field(min_length=10, max_length=12)
 
 
@@ -110,6 +109,9 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):
         )
 
 
+user_dep = Annotated[dict, Depends(get_current_user)]
+
+
 @router.post("/", status_code=status.HTTP_201_CREATED)
 async def create_user(db: db_dep, create_user_request: CreateUserRequest):
     password_bytes = create_user_request.password.encode("utf-8")[:72]
@@ -121,7 +123,7 @@ async def create_user(db: db_dep, create_user_request: CreateUserRequest):
         first_name=create_user_request.first_name,
         last_name=create_user_request.last_name,
         hashed_password=hashed_password,
-        role=create_user_request.role,
+        role="user",  # role is assigned by the server, not the client,
         is_active=True,
         phone_number=create_user_request.phone_number,
     )
@@ -148,3 +150,27 @@ def login_for_access_token(
     )
 
     return {"access_token": token, "token_type": "bearer"}
+
+
+class RoleUpdateRequest(BaseModel):
+    role: str = Field(pattern="^(user|admin)$")
+
+
+@router.put("/users/{user_id}/role", status_code=200)
+async def update_user_role(
+    db: db_dep,
+    user: user_dep,
+    payload: RoleUpdateRequest,
+    user_id: int = Path(gt=0),
+):
+    """Promote or demote a user. Admin-only."""
+    if user is None or user.get("user_role") != "admin":
+        raise HTTPException(status_code=403, detail="Admin access required")
+
+    target = db.query(Users).filter(Users.id == user_id).first()
+    if target is None:
+        raise HTTPException(status_code=404, detail="User Not Found")
+
+    target.role = payload.role
+    db.commit()
+    return {"id": target.id, "username": target.username, "role": target.role}
