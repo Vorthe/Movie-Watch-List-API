@@ -16,3 +16,7 @@ pytest-asyncio
 celery[redis]
 redis
 resend
+fastapi-admin-kit[full]
+greenlet
+sqlalchemy[asyncio]
+asyncpg

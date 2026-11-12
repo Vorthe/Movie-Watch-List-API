@@ -146,7 +146,7 @@ async def update_schedule(
 
     schedule.status = payload.status
     if payload.status == "done":
-        schedule.completed_at = datetime.now(timezone.utc).replace(tzinfo=None)
+        schedule.completed_at = datetime.now(timezone.utc)
     else:
         schedule.completed_at = None
 

@@ -31,7 +31,6 @@ class Users(Base):
     movie_statuses = relationship(
         "UserMovieStatus", back_populates="user", cascade="all, delete-orphan"
     )
-
     notifications = relationship(
         "Notification", back_populates="user", cascade="all, delete-orphan"
     )
@@ -56,7 +55,11 @@ class Movie(Base):
     external_rating = Column(Numeric(3, 1), nullable=True)
     external_id = Column(String(50), nullable=True)
     external_source = Column(String(20), nullable=True)
-    created_at = Column(DateTime, server_default=func.now(), nullable=False)
+    created_at = Column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False,
+    )
 
     statuses = relationship(
         "UserMovieStatus", back_populates="movie", cascade="all, delete-orphan"
@@ -64,6 +67,7 @@ class Movie(Base):
     schedules = relationship(
         "WatchSchedule", back_populates="movie", cascade="all, delete-orphan"
     )
+
     __table_args__ = (
         UniqueConstraint("external_source", "external_id", name="uq_movie_external"),
     )
@@ -93,9 +97,16 @@ class UserMovieStatus(Base):
     )
     watched = Column(Boolean, nullable=False, default=False)
     rating = Column(Integer, nullable=True)
-    created_at = Column(DateTime, server_default=func.now(), nullable=False)
+    created_at = Column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False,
+    )
     updated_at = Column(
-        DateTime, server_default=func.now(), onupdate=func.now(), nullable=False
+        DateTime(timezone=True),
+        server_default=func.now(),
+        onupdate=func.now(),
+        nullable=False,
     )
 
     user = relationship("Users", back_populates="movie_statuses")
@@ -122,7 +133,11 @@ class Notification(Base):
     )
     message = Column(String(500), nullable=False)
     read = Column(Boolean, nullable=False, default=False, index=True)
-    created_at = Column(DateTime, server_default=func.now(), nullable=False)
+    created_at = Column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False,
+    )
 
     user = relationship("Users", back_populates="notifications")
 
@@ -152,8 +167,12 @@ class WatchSchedule(Base):
     )
     scheduled_date = Column(Date, nullable=False, index=True)
     status = Column(String(20), nullable=False, default="pending", index=True)
-    completed_at = Column(DateTime, nullable=True)
-    created_at = Column(DateTime, server_default=func.now(), nullable=False)
+    completed_at = Column(DateTime(timezone=True), nullable=True)
+    created_at = Column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False,
+    )
 
     user = relationship("Users", back_populates="watch_schedules")
     movie = relationship("Movie", back_populates="schedules")
