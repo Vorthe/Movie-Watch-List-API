@@ -77,6 +77,7 @@ admin = Admin(
     dashboard_stats=[],
     dashboard_charts=False,
     session_samesite="lax",
+    enable_notification=False,
 )
 
 
