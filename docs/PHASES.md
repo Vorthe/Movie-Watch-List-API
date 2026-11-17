@@ -40,6 +40,24 @@ Goal: Add background processing with Celery + Redis.
 - Schedule management UI (create, update status, delete)
 - 55 tests passing (was 44, added 11 for schedule)
 
+## Phase 4 — Production Features (DONE)
+
+Goal: Add production-grade features that separate a portfolio project
+from a real product.
+
+- **4.0 — Security:** Removed client-controlled role from signup. Admin
+  promotion now requires an admin-only endpoint. Closed KNOWN_ISSUES #8.
+- **4.1 — Email:** Real welcome emails via Resend. SendGrid rejected signup
+  from Iran; Resend accepted. Email is best-effort (signup succeeds if
+  email fails). Domain verification needed for sending to users other than
+  account owner.
+- **4.2 — Admin panel:** `fastapi-admin-kit` at `/admin`, session auth,
+  separate async engine and `admin_users` table. Covers Movie,
+  UserMovieStatus, Notification, WatchSchedule.
+- **4.3 — Recommendations:** `GET /recommendations` returns top genres from
+  user's 7+ ratings and recommends unseen movies in those genres sorted by
+  IMDb rating.
+
 ## Phase 5 — Production
 
 Goal: Make it production ready.

@@ -19,7 +19,7 @@ A full-stack movie tracking application where users manage their personal watch 
 - PostgreSQL 16
 - JWT authentication (python-jose, bcrypt)
 - Celery 5.4 + Redis 6 (background tasks, scheduled jobs)
-- Pytest (55 tests)
+- Pytest (59 tests)
 
 **Frontend**
 
@@ -48,6 +48,7 @@ A full-stack movie tracking application where users manage their personal watch 
 - Watch Schedule: plan movies for specific dates, with daily reminders
 - Background tasks via Celery: welcome notification on signup
 - Scheduled task via Celery Beat: daily check for today's movies
+- Personalized recommendations based on user's top-rated genres
 
 ## Data
 
@@ -71,6 +72,7 @@ Movie-Watch-List-API/
 │   │   ├── users.py
 │   │   ├── notifications.py
 │   │   └── schedule.py
+│   │   └── recommendations.py
 │   ├── main.py
 │   ├── database.py       # SQLAlchemy engine + session
 │   ├── models.py         # Users, Movie, UserMovieStatus, Notification, WatchSchedule
@@ -206,6 +208,21 @@ The Web Service on Render can enqueue tasks (e.g. welcome notification on signup
 
 ## Architecture Notes
 
+### Admin Panel
+
+The admin panel uses `fastapi-admin-kit`, mounted at `/admin`. It runs on a
+separate async engine (`asyncpg`) with its own `admin_users` table, and
+session-based authentication (separate from JWT for the main API).
+
+For local development, CSRF protection is disabled via `CSRF_ENABLED=false`.
+This is documented in KNOWN_ISSUES for production considerations.
+
+### Recommendations
+
+`GET /recommendations` returns content-based suggestions: the user's top 3
+genres from movies rated 7+ are selected, and unseen movies in those genres
+are returned sorted by IMDb rating. See `docs/adr/ADR-005-recommendations.md`.
+
 ### Database Connection Strategy
 
 The backend uses `NullPool` in SQLAlchemy to prevent stale connections to the managed PostgreSQL instance. This is a deliberate choice for environments where the database provider closes idle connections at the network level.
@@ -268,6 +285,10 @@ If tests pass, GitHub Actions calls Render's Deploy Hook to deploy the backend. 
 | `CELERY_RESULT_BACKEND` | Celery result backend URL                         | Yes      |
 | `VITE_API_BASE_URL`     | Backend URL (frontend only)                       | Yes      |
 | `TMDB_API_KEY`          | TMDB API key (only for `scripts/fetch_movies.py`) | No       |
+| `CSRF_ENABLED`          | Disable CSRF for local dev (default: true)        | No       |
+| `ADMIN_SESSION_SECURE`  | Admin session cookie secure flag (default: false) | No       |
+| `RESEND_API_KEY`        | Resend API key for welcome emails                 | No       |
+| `RESEND_FROM_EMAIL`     | Sender email (default: onboarding@resend.dev)     | No       |
 
 ## Architecture Decision Records
 

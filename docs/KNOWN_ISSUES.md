@@ -14,6 +14,8 @@ Last updated: 2026-11-07 (end of Phase 1).
 | 15  | No automated tests                                            | 37 tests                               |
 | 16  | No CI pipeline                                                | GitHub Actions CI                      |
 
+| 8 | **SECURITY: `role` accepted from client on signup** | Removed from CreateUserRequest; admin promotion requires admin-only endpoint |
+
 ## Still open
 
 | #   | Issue                                                   | Severity | Notes                                                         |
