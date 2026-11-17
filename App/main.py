@@ -9,7 +9,7 @@ from .admin_setup import admin, async_engine
 from .database import engine
 from .models import Base
 from .routers import admin as admin_router
-from .routers import auth, movies, notifications, schedule, users
+from .routers import auth, movies, notifications, schedule, users, recommendations
 
 
 @asynccontextmanager
@@ -72,3 +72,4 @@ app.include_router(admin_router.router)
 app.include_router(users.router)
 app.include_router(notifications.router)
 app.include_router(schedule.router)
+app.include_router(recommendations.router)
