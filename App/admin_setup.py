@@ -17,7 +17,7 @@ _is_postgres = DATABASE_URL.startswith("postgresql://")
 if _is_postgres:
     from sqlalchemy.ext.asyncio import create_async_engine
 
-    from fastapi_admin_kit import Admin
+    from fastapi_admin_kit import Admin, ModelAdmin
     from fastapi_admin_kit.auth.backend import BuiltinAuthBackend
     from fastapi_admin_kit.migrations.models import User as AdminUser
     from fastapi_admin_kit.models.base import Base as AdminBase
@@ -62,10 +62,22 @@ if _is_postgres:
         enable_notification=False,
     )
 
-    admin.register(Movie)
-    admin.register(UserMovieStatus)
-    admin.register(Notification)
-    admin.register(WatchSchedule)
+    class MovieAdmin(ModelAdmin):
+        ordering = ["id"]
+
+    class UserMovieStatusAdmin(ModelAdmin):
+        ordering = ["id"]
+
+    class NotificationAdmin(ModelAdmin):
+        ordering = ["id"]
+
+    class WatchScheduleAdmin(ModelAdmin):
+        ordering = ["id"]
+
+    admin.register(Movie, MovieAdmin)
+    admin.register(UserMovieStatus, UserMovieStatusAdmin)
+    admin.register(Notification, NotificationAdmin)
+    admin.register(WatchSchedule, WatchScheduleAdmin)
 else:
     # Test / SQLite environment: skip admin entirely
     async_engine = None
