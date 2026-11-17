@@ -14,10 +14,10 @@ from .routers import auth, movies, notifications, schedule, users
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await admin.setup(app)
+    if admin is not None:
+        await admin.setup(app)
 
-    # Dev only: strip CSRF middleware added by admin.setup()
-    if os.getenv("CSRF_ENABLED", "true").lower() == "false":
+    if admin is not None and os.getenv("CSRF_ENABLED", "true").lower() == "false":
         from fastapi_admin_kit.auth.csrf import CSRFMiddleware
 
         app.user_middleware = [
@@ -25,18 +25,18 @@ async def lifespan(app: FastAPI):
             for m in app.user_middleware
             if getattr(m, "cls", None) is not CSRFMiddleware
             and getattr(m, "cls", None).__name__ != "CSRFMiddleware"
-            and getattr(m, "cls", None).__name__ != "_NoCSRFMiddleware"
         ]
+        app.build_middleware_stack()
 
     yield
-    await async_engine.dispose()
+
+    if async_engine is not None:
+        await async_engine.dispose()
 
 
 app = FastAPI(lifespan=lifespan)
 
-
-# Dev only: override CSRF dependency when CSRF_ENABLED=false
-if os.getenv("CSRF_ENABLED", "true").lower() == "false":
+if admin is not None and os.getenv("CSRF_ENABLED", "true").lower() == "false":
     from fastapi_admin_kit.auth.csrf import require_csrf_token
 
     app.dependency_overrides[require_csrf_token] = lambda: True
