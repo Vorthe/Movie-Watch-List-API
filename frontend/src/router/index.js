@@ -6,12 +6,18 @@ import MoviesView from '../views/MoviesView.vue'
 import NotificationsView from '../views/NotificationsView.vue'
 import ScheduleView from '../views/ScheduleView.vue'
 import AdminView from '../views/AdminView.vue'
+import RecommendationsView from '../views/RecommendationsView.vue'
 
 const routes = [
   { path: '/', redirect: '/movies' },
   { path: '/login', name: 'login', component: LoginView },
   { path: '/signup', name: 'signup', component: SignupView },
   { path: '/movies', name: 'movies', component: MoviesView },
+  {
+    path: '/recommendations',
+    name: 'recommendations',
+    component: RecommendationsView,
+  },
   {
     path: '/notifications',
     name: 'notifications',

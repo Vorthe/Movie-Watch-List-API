@@ -21,6 +21,9 @@ function logout() {
         <router-link to="/movies" :class="{ active: route.name === 'movies' }">
           Catalog
         </router-link>
+        <router-link to="/recommendations" :class="{ active: route.name === 'recommendations' }">
+          Recommended
+        </router-link>
         <router-link to="/schedule" :class="{ active: route.name === 'schedule' }">
           Schedule
         </router-link>
