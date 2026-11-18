@@ -46,13 +46,9 @@ def test_mark_all_read(client, test_notification):
 def test_signup_creates_welcome_notification(client):
     """Signup should enqueue welcome task; in eager mode, it runs immediately."""
     payload = {
-        "username": "newuser",
+        "full_name": "New User",
         "email": "new@example.com",
-        "first_name": "New",
-        "last_name": "User",
         "password": "newpass1234",
-        "role": "user",
-        "phone_number": "09121112222",
     }
     response = client.post("/auth/", json=payload)
     assert response.status_code == status.HTTP_201_CREATED
@@ -66,8 +62,10 @@ def test_signup_creates_welcome_notification(client):
 
     db = TestingSessionLocal()
     try:
-        user = db.query(Users).filter(Users.username == "newuser").first()
+        user = db.query(Users).filter(Users.email == "new@example.com").first()
         assert user is not None
+        assert user.first_name == "New"
+        assert user.last_name == "User"
 
         notifications = (
             db.query(Notification).filter(Notification.user_id == user.id).all()

@@ -28,12 +28,9 @@ oauth2_bearer = OAuth2PasswordBearer(tokenUrl="auth/token")
 
 
 class CreateUserRequest(BaseModel):
-    username: str
     email: str
-    first_name: str
-    last_name: str
-    password: str
-    phone_number: str = Field(min_length=10, max_length=12)
+    full_name: str
+    password: str = Field(min_length=6)
 
 
 class Token(BaseModel):
@@ -71,7 +68,12 @@ db_dep = Annotated[Session, Depends(get_db)]
 
 ### Endpoints ###
 def authentication_user(username: str, password: str, db):
-    user = db.query(Users).filter(Users.username == username).first()
+    # Accept either username or email
+    user = (
+        db.query(Users)
+        .filter((Users.username == username) | (Users.email == username))
+        .first()
+    )
     if not user:
         return False
     password_bytes = password.encode("utf-8")[:72]
@@ -114,23 +116,27 @@ user_dep = Annotated[dict, Depends(get_current_user)]
 
 @router.post("/", status_code=status.HTTP_201_CREATED)
 async def create_user(db: db_dep, create_user_request: CreateUserRequest):
+    # Split full_name into first and last
+    parts = create_user_request.full_name.strip().split(maxsplit=1)
+    first_name = parts[0] if parts else ""
+    last_name = parts[1] if len(parts) > 1 else ""
+
     password_bytes = create_user_request.password.encode("utf-8")[:72]
     hashed_password = bcrypt.hashpw(password_bytes, bcrypt.gensalt()).decode("utf-8")
 
     create_user_model = Users(
-        username=create_user_request.username,
         email=create_user_request.email,
-        first_name=create_user_request.first_name,
-        last_name=create_user_request.last_name,
+        username=create_user_request.email,  # email as username
+        first_name=first_name,
+        last_name=last_name,
         hashed_password=hashed_password,
-        role="user",  # role is assigned by the server, not the client,
+        role="user",
         is_active=True,
-        phone_number=create_user_request.phone_number,
+        phone_number=None,
     )
     db.add(create_user_model)
     db.commit()
 
-    # Enqueue welcome notification (runs asynchronously in Celery worker)
     send_welcome_notification.delay(create_user_model.id)
 
 

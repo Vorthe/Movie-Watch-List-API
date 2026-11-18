@@ -1,6 +1,7 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 import { useAuth } from './stores/auth'
+const adminUrl = `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8001'}/admin/login`
 import NotificationBell from './components/NotificationBell.vue'
 
 const router = useRouter()
@@ -30,9 +31,9 @@ function logout() {
         <router-link to="/notifications" :class="{ active: route.name === 'notifications' }">
           Notifications
         </router-link>
-        <router-link v-if="isAdmin" to="/admin" :class="{ active: route.name === 'admin' }">
-          Admin
-        </router-link>
+        <a v-if="isAdmin" :href="adminUrl" target="_blank" rel="noopener" class="admin-link">
+          Admin Panel ↗
+        </a>
       </div>
       <div class="nav-right" v-if="isAuthenticated">
         <NotificationBell />
@@ -108,5 +109,18 @@ function logout() {
 }
 .content {
   padding: 2rem;
+}
+.admin-link {
+  color: #fbbf24;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #fbbf2444;
+  transition: all 0.15s;
+}
+.admin-link:hover {
+  background: #fbbf2422;
+  border-color: #fbbf24;
 }
 </style>

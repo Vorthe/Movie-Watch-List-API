@@ -1,12 +1,9 @@
 from fastapi import status
 
 SIGNUP_PAYLOAD = {
-    "username": "newuser",
-    "email": "new@example.com",
-    "first_name": "New",
-    "last_name": "User",
+    "email": "newuser@example.com",
+    "full_name": "New User",
     "password": "newpass1234",
-    "phone_number": "09121234567",
 }
 
 
@@ -16,33 +13,18 @@ def test_signup_success(client):
 
 
 def test_signup_missing_required_fields(client):
-    response = client.post("/auth/", json={"username": "x"})
+    response = client.post("/auth/", json={"email": "x@x.com"})
     assert response.status_code == status.HTTP_422_UNPROCESSABLE_CONTENT
 
 
-def test_signup_short_phone_number(client):
-    payload = {**SIGNUP_PAYLOAD, "phone_number": "123"}
-    response = client.post("/auth/", json=payload)
-    assert response.status_code == status.HTTP_422_UNPROCESSABLE_CONTENT
-
-
-def test_signup_too_long_phone_number(client):
-    payload = {**SIGNUP_PAYLOAD, "phone_number": "123456789012345"}
+def test_signup_short_password(client):
+    payload = {**SIGNUP_PAYLOAD, "password": "12345"}
     response = client.post("/auth/", json=payload)
     assert response.status_code == status.HTTP_422_UNPROCESSABLE_CONTENT
 
 
 def test_signup_ignores_role_from_client(client):
-    """Client cannot self-assign admin role."""
-    payload = {
-        "username": "hacker",
-        "email": "hacker@test.com",
-        "first_name": "H",
-        "last_name": "X",
-        "password": "pass1234",
-        "phone_number": "09121234567",
-        "role": "admin",  # tried to become admin
-    }
+    payload = {**SIGNUP_PAYLOAD, "role": "admin"}
     response = client.post("/auth/", json=payload)
     assert response.status_code == status.HTTP_201_CREATED
 
@@ -51,8 +33,11 @@ def test_signup_ignores_role_from_client(client):
 
     db = TestingSessionLocal()
     try:
-        user = db.query(Users).filter(Users.username == "hacker").first()
+        user = db.query(Users).filter(Users.email == "newuser@example.com").first()
         assert user is not None
-        assert user.role == "user"  # forced to user
+        assert user.role == "user"
+        assert user.username == "newuser@example.com"
+        assert user.first_name == "New"
+        assert user.last_name == "User"
     finally:
         db.close()

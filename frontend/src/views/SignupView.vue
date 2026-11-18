@@ -6,12 +6,9 @@ import api from '../api/client'
 const router = useRouter()
 
 const form = ref({
-  username: '',
+  full_name: '',
   email: '',
-  first_name: '',
-  last_name: '',
   password: '',
-  phone_number: '',
 })
 const loading = ref(false)
 const error = ref('')
@@ -21,7 +18,9 @@ async function handleSignup() {
   loading.value = true
   try {
     await api.post('/auth/', {
-      ...form.value,
+      email: form.value.email,
+      full_name: form.value.full_name,
+      password: form.value.password,
     })
     router.push({ name: 'login', query: { registered: '1' } })
   } catch (e) {
@@ -43,20 +42,9 @@ async function handleSignup() {
       <h1>Create Account</h1>
       <p class="subtitle">Movie Watch List</p>
 
-      <div class="grid-2">
-        <label>
-          First name
-          <input v-model="form.first_name" type="text" required />
-        </label>
-        <label>
-          Last name
-          <input v-model="form.last_name" type="text" required />
-        </label>
-      </div>
-
       <label>
-        Username
-        <input v-model="form.username" type="text" required autocomplete="username" />
+        Full name
+        <input v-model="form.full_name" type="text" required minlength="2" autocomplete="name" />
       </label>
 
       <label>
@@ -65,24 +53,12 @@ async function handleSignup() {
       </label>
 
       <label>
-        Phone number (10-12 digits)
-        <input
-          v-model="form.phone_number"
-          type="tel"
-          required
-          minlength="10"
-          maxlength="12"
-          pattern="[0-9]{10,12}"
-        />
-      </label>
-
-      <label>
-        Password (min 8 chars)
+        Password (min 6 chars)
         <input
           v-model="form.password"
           type="password"
           required
-          minlength="8"
+          minlength="6"
           autocomplete="new-password"
         />
       </label>
@@ -113,7 +89,7 @@ async function handleSignup() {
   padding: 2rem;
   border-radius: 12px;
   width: 100%;
-  max-width: 460px;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
@@ -127,11 +103,6 @@ h1 {
   margin: 0 0 0.5rem 0;
   color: #94a3b8;
   font-size: 0.9rem;
-}
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.7rem;
 }
 label {
   display: flex;
@@ -147,6 +118,8 @@ input {
   background: #0f172a;
   color: #e2e8f0;
   font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 input:focus {
   outline: none;
